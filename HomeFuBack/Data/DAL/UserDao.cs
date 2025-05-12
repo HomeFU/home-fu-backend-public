@@ -1,6 +1,7 @@
 ﻿using HomeFuBack.Data.Entities;
 using System.Net.Mail;
 using Microsoft.EntityFrameworkCore;
+using HomeFuBack.Models.Users;
 
 
 namespace HomeFuBack.Data.DAL
