@@ -11,6 +11,6 @@ namespace HomeFuBack.Models.Housing
         [Required]
         public string Name { get; set; }
 
-        public List<CardCategory> CardCategories { get; set; }
+        public List<CardCategory>? CardCategories { get; set; }
     }
 }

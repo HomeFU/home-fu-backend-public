@@ -1,10 +1,16 @@
 {
   "ExpandedNodes": [
+<<<<<<< HEAD
     "",
     "\\HomeFuBack",
     "\\HomeFuBack\\Models",
     "\\HomeFuBack\\Models\\Housing"
   ],
   "SelectedNode": "\\HomeFuBack\\Models\\Housing\\Card.cs",
+=======
+    ""
+  ],
+  "SelectedNode": "\\HomeFuBack.sln",
+>>>>>>> main
   "PreviewInSolutionExplorer": false
 }

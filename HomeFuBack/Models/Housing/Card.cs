@@ -13,30 +13,37 @@ namespace HomeFuBack.Models.Housing
         public string Name { get; set; }
 
         public int LocationId { get; set; }
-        public Location Location { get; set; }  // Локация(отдельный модель)
+        public Location Location { get; set; }
 
-        public List<CardCategory> CardCategories { get; set; }  // Категории(отдельный модель)
+        public List<CardCategory> CardCategories { get; set; }
 
         [DataType(DataType.Date)]
+<<<<<<< HEAD
         public DateTime StartDate { get; set; } 
 
         [DataType(DataType.Date)]
         public DateTime? EndDate { get; set; } 
+=======
+        public DateTime StartDate { get; set; }
+
+        [DataType(DataType.Date)]
+        public DateTime? EndDate { get; set; }
+>>>>>>> main
 
         [Range(1, 5)]
-        public int? Rating { get; set; }  // Оценка
+        public int? Rating { get; set; }
 
-        public List<CardImage> Images { get; set; }  // Изображения(список с ссылками)
+        public List<string> ImageUrls { get; set; }
 
         [DataType(DataType.Currency)]
-        public decimal Price { get; set; }  // Цена
+        public decimal Price { get; set; }
 
-        public bool IsDeleted { get; set; }  // Удален (。_。)
+        public bool IsDeleted { get; set; }
 
         public Card()
         {
             CardCategories = new List<CardCategory>();
-            Images = new List<CardImage>();
+            ImageUrls = new List<string>();
             IsDeleted = false;
         }
     }
