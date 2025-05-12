@@ -4989,23 +4989,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\NightSpark\\.nuget\\packages\\": {},
+    "C:\\Users\\N0Wh4l3\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NightSpark\\Documents\\Project\\home-fu-backend-public\\HomeFuBack\\HomeFuBack.csproj",
+      "projectUniqueName": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\HomeFuBack.csproj",
       "projectName": "HomeFuBack",
-      "projectPath": "C:\\Users\\NightSpark\\Documents\\Project\\home-fu-backend-public\\HomeFuBack\\HomeFuBack.csproj",
-      "packagesPath": "C:\\Users\\NightSpark\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NightSpark\\Documents\\Project\\home-fu-backend-public\\HomeFuBack\\obj\\",
+      "projectPath": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\HomeFuBack.csproj",
+      "packagesPath": "C:\\Users\\N0Wh4l3\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\NightSpark\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\N0Wh4l3\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5088,7 +5088,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\NightSpark\\Documents\\Project\\home-fu-backend-public\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|c:\\users\\nightspark\\documents\\project\\home-fu-backend-public\\homefuback\\models\\housing\\cardcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\models\\housing\\cardcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|c:\\users\\nightspark\\documents\\project\\home-fu-backend-public\\homefuback\\models\\housing\\cardimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\models\\housing\\cardimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|c:\\users\\nightspark\\documents\\project\\home-fu-backend-public\\homefuback\\models\\housing\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\models\\housing\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|c:\\users\\nightspark\\documents\\project\\home-fu-backend-public\\homefuback\\models\\housing\\cardcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\models\\housing\\cardcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|c:\\users\\nightspark\\documents\\project\\home-fu-backend-public\\homefuback\\models\\housing\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\models\\housing\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|c:\\users\\nightspark\\documents\\project\\home-fu-backend-public\\homefuback\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|c:\\users\\nightspark\\documents\\project\\home-fu-backend-public\\homefuback\\models\\housing\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\models\\housing\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|c:\\users\\nightspark\\documents\\project\\home-fu-backend-public\\homefuback\\models\\housing\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\models\\housing\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|c:\\users\\nightspark\\documents\\project\\home-fu-backend-public\\homefuback\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|c:\\users\\nightspark\\documents\\project\\home-fu-backend-public\\homefuback\\homefuback.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -62,37 +62,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "CardImage.cs",
               "DocumentMoniker": "C:\\Users\\NightSpark\\Documents\\Project\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\CardImage.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Models\\Housing\\CardImage.cs",
               "ToolTip": "C:\\Users\\NightSpark\\Documents\\Project\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\CardImage.cs",
               "RelativeToolTip": "HomeFuBack\\Models\\Housing\\CardImage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T20:07:32.153Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CardCategory.cs",
               "DocumentMoniker": "C:\\Users\\NightSpark\\Documents\\Project\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\CardCategory.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Models\\Housing\\CardCategory.cs",
               "ToolTip": "C:\\Users\\NightSpark\\Documents\\Project\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\CardCategory.cs",
               "RelativeToolTip": "HomeFuBack\\Models\\Housing\\CardCategory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T20:07:21.467Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\NightSpark\\Documents\\Project\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\Category.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Models\\Housing\\Category.cs",
@@ -105,33 +105,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Location.cs",
               "DocumentMoniker": "C:\\Users\\NightSpark\\Documents\\Project\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\Location.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Models\\Housing\\Location.cs",
               "ToolTip": "C:\\Users\\NightSpark\\Documents\\Project\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\Location.cs",
               "RelativeToolTip": "HomeFuBack\\Models\\Housing\\Location.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T20:06:44.861Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Card.cs",
               "DocumentMoniker": "C:\\Users\\NightSpark\\Documents\\Project\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\Card.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Models\\Housing\\Card.cs",
               "ToolTip": "C:\\Users\\NightSpark\\Documents\\Project\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\Card.cs",
               "RelativeToolTip": "HomeFuBack\\Models\\Housing\\Card.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAcwBwAAABWAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAA8AAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-09T19:53:41.668Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\NightSpark\\Documents\\Project\\home-fu-backend-public\\HomeFuBack\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Controllers\\AuthController.cs",
@@ -139,8 +139,7 @@
               "RelativeToolTip": "HomeFuBack\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T16:07:57.609Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T16:07:57.609Z"
             },
             {
               "$type": "Document",
@@ -164,8 +163,7 @@
               "RelativeToolTip": "HomeFuBack\\Data\\Entities\\User.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T10:55:32.012Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T10:55:32.012Z"
             },
             {
               "$type": "Document",
@@ -189,8 +187,7 @@
               "RelativeToolTip": "HomeFuBack\\Program.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAAACEAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T13:04:59.89Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T13:04:59.89Z"
             },
             {
               "$type": "Document",
@@ -202,8 +199,7 @@
               "RelativeToolTip": "HomeFuBack\\Data\\ApplicationDbContext .cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T13:02:47.636Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T13:02:47.636Z"
             },
             {
               "$type": "Document",
@@ -215,8 +211,7 @@
               "RelativeToolTip": "HomeFuBack\\HomeFuBack.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-21T13:02:06.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T13:02:06.321Z"
             },
             {
               "$type": "Document",
