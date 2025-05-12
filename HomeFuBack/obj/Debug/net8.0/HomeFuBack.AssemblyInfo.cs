@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HomeFuBack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e712ea118e6da212057a916115827995c12bffa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+12d05ca642cd13e4234d1e25b2329da0a22f64ed")]
 [assembly: System.Reflection.AssemblyProductAttribute("HomeFuBack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HomeFuBack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
