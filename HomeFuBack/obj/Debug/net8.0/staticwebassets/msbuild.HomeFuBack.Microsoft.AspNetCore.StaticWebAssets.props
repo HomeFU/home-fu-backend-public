@@ -396,5 +396,41 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\fec3dc2f-022d-456b-8f42-2949585ecfbf.avif'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\3aaf9662-06ac-4c9c-9646-fb9da2a41ca2.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HomeFuBack</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HomeFuBack</BasePath>
+      <RelativePath>images/profiles/3aaf9662-06ac-4c9c-9646-fb9da2a41ca2.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>7f2lzwkn23</Fingerprint>
+      <Integrity>g4JnkX1qf4MOvR/yUSS6W5md0sRXBXNLrF+0WxgxUVE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\3aaf9662-06ac-4c9c-9646-fb9da2a41ca2.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\7b29b3d1-88d8-4a0e-add2-b2cf32c09bda.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>HomeFuBack</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/HomeFuBack</BasePath>
+      <RelativePath>images/profiles/7b29b3d1-88d8-4a0e-add2-b2cf32c09bda.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>nvvswu01xh</Fingerprint>
+      <Integrity>Yyibq6m7ZuIOmjIEiIkYbOl0u+s5tb3BlWSWvMxErEY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\profiles\7b29b3d1-88d8-4a0e-add2-b2cf32c09bda.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
   </ItemGroup>
 </Project>

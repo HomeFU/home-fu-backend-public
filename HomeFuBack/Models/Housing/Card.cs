@@ -18,17 +18,10 @@ namespace HomeFuBack.Models.Housing
         public List<CardCategory> CardCategories { get; set; }
 
         [DataType(DataType.Date)]
-<<<<<<< HEAD
-        public DateTime StartDate { get; set; } 
-
-        [DataType(DataType.Date)]
-        public DateTime? EndDate { get; set; } 
-=======
         public DateTime StartDate { get; set; }
 
         [DataType(DataType.Date)]
         public DateTime? EndDate { get; set; }
->>>>>>> main
 
         [Range(1, 5)]
         public int? Rating { get; set; }

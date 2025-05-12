@@ -89,6 +89,14 @@
       "PackagePath": "staticwebassets\\images\\fec3dc2f-022d-456b-8f42-2949585ecfbf.avif"
     },
     {
+      "Id": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\profiles\\3aaf9662-06ac-4c9c-9646-fb9da2a41ca2.png",
+      "PackagePath": "staticwebassets\\images\\profiles\\3aaf9662-06ac-4c9c-9646-fb9da2a41ca2.png"
+    },
+    {
+      "Id": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\profiles\\7b29b3d1-88d8-4a0e-add2-b2cf32c09bda.jpg",
+      "PackagePath": "staticwebassets\\images\\profiles\\7b29b3d1-88d8-4a0e-add2-b2cf32c09bda.jpg"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HomeFuBack.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
