@@ -54,10 +54,7 @@ namespace HomeFuBack.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutLocation(int id, Location location)
         {
-            if (id != location.Id)
-            {
-                return BadRequest();
-            }
+            location.Id = id; // Присваиваем ID из URL объекту location
 
             _context.Entry(location).State = EntityState.Modified;
 

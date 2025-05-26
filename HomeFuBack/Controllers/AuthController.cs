@@ -8,7 +8,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System;
-using HomeFuBack.Helpers;
+using HomeFuBack.Helpers; // Убедитесь, что это действительно используется, если нет, можно удалить
 using HomeFuBack.Models.Users;
 using HomeFuBack.Data.DTO;
 using Microsoft.Extensions.Configuration;
@@ -35,7 +35,10 @@ public class AuthController : ControllerBase
             return BadRequest("Email уже используется");
         }
 
+        // 1) При регистрации указывал роль "USER"
         user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
+        user.Role = "User"; // Присваиваем роль "User" по умолчанию
+
         _context.Users.Add(user);
         await _context.SaveChangesAsync();
 
@@ -70,7 +73,13 @@ public class AuthController : ControllerBase
         _context.Tokens.Add(tokenEntity);
         await _context.SaveChangesAsync();
 
-        return Ok(new { Token = accessToken, RefreshToken = refreshToken });
+        // 2) При авторизации возвращал роль юзера
+        return Ok(new
+        {
+            Token = accessToken,
+            RefreshToken = refreshToken,
+            Role = user.Role // Возвращаем роль пользователя
+        });
     }
 
     private string GenerateJwtToken(User user)
@@ -85,7 +94,7 @@ public class AuthController : ControllerBase
         {
             new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
             new Claim(ClaimTypes.Email, user.Email),
-            new Claim(ClaimTypes.Role, user.Role ?? "User")
+            new Claim(ClaimTypes.Role, user.Role ?? "User") // Убедимся, что роль всегда есть в токене
         };
 
         var tokenDescriptor = new SecurityTokenDescriptor

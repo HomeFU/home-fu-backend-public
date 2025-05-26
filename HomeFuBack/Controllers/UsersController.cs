@@ -62,6 +62,39 @@ namespace HomeFuBack.Controllers
             return user;
         }
 
+        [HttpGet("me")] // Новый эндпоинт
+        public async Task<ActionResult<User>> GetCurrentUser()
+        {
+            // Получаем ID пользователя из JWT токена
+            var userIdFromToken = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (string.IsNullOrEmpty(userIdFromToken))
+            {
+                // Это не должно произойти, если [Authorize] работает корректно,
+                // но всегда лучше проверить
+                return Unauthorized("User ID not found in token.");
+            }
+
+            // Пытаемся распарсить ID в GUID
+            if (!Guid.TryParse(userIdFromToken, out Guid userIdGuid))
+            {
+                return Unauthorized("Invalid user ID format in token.");
+            }
+
+            // Ищем пользователя в базе данных по полученному GUID
+            var user = await _context.Users.FindAsync(userIdGuid);
+
+            if (user == null)
+            {
+                // Пользователь не найден в базе данных, хотя токен был валиден.
+                // Это может указывать на удаленный аккаунт или проблему с данными.
+                return NotFound("User not found.");
+            }
+
+            // Возвращаем данные пользователя
+            return user;
+        }
+
         // PUT: api/users/{id}
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUser(Guid id, [FromBody] User updatedUser)

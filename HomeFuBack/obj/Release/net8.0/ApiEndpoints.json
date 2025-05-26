@@ -254,7 +254,7 @@
   {
     "ContainingType": "HomeFuBack.Controllers.CategoriesController",
     "Method": "GetCategories",
-    "RelativePath": "api/Categories",
+    "RelativePath": "api/categories",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -274,15 +274,20 @@
   {
     "ContainingType": "HomeFuBack.Controllers.CategoriesController",
     "Method": "PostCategory",
-    "RelativePath": "api/Categories",
+    "RelativePath": "api/categories",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "category",
-        "Type": "HomeFuBack.Models.Housing.Category",
-        "IsRequired": true
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
@@ -300,7 +305,7 @@
   {
     "ContainingType": "HomeFuBack.Controllers.CategoriesController",
     "Method": "GetCategory",
-    "RelativePath": "api/Categories/{id}",
+    "RelativePath": "api/categories/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -326,7 +331,7 @@
   {
     "ContainingType": "HomeFuBack.Controllers.CategoriesController",
     "Method": "PutCategory",
-    "RelativePath": "api/Categories/{id}",
+    "RelativePath": "api/categories/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -337,9 +342,14 @@
         "IsRequired": true
       },
       {
-        "Name": "category",
-        "Type": "HomeFuBack.Models.Housing.Category",
-        "IsRequired": true
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImageFile",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -347,7 +357,7 @@
   {
     "ContainingType": "HomeFuBack.Controllers.CategoriesController",
     "Method": "DeleteCategory",
-    "RelativePath": "api/Categories/{id}",
+    "RelativePath": "api/categories/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -356,6 +366,27 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeFuBack.Controllers.CategoriesController",
+    "Method": "UploadCategoryImage",
+    "RelativePath": "api/categories/{id}/image",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -594,5 +625,25 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HomeFuBack.Controllers.UsersController",
+    "Method": "GetCurrentUser",
+    "RelativePath": "api/users/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "HomeFuBack.Models.Users.User",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]

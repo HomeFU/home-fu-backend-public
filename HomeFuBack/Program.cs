@@ -67,6 +67,10 @@ var provider = new FileExtensionContentTypeProvider(new Dictionary<string, strin
 {
     [".avif"] = "image/avif",
     [".webp"] = "image/webp",
+    [".jpg"] = "image/jpg",
+    [".jpeg"] = "image/jpeg",
+    [".png"] = "image/png",
+    [".svg"] = "image/svg+xml",
     // Добавьте другие MIME-типы, если необходимо
 });
 
