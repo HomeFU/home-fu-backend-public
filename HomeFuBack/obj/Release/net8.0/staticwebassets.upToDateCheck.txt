@@ -16,6 +16,7 @@ wwwroot\images\9e20112d-37fd-48f1-be13-777d7b1fdf7c.avif
 wwwroot\images\a9e934fc-6010-47c2-ad03-09a2f3f0eb61.avif
 wwwroot\images\ac2c3394-284b-43d1-9077-c718ad47482d.jpg
 wwwroot\images\adf7a170-16cb-42ee-848b-13be2d8c5a65.avif
+wwwroot\images\amenities\amenity_2_a2d698bb-f15a-4738-bfe4-c00a2cd721e0.png
 wwwroot\images\b0eb0ed4-abe0-4901-a9a0-34ac4eb28244.avif
 wwwroot\images\bc5a576f-c93d-4e73-b535-50cb01b23ef9.avif
 wwwroot\images\categories\category_1_130aedbf-c800-4a98-ad4c-a6473b02749c.png

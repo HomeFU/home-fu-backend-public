@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "n8tCErcoUh2ZxgzK5dMkHJ87yu0Urn00Ys3xScrtn/k=",
+  "Hash": "S6IL7Lwq2ehvS5HXpNBjO/Uvsc4f0Grl+g1RAGk7yRk=",
   "Source": "HomeFuBack",
   "BasePath": "_content/HomeFuBack",
   "Mode": "Default",
@@ -393,6 +393,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\adf7a170-16cb-42ee-848b-13be2d8c5a65.avif"
+    },
+    {
+      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\amenities\\amenity_2_a2d698bb-f15a-4738-bfe4-c00a2cd721e0.png",
+      "SourceId": "HomeFuBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "BasePath": "_content/HomeFuBack",
+      "RelativePath": "images/amenities/amenity_2_a2d698bb-f15a-4738-bfe4-c00a2cd721e0#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "aju3fibcvo",
+      "Integrity": "qpvd1SJ79YbTdQkbwlYBTM7cnUWn5RH1THMnkJJsW+8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\amenities\\amenity_2_a2d698bb-f15a-4738-bfe4-c00a2cd721e0.png"
     },
     {
       "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\b0eb0ed4-abe0-4901-a9a0-34ac4eb28244.avif",
@@ -2415,6 +2436,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-ARzen3ysf1AEgSUcIVhTClgiD37wgWS8jXXOe5dXLk4="
+        }
+      ]
+    },
+    {
+      "Route": "images/amenities/amenity_2_a2d698bb-f15a-4738-bfe4-c00a2cd721e0.aju3fibcvo.png",
+      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\amenities\\amenity_2_a2d698bb-f15a-4738-bfe4-c00a2cd721e0.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5534"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qpvd1SJ79YbTdQkbwlYBTM7cnUWn5RH1THMnkJJsW+8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 27 May 2025 18:36:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "aju3fibcvo"
+        },
+        {
+          "Name": "label",
+          "Value": "images/amenities/amenity_2_a2d698bb-f15a-4738-bfe4-c00a2cd721e0.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qpvd1SJ79YbTdQkbwlYBTM7cnUWn5RH1THMnkJJsW+8="
+        }
+      ]
+    },
+    {
+      "Route": "images/amenities/amenity_2_a2d698bb-f15a-4738-bfe4-c00a2cd721e0.png",
+      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\amenities\\amenity_2_a2d698bb-f15a-4738-bfe4-c00a2cd721e0.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5534"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qpvd1SJ79YbTdQkbwlYBTM7cnUWn5RH1THMnkJJsW+8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 27 May 2025 18:36:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qpvd1SJ79YbTdQkbwlYBTM7cnUWn5RH1THMnkJJsW+8="
         }
       ]
     },

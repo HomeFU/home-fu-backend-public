@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HomeFuBack.Models.Housing
 {
@@ -30,6 +31,10 @@ namespace HomeFuBack.Models.Housing
 
         [DataType(DataType.Currency)]
         public decimal Price { get; set; }
+
+        public int? CardDetailId { get; set; } // Nullable, если детальная информация может отсутствовать
+        [ForeignKey("CardDetailId")]
+        public CardDetail? CardDetail { get; set; } // Навигационное свойство
 
         public bool IsDeleted { get; set; }
 
