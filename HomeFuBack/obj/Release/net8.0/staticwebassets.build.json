@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "S6IL7Lwq2ehvS5HXpNBjO/Uvsc4f0Grl+g1RAGk7yRk=",
+  "Hash": "QyfbFN5vEQq3ZRo8EKbC0ZVFqHjkzNWPDrSgfmmYycM=",
   "Source": "HomeFuBack",
   "BasePath": "_content/HomeFuBack",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "HomeFuBack\\wwwroot",
       "Source": "HomeFuBack",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\08e785d1-96c0-4274-8fbc-263e36f102e0.jpg",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\08e785d1-96c0-4274-8fbc-263e36f102e0.jpg",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/08e785d1-96c0-4274-8fbc-263e36f102e0#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -38,10 +38,10 @@
       "OriginalItemSpec": "wwwroot\\images\\08e785d1-96c0-4274-8fbc-263e36f102e0.jpg"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\0bb972ee-56bf-4d7e-af58-c069b1ced0b9.jpg",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\0bb972ee-56bf-4d7e-af58-c069b1ced0b9.jpg",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/0bb972ee-56bf-4d7e-af58-c069b1ced0b9#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -59,10 +59,10 @@
       "OriginalItemSpec": "wwwroot\\images\\0bb972ee-56bf-4d7e-af58-c069b1ced0b9.jpg"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\20d07d05-cb23-446e-95d0-2aafd20e363c.jpg",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\20d07d05-cb23-446e-95d0-2aafd20e363c.jpg",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/20d07d05-cb23-446e-95d0-2aafd20e363c#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -80,10 +80,10 @@
       "OriginalItemSpec": "wwwroot\\images\\20d07d05-cb23-446e-95d0-2aafd20e363c.jpg"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\39db1ee7-0300-46a0-9601-fce2e1bc6859.webp",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\39db1ee7-0300-46a0-9601-fce2e1bc6859.webp",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/39db1ee7-0300-46a0-9601-fce2e1bc6859#[.{fingerprint}]?.webp",
       "AssetKind": "All",
@@ -101,10 +101,10 @@
       "OriginalItemSpec": "wwwroot\\images\\39db1ee7-0300-46a0-9601-fce2e1bc6859.webp"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\3c6244f5-d5c1-4921-8bbe-200c2ba5e782.avif",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\3c6244f5-d5c1-4921-8bbe-200c2ba5e782.avif",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/3c6244f5-d5c1-4921-8bbe-200c2ba5e782#[.{fingerprint}]?.avif",
       "AssetKind": "All",
@@ -122,10 +122,10 @@
       "OriginalItemSpec": "wwwroot\\images\\3c6244f5-d5c1-4921-8bbe-200c2ba5e782.avif"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\4aa807e2-38cf-4f70-9705-54108a904781.avif",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\4aa807e2-38cf-4f70-9705-54108a904781.avif",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/4aa807e2-38cf-4f70-9705-54108a904781#[.{fingerprint}]?.avif",
       "AssetKind": "All",
@@ -143,10 +143,10 @@
       "OriginalItemSpec": "wwwroot\\images\\4aa807e2-38cf-4f70-9705-54108a904781.avif"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\5619a883-de54-4cff-b351-f2e4dabe0b8e.webp",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\5619a883-de54-4cff-b351-f2e4dabe0b8e.webp",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/5619a883-de54-4cff-b351-f2e4dabe0b8e#[.{fingerprint}]?.webp",
       "AssetKind": "All",
@@ -164,10 +164,10 @@
       "OriginalItemSpec": "wwwroot\\images\\5619a883-de54-4cff-b351-f2e4dabe0b8e.webp"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\5efa10d6-17a5-43bd-a91b-501ff9b065db.avif",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\5efa10d6-17a5-43bd-a91b-501ff9b065db.avif",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/5efa10d6-17a5-43bd-a91b-501ff9b065db#[.{fingerprint}]?.avif",
       "AssetKind": "All",
@@ -185,10 +185,10 @@
       "OriginalItemSpec": "wwwroot\\images\\5efa10d6-17a5-43bd-a91b-501ff9b065db.avif"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\63df7c61-0be1-4aec-91c0-3bad0e8601b0.avif",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\63df7c61-0be1-4aec-91c0-3bad0e8601b0.avif",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/63df7c61-0be1-4aec-91c0-3bad0e8601b0#[.{fingerprint}]?.avif",
       "AssetKind": "All",
@@ -206,10 +206,10 @@
       "OriginalItemSpec": "wwwroot\\images\\63df7c61-0be1-4aec-91c0-3bad0e8601b0.avif"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\742956f3-e6a6-4755-a213-a09ce8853a34.avif",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\742956f3-e6a6-4755-a213-a09ce8853a34.avif",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/742956f3-e6a6-4755-a213-a09ce8853a34#[.{fingerprint}]?.avif",
       "AssetKind": "All",
@@ -227,10 +227,10 @@
       "OriginalItemSpec": "wwwroot\\images\\742956f3-e6a6-4755-a213-a09ce8853a34.avif"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\7f6e929c-766e-45ce-9e53-85ef4f7ddb68.avif",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\7f6e929c-766e-45ce-9e53-85ef4f7ddb68.avif",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/7f6e929c-766e-45ce-9e53-85ef4f7ddb68#[.{fingerprint}]?.avif",
       "AssetKind": "All",
@@ -248,10 +248,10 @@
       "OriginalItemSpec": "wwwroot\\images\\7f6e929c-766e-45ce-9e53-85ef4f7ddb68.avif"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\871d145b-1771-4b33-9c3a-d2487cc513b5.avif",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\871d145b-1771-4b33-9c3a-d2487cc513b5.avif",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/871d145b-1771-4b33-9c3a-d2487cc513b5#[.{fingerprint}]?.avif",
       "AssetKind": "All",
@@ -269,10 +269,10 @@
       "OriginalItemSpec": "wwwroot\\images\\871d145b-1771-4b33-9c3a-d2487cc513b5.avif"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\9ad5e41e-2995-4a54-b2dd-068409bd715d.avif",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\9ad5e41e-2995-4a54-b2dd-068409bd715d.avif",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/9ad5e41e-2995-4a54-b2dd-068409bd715d#[.{fingerprint}]?.avif",
       "AssetKind": "All",
@@ -290,10 +290,10 @@
       "OriginalItemSpec": "wwwroot\\images\\9ad5e41e-2995-4a54-b2dd-068409bd715d.avif"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\9e0ed9d3-f9b9-4b13-8849-38c31c63ad24.avif",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\9e0ed9d3-f9b9-4b13-8849-38c31c63ad24.avif",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/9e0ed9d3-f9b9-4b13-8849-38c31c63ad24#[.{fingerprint}]?.avif",
       "AssetKind": "All",
@@ -311,10 +311,10 @@
       "OriginalItemSpec": "wwwroot\\images\\9e0ed9d3-f9b9-4b13-8849-38c31c63ad24.avif"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\9e20112d-37fd-48f1-be13-777d7b1fdf7c.avif",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\9e20112d-37fd-48f1-be13-777d7b1fdf7c.avif",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/9e20112d-37fd-48f1-be13-777d7b1fdf7c#[.{fingerprint}]?.avif",
       "AssetKind": "All",
@@ -332,10 +332,10 @@
       "OriginalItemSpec": "wwwroot\\images\\9e20112d-37fd-48f1-be13-777d7b1fdf7c.avif"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\a9e934fc-6010-47c2-ad03-09a2f3f0eb61.avif",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\a9e934fc-6010-47c2-ad03-09a2f3f0eb61.avif",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/a9e934fc-6010-47c2-ad03-09a2f3f0eb61#[.{fingerprint}]?.avif",
       "AssetKind": "All",
@@ -353,10 +353,10 @@
       "OriginalItemSpec": "wwwroot\\images\\a9e934fc-6010-47c2-ad03-09a2f3f0eb61.avif"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\ac2c3394-284b-43d1-9077-c718ad47482d.jpg",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\ac2c3394-284b-43d1-9077-c718ad47482d.jpg",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/ac2c3394-284b-43d1-9077-c718ad47482d#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\images\\ac2c3394-284b-43d1-9077-c718ad47482d.jpg"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\adf7a170-16cb-42ee-848b-13be2d8c5a65.avif",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\adf7a170-16cb-42ee-848b-13be2d8c5a65.avif",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/adf7a170-16cb-42ee-848b-13be2d8c5a65#[.{fingerprint}]?.avif",
       "AssetKind": "All",
@@ -395,10 +395,10 @@
       "OriginalItemSpec": "wwwroot\\images\\adf7a170-16cb-42ee-848b-13be2d8c5a65.avif"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\amenities\\amenity_2_a2d698bb-f15a-4738-bfe4-c00a2cd721e0.png",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\amenities\\amenity_2_a2d698bb-f15a-4738-bfe4-c00a2cd721e0.png",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/amenities/amenity_2_a2d698bb-f15a-4738-bfe4-c00a2cd721e0#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\images\\amenities\\amenity_2_a2d698bb-f15a-4738-bfe4-c00a2cd721e0.png"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\b0eb0ed4-abe0-4901-a9a0-34ac4eb28244.avif",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\b0eb0ed4-abe0-4901-a9a0-34ac4eb28244.avif",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/b0eb0ed4-abe0-4901-a9a0-34ac4eb28244#[.{fingerprint}]?.avif",
       "AssetKind": "All",
@@ -437,10 +437,10 @@
       "OriginalItemSpec": "wwwroot\\images\\b0eb0ed4-abe0-4901-a9a0-34ac4eb28244.avif"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\bc5a576f-c93d-4e73-b535-50cb01b23ef9.avif",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\bc5a576f-c93d-4e73-b535-50cb01b23ef9.avif",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/bc5a576f-c93d-4e73-b535-50cb01b23ef9#[.{fingerprint}]?.avif",
       "AssetKind": "All",
@@ -458,10 +458,10 @@
       "OriginalItemSpec": "wwwroot\\images\\bc5a576f-c93d-4e73-b535-50cb01b23ef9.avif"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_1_130aedbf-c800-4a98-ad4c-a6473b02749c.png",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_1_130aedbf-c800-4a98-ad4c-a6473b02749c.png",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/categories/category_1_130aedbf-c800-4a98-ad4c-a6473b02749c#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -479,10 +479,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\category_1_130aedbf-c800-4a98-ad4c-a6473b02749c.png"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_1_15415e78-8f86-4163-b873-3238f26496a4.png",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_1_15415e78-8f86-4163-b873-3238f26496a4.png",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/categories/category_1_15415e78-8f86-4163-b873-3238f26496a4#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -500,10 +500,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\category_1_15415e78-8f86-4163-b873-3238f26496a4.png"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_10_67ee3f83-85ec-4c20-83b3-a36f4e1f4033.png",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_10_67ee3f83-85ec-4c20-83b3-a36f4e1f4033.png",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/categories/category_10_67ee3f83-85ec-4c20-83b3-a36f4e1f4033#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -521,10 +521,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\category_10_67ee3f83-85ec-4c20-83b3-a36f4e1f4033.png"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_11_c3a7c8e9-7956-4294-95ed-4b0da2e42faf.png",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_11_c3a7c8e9-7956-4294-95ed-4b0da2e42faf.png",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/categories/category_11_c3a7c8e9-7956-4294-95ed-4b0da2e42faf#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -542,10 +542,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\category_11_c3a7c8e9-7956-4294-95ed-4b0da2e42faf.png"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_12_08b328ed-6bb4-455f-bd57-2074f6748442.png",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_12_08b328ed-6bb4-455f-bd57-2074f6748442.png",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/categories/category_12_08b328ed-6bb4-455f-bd57-2074f6748442#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -563,10 +563,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\category_12_08b328ed-6bb4-455f-bd57-2074f6748442.png"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_13_6bc17ad7-d56a-49c8-a97d-1f400086b18c.png",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_13_6bc17ad7-d56a-49c8-a97d-1f400086b18c.png",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/categories/category_13_6bc17ad7-d56a-49c8-a97d-1f400086b18c#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -584,10 +584,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\category_13_6bc17ad7-d56a-49c8-a97d-1f400086b18c.png"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_14_7276af30-ebfa-4e23-8c9b-e0520fa7cb7c.png",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_14_7276af30-ebfa-4e23-8c9b-e0520fa7cb7c.png",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/categories/category_14_7276af30-ebfa-4e23-8c9b-e0520fa7cb7c#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -605,10 +605,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\category_14_7276af30-ebfa-4e23-8c9b-e0520fa7cb7c.png"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_15_210313f1-2e10-4dc5-98ae-c7ec74ab2f4a.png",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_15_210313f1-2e10-4dc5-98ae-c7ec74ab2f4a.png",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/categories/category_15_210313f1-2e10-4dc5-98ae-c7ec74ab2f4a#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -626,10 +626,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\category_15_210313f1-2e10-4dc5-98ae-c7ec74ab2f4a.png"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_16_aad5e30f-1434-43b1-9c65-4cc21683f1bc.png",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_16_aad5e30f-1434-43b1-9c65-4cc21683f1bc.png",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/categories/category_16_aad5e30f-1434-43b1-9c65-4cc21683f1bc#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -647,10 +647,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\category_16_aad5e30f-1434-43b1-9c65-4cc21683f1bc.png"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_18_3ed2ba80-b1bf-4e6e-8264-b001a65a82fb.png",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_18_3ed2ba80-b1bf-4e6e-8264-b001a65a82fb.png",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/categories/category_18_3ed2ba80-b1bf-4e6e-8264-b001a65a82fb#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -668,10 +668,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\category_18_3ed2ba80-b1bf-4e6e-8264-b001a65a82fb.png"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_2_83802926-1cb0-4b30-9483-c81df80ffa3d.png",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_2_83802926-1cb0-4b30-9483-c81df80ffa3d.png",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/categories/category_2_83802926-1cb0-4b30-9483-c81df80ffa3d#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -689,10 +689,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\category_2_83802926-1cb0-4b30-9483-c81df80ffa3d.png"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_3_4633ca50-4dcc-4839-8b02-7223d424d8c8.png",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_3_4633ca50-4dcc-4839-8b02-7223d424d8c8.png",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/categories/category_3_4633ca50-4dcc-4839-8b02-7223d424d8c8#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -710,10 +710,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\category_3_4633ca50-4dcc-4839-8b02-7223d424d8c8.png"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_4_c77f6666-841d-49e6-82de-0ff19e988aef.png",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_4_c77f6666-841d-49e6-82de-0ff19e988aef.png",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/categories/category_4_c77f6666-841d-49e6-82de-0ff19e988aef#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -731,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\category_4_c77f6666-841d-49e6-82de-0ff19e988aef.png"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_5_0e201ab9-3566-4a15-98df-c30512655ff1.png",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_5_0e201ab9-3566-4a15-98df-c30512655ff1.png",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/categories/category_5_0e201ab9-3566-4a15-98df-c30512655ff1#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -752,10 +752,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\category_5_0e201ab9-3566-4a15-98df-c30512655ff1.png"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_6_67bfb549-17a1-4db4-9644-20bba765e36f.png",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_6_67bfb549-17a1-4db4-9644-20bba765e36f.png",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/categories/category_6_67bfb549-17a1-4db4-9644-20bba765e36f#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -773,10 +773,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\category_6_67bfb549-17a1-4db4-9644-20bba765e36f.png"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_7_2f700059-e254-4359-b25d-c3983f7571ee.png",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_7_2f700059-e254-4359-b25d-c3983f7571ee.png",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/categories/category_7_2f700059-e254-4359-b25d-c3983f7571ee#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -794,10 +794,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\category_7_2f700059-e254-4359-b25d-c3983f7571ee.png"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_8_5be53174-0fd3-4158-8e63-5eb4166d0fc1.png",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_8_5be53174-0fd3-4158-8e63-5eb4166d0fc1.png",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/categories/category_8_5be53174-0fd3-4158-8e63-5eb4166d0fc1#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\category_8_5be53174-0fd3-4158-8e63-5eb4166d0fc1.png"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_9_ef6fde0b-e8aa-46fa-9b56-6a738cc87077.png",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_9_ef6fde0b-e8aa-46fa-9b56-6a738cc87077.png",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/categories/category_9_ef6fde0b-e8aa-46fa-9b56-6a738cc87077#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -836,10 +836,10 @@
       "OriginalItemSpec": "wwwroot\\images\\categories\\category_9_ef6fde0b-e8aa-46fa-9b56-6a738cc87077.png"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\d708f70b-5133-4e04-9400-f15e13443094.webp",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\d708f70b-5133-4e04-9400-f15e13443094.webp",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/d708f70b-5133-4e04-9400-f15e13443094#[.{fingerprint}]?.webp",
       "AssetKind": "All",
@@ -857,10 +857,10 @@
       "OriginalItemSpec": "wwwroot\\images\\d708f70b-5133-4e04-9400-f15e13443094.webp"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\e2bfbc3f-740c-423c-a732-cd365af77715.avif",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\e2bfbc3f-740c-423c-a732-cd365af77715.avif",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/e2bfbc3f-740c-423c-a732-cd365af77715#[.{fingerprint}]?.avif",
       "AssetKind": "All",
@@ -878,10 +878,10 @@
       "OriginalItemSpec": "wwwroot\\images\\e2bfbc3f-740c-423c-a732-cd365af77715.avif"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\e3f8bd1b-ca0f-4f17-8e59-7f37c26e57ce.avif",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\e3f8bd1b-ca0f-4f17-8e59-7f37c26e57ce.avif",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/e3f8bd1b-ca0f-4f17-8e59-7f37c26e57ce#[.{fingerprint}]?.avif",
       "AssetKind": "All",
@@ -899,10 +899,10 @@
       "OriginalItemSpec": "wwwroot\\images\\e3f8bd1b-ca0f-4f17-8e59-7f37c26e57ce.avif"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\fec3dc2f-022d-456b-8f42-2949585ecfbf.avif",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\fec3dc2f-022d-456b-8f42-2949585ecfbf.avif",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/fec3dc2f-022d-456b-8f42-2949585ecfbf#[.{fingerprint}]?.avif",
       "AssetKind": "All",
@@ -920,10 +920,10 @@
       "OriginalItemSpec": "wwwroot\\images\\fec3dc2f-022d-456b-8f42-2949585ecfbf.avif"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\profiles\\3aaf9662-06ac-4c9c-9646-fb9da2a41ca2.png",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\profiles\\3aaf9662-06ac-4c9c-9646-fb9da2a41ca2.png",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/profiles/3aaf9662-06ac-4c9c-9646-fb9da2a41ca2#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -941,10 +941,10 @@
       "OriginalItemSpec": "wwwroot\\images\\profiles\\3aaf9662-06ac-4c9c-9646-fb9da2a41ca2.png"
     },
     {
-      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\profiles\\7b29b3d1-88d8-4a0e-add2-b2cf32c09bda.jpg",
+      "Identity": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\profiles\\7b29b3d1-88d8-4a0e-add2-b2cf32c09bda.jpg",
       "SourceId": "HomeFuBack",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "ContentRoot": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
       "BasePath": "_content/HomeFuBack",
       "RelativePath": "images/profiles/7b29b3d1-88d8-4a0e-add2-b2cf32c09bda#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
@@ -965,7 +965,7 @@
   "Endpoints": [
     {
       "Route": "images/08e785d1-96c0-4274-8fbc-263e36f102e0.jpg",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\08e785d1-96c0-4274-8fbc-263e36f102e0.jpg",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\08e785d1-96c0-4274-8fbc-263e36f102e0.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -986,7 +986,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1002,7 +1002,7 @@
     },
     {
       "Route": "images/08e785d1-96c0-4274-8fbc-263e36f102e0.yzt0mlolj1.jpg",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\08e785d1-96c0-4274-8fbc-263e36f102e0.jpg",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\08e785d1-96c0-4274-8fbc-263e36f102e0.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1023,7 +1023,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1047,7 +1047,7 @@
     },
     {
       "Route": "images/0bb972ee-56bf-4d7e-af58-c069b1ced0b9.ekkpnnkq4a.jpg",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\0bb972ee-56bf-4d7e-af58-c069b1ced0b9.jpg",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\0bb972ee-56bf-4d7e-af58-c069b1ced0b9.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1068,7 +1068,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1092,7 +1092,7 @@
     },
     {
       "Route": "images/0bb972ee-56bf-4d7e-af58-c069b1ced0b9.jpg",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\0bb972ee-56bf-4d7e-af58-c069b1ced0b9.jpg",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\0bb972ee-56bf-4d7e-af58-c069b1ced0b9.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1113,7 +1113,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1129,7 +1129,7 @@
     },
     {
       "Route": "images/20d07d05-cb23-446e-95d0-2aafd20e363c.ekkpnnkq4a.jpg",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\20d07d05-cb23-446e-95d0-2aafd20e363c.jpg",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\20d07d05-cb23-446e-95d0-2aafd20e363c.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1150,7 +1150,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 12:46:29 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1174,7 +1174,7 @@
     },
     {
       "Route": "images/20d07d05-cb23-446e-95d0-2aafd20e363c.jpg",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\20d07d05-cb23-446e-95d0-2aafd20e363c.jpg",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\20d07d05-cb23-446e-95d0-2aafd20e363c.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1195,7 +1195,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 12:46:29 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1211,7 +1211,7 @@
     },
     {
       "Route": "images/39db1ee7-0300-46a0-9601-fce2e1bc6859.sft8tmmpg6.webp",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\39db1ee7-0300-46a0-9601-fce2e1bc6859.webp",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\39db1ee7-0300-46a0-9601-fce2e1bc6859.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1232,7 +1232,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1256,7 +1256,7 @@
     },
     {
       "Route": "images/39db1ee7-0300-46a0-9601-fce2e1bc6859.webp",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\39db1ee7-0300-46a0-9601-fce2e1bc6859.webp",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\39db1ee7-0300-46a0-9601-fce2e1bc6859.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1277,7 +1277,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1293,7 +1293,7 @@
     },
     {
       "Route": "images/3c6244f5-d5c1-4921-8bbe-200c2ba5e782.2tly5pk5am.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\3c6244f5-d5c1-4921-8bbe-200c2ba5e782.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\3c6244f5-d5c1-4921-8bbe-200c2ba5e782.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1314,7 +1314,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1338,7 +1338,7 @@
     },
     {
       "Route": "images/3c6244f5-d5c1-4921-8bbe-200c2ba5e782.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\3c6244f5-d5c1-4921-8bbe-200c2ba5e782.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\3c6244f5-d5c1-4921-8bbe-200c2ba5e782.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1359,7 +1359,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1375,7 +1375,7 @@
     },
     {
       "Route": "images/4aa807e2-38cf-4f70-9705-54108a904781.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\4aa807e2-38cf-4f70-9705-54108a904781.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\4aa807e2-38cf-4f70-9705-54108a904781.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1396,7 +1396,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1412,7 +1412,7 @@
     },
     {
       "Route": "images/4aa807e2-38cf-4f70-9705-54108a904781.ojgnb2ke88.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\4aa807e2-38cf-4f70-9705-54108a904781.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\4aa807e2-38cf-4f70-9705-54108a904781.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1433,7 +1433,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1457,7 +1457,7 @@
     },
     {
       "Route": "images/5619a883-de54-4cff-b351-f2e4dabe0b8e.axm7jfb5jw.webp",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\5619a883-de54-4cff-b351-f2e4dabe0b8e.webp",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\5619a883-de54-4cff-b351-f2e4dabe0b8e.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1478,7 +1478,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1502,7 +1502,7 @@
     },
     {
       "Route": "images/5619a883-de54-4cff-b351-f2e4dabe0b8e.webp",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\5619a883-de54-4cff-b351-f2e4dabe0b8e.webp",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\5619a883-de54-4cff-b351-f2e4dabe0b8e.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1523,7 +1523,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1539,7 +1539,7 @@
     },
     {
       "Route": "images/5efa10d6-17a5-43bd-a91b-501ff9b065db.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\5efa10d6-17a5-43bd-a91b-501ff9b065db.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\5efa10d6-17a5-43bd-a91b-501ff9b065db.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1560,7 +1560,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1576,7 +1576,7 @@
     },
     {
       "Route": "images/5efa10d6-17a5-43bd-a91b-501ff9b065db.t3pm44mb9g.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\5efa10d6-17a5-43bd-a91b-501ff9b065db.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\5efa10d6-17a5-43bd-a91b-501ff9b065db.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1597,7 +1597,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1621,7 +1621,7 @@
     },
     {
       "Route": "images/63df7c61-0be1-4aec-91c0-3bad0e8601b0.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\63df7c61-0be1-4aec-91c0-3bad0e8601b0.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\63df7c61-0be1-4aec-91c0-3bad0e8601b0.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1642,7 +1642,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1658,7 +1658,7 @@
     },
     {
       "Route": "images/63df7c61-0be1-4aec-91c0-3bad0e8601b0.cnxo6dylo9.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\63df7c61-0be1-4aec-91c0-3bad0e8601b0.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\63df7c61-0be1-4aec-91c0-3bad0e8601b0.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1679,7 +1679,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1703,7 +1703,7 @@
     },
     {
       "Route": "images/742956f3-e6a6-4755-a213-a09ce8853a34.achh7jw7dg.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\742956f3-e6a6-4755-a213-a09ce8853a34.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\742956f3-e6a6-4755-a213-a09ce8853a34.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1724,7 +1724,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1748,7 +1748,7 @@
     },
     {
       "Route": "images/742956f3-e6a6-4755-a213-a09ce8853a34.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\742956f3-e6a6-4755-a213-a09ce8853a34.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\742956f3-e6a6-4755-a213-a09ce8853a34.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1769,7 +1769,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1785,7 +1785,7 @@
     },
     {
       "Route": "images/7f6e929c-766e-45ce-9e53-85ef4f7ddb68.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\7f6e929c-766e-45ce-9e53-85ef4f7ddb68.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\7f6e929c-766e-45ce-9e53-85ef4f7ddb68.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1806,7 +1806,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1822,7 +1822,7 @@
     },
     {
       "Route": "images/7f6e929c-766e-45ce-9e53-85ef4f7ddb68.q7lf35v54j.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\7f6e929c-766e-45ce-9e53-85ef4f7ddb68.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\7f6e929c-766e-45ce-9e53-85ef4f7ddb68.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1843,7 +1843,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1867,7 +1867,7 @@
     },
     {
       "Route": "images/871d145b-1771-4b33-9c3a-d2487cc513b5.0qioz28d2c.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\871d145b-1771-4b33-9c3a-d2487cc513b5.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\871d145b-1771-4b33-9c3a-d2487cc513b5.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1888,7 +1888,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1912,7 +1912,7 @@
     },
     {
       "Route": "images/871d145b-1771-4b33-9c3a-d2487cc513b5.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\871d145b-1771-4b33-9c3a-d2487cc513b5.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\871d145b-1771-4b33-9c3a-d2487cc513b5.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1933,7 +1933,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1949,7 +1949,7 @@
     },
     {
       "Route": "images/9ad5e41e-2995-4a54-b2dd-068409bd715d.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\9ad5e41e-2995-4a54-b2dd-068409bd715d.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\9ad5e41e-2995-4a54-b2dd-068409bd715d.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1970,7 +1970,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1986,7 +1986,7 @@
     },
     {
       "Route": "images/9ad5e41e-2995-4a54-b2dd-068409bd715d.ezlq7h4vuf.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\9ad5e41e-2995-4a54-b2dd-068409bd715d.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\9ad5e41e-2995-4a54-b2dd-068409bd715d.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2007,7 +2007,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:21 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2031,7 +2031,7 @@
     },
     {
       "Route": "images/9e0ed9d3-f9b9-4b13-8849-38c31c63ad24.3luqyl67td.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\9e0ed9d3-f9b9-4b13-8849-38c31c63ad24.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\9e0ed9d3-f9b9-4b13-8849-38c31c63ad24.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2052,7 +2052,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2076,7 +2076,7 @@
     },
     {
       "Route": "images/9e0ed9d3-f9b9-4b13-8849-38c31c63ad24.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\9e0ed9d3-f9b9-4b13-8849-38c31c63ad24.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\9e0ed9d3-f9b9-4b13-8849-38c31c63ad24.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2097,7 +2097,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2113,7 +2113,7 @@
     },
     {
       "Route": "images/9e20112d-37fd-48f1-be13-777d7b1fdf7c.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\9e20112d-37fd-48f1-be13-777d7b1fdf7c.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\9e20112d-37fd-48f1-be13-777d7b1fdf7c.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2134,7 +2134,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2150,7 +2150,7 @@
     },
     {
       "Route": "images/9e20112d-37fd-48f1-be13-777d7b1fdf7c.comqos5o69.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\9e20112d-37fd-48f1-be13-777d7b1fdf7c.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\9e20112d-37fd-48f1-be13-777d7b1fdf7c.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2171,7 +2171,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2195,7 +2195,7 @@
     },
     {
       "Route": "images/a9e934fc-6010-47c2-ad03-09a2f3f0eb61.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\a9e934fc-6010-47c2-ad03-09a2f3f0eb61.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\a9e934fc-6010-47c2-ad03-09a2f3f0eb61.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2216,7 +2216,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2232,7 +2232,7 @@
     },
     {
       "Route": "images/a9e934fc-6010-47c2-ad03-09a2f3f0eb61.osreahqla7.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\a9e934fc-6010-47c2-ad03-09a2f3f0eb61.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\a9e934fc-6010-47c2-ad03-09a2f3f0eb61.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2253,7 +2253,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2277,7 +2277,7 @@
     },
     {
       "Route": "images/ac2c3394-284b-43d1-9077-c718ad47482d.jpg",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\ac2c3394-284b-43d1-9077-c718ad47482d.jpg",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\ac2c3394-284b-43d1-9077-c718ad47482d.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2298,7 +2298,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 12:46:29 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2314,7 +2314,7 @@
     },
     {
       "Route": "images/ac2c3394-284b-43d1-9077-c718ad47482d.yzt0mlolj1.jpg",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\ac2c3394-284b-43d1-9077-c718ad47482d.jpg",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\ac2c3394-284b-43d1-9077-c718ad47482d.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2335,7 +2335,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 12:46:29 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2359,7 +2359,7 @@
     },
     {
       "Route": "images/adf7a170-16cb-42ee-848b-13be2d8c5a65.5nc0c87jl2.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\adf7a170-16cb-42ee-848b-13be2d8c5a65.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\adf7a170-16cb-42ee-848b-13be2d8c5a65.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2380,7 +2380,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2404,7 +2404,7 @@
     },
     {
       "Route": "images/adf7a170-16cb-42ee-848b-13be2d8c5a65.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\adf7a170-16cb-42ee-848b-13be2d8c5a65.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\adf7a170-16cb-42ee-848b-13be2d8c5a65.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2425,7 +2425,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2441,7 +2441,7 @@
     },
     {
       "Route": "images/amenities/amenity_2_a2d698bb-f15a-4738-bfe4-c00a2cd721e0.aju3fibcvo.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\amenities\\amenity_2_a2d698bb-f15a-4738-bfe4-c00a2cd721e0.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\amenities\\amenity_2_a2d698bb-f15a-4738-bfe4-c00a2cd721e0.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2462,7 +2462,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 27 May 2025 18:36:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2486,7 +2486,7 @@
     },
     {
       "Route": "images/amenities/amenity_2_a2d698bb-f15a-4738-bfe4-c00a2cd721e0.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\amenities\\amenity_2_a2d698bb-f15a-4738-bfe4-c00a2cd721e0.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\amenities\\amenity_2_a2d698bb-f15a-4738-bfe4-c00a2cd721e0.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2507,7 +2507,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 27 May 2025 18:36:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2523,7 +2523,7 @@
     },
     {
       "Route": "images/b0eb0ed4-abe0-4901-a9a0-34ac4eb28244.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\b0eb0ed4-abe0-4901-a9a0-34ac4eb28244.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\b0eb0ed4-abe0-4901-a9a0-34ac4eb28244.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2544,7 +2544,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2560,7 +2560,7 @@
     },
     {
       "Route": "images/b0eb0ed4-abe0-4901-a9a0-34ac4eb28244.hzugg1vsp2.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\b0eb0ed4-abe0-4901-a9a0-34ac4eb28244.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\b0eb0ed4-abe0-4901-a9a0-34ac4eb28244.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2581,7 +2581,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2605,7 +2605,7 @@
     },
     {
       "Route": "images/bc5a576f-c93d-4e73-b535-50cb01b23ef9.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\bc5a576f-c93d-4e73-b535-50cb01b23ef9.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\bc5a576f-c93d-4e73-b535-50cb01b23ef9.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2626,7 +2626,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2642,7 +2642,7 @@
     },
     {
       "Route": "images/bc5a576f-c93d-4e73-b535-50cb01b23ef9.yr3aectieg.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\bc5a576f-c93d-4e73-b535-50cb01b23ef9.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\bc5a576f-c93d-4e73-b535-50cb01b23ef9.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2663,7 +2663,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2687,7 +2687,7 @@
     },
     {
       "Route": "images/categories/category_1_130aedbf-c800-4a98-ad4c-a6473b02749c.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_1_130aedbf-c800-4a98-ad4c-a6473b02749c.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_1_130aedbf-c800-4a98-ad4c-a6473b02749c.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2708,7 +2708,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:18:56 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2724,7 +2724,7 @@
     },
     {
       "Route": "images/categories/category_1_130aedbf-c800-4a98-ad4c-a6473b02749c.w2m3d1znyn.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_1_130aedbf-c800-4a98-ad4c-a6473b02749c.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_1_130aedbf-c800-4a98-ad4c-a6473b02749c.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2745,7 +2745,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:18:56 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2769,7 +2769,7 @@
     },
     {
       "Route": "images/categories/category_1_15415e78-8f86-4163-b873-3238f26496a4.5au61m9nuv.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_1_15415e78-8f86-4163-b873-3238f26496a4.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_1_15415e78-8f86-4163-b873-3238f26496a4.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2790,7 +2790,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:22:09 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2814,7 +2814,7 @@
     },
     {
       "Route": "images/categories/category_1_15415e78-8f86-4163-b873-3238f26496a4.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_1_15415e78-8f86-4163-b873-3238f26496a4.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_1_15415e78-8f86-4163-b873-3238f26496a4.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2835,7 +2835,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:22:09 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2851,7 +2851,7 @@
     },
     {
       "Route": "images/categories/category_10_67ee3f83-85ec-4c20-83b3-a36f4e1f4033.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_10_67ee3f83-85ec-4c20-83b3-a36f4e1f4033.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_10_67ee3f83-85ec-4c20-83b3-a36f4e1f4033.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2872,7 +2872,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:17:02 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2888,7 +2888,7 @@
     },
     {
       "Route": "images/categories/category_10_67ee3f83-85ec-4c20-83b3-a36f4e1f4033.xjnem9k1go.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_10_67ee3f83-85ec-4c20-83b3-a36f4e1f4033.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_10_67ee3f83-85ec-4c20-83b3-a36f4e1f4033.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2909,7 +2909,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:17:02 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2933,7 +2933,7 @@
     },
     {
       "Route": "images/categories/category_11_c3a7c8e9-7956-4294-95ed-4b0da2e42faf.1587gqrnsr.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_11_c3a7c8e9-7956-4294-95ed-4b0da2e42faf.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_11_c3a7c8e9-7956-4294-95ed-4b0da2e42faf.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2954,7 +2954,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:22:56 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2978,7 +2978,7 @@
     },
     {
       "Route": "images/categories/category_11_c3a7c8e9-7956-4294-95ed-4b0da2e42faf.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_11_c3a7c8e9-7956-4294-95ed-4b0da2e42faf.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_11_c3a7c8e9-7956-4294-95ed-4b0da2e42faf.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2999,7 +2999,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:22:56 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3015,7 +3015,7 @@
     },
     {
       "Route": "images/categories/category_12_08b328ed-6bb4-455f-bd57-2074f6748442.lrzjnu6zs8.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_12_08b328ed-6bb4-455f-bd57-2074f6748442.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_12_08b328ed-6bb4-455f-bd57-2074f6748442.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3036,7 +3036,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:14:41 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3060,7 +3060,7 @@
     },
     {
       "Route": "images/categories/category_12_08b328ed-6bb4-455f-bd57-2074f6748442.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_12_08b328ed-6bb4-455f-bd57-2074f6748442.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_12_08b328ed-6bb4-455f-bd57-2074f6748442.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3081,7 +3081,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:14:41 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3097,7 +3097,7 @@
     },
     {
       "Route": "images/categories/category_13_6bc17ad7-d56a-49c8-a97d-1f400086b18c.00gxlklvll.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_13_6bc17ad7-d56a-49c8-a97d-1f400086b18c.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_13_6bc17ad7-d56a-49c8-a97d-1f400086b18c.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3118,7 +3118,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:13:57 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3142,7 +3142,7 @@
     },
     {
       "Route": "images/categories/category_13_6bc17ad7-d56a-49c8-a97d-1f400086b18c.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_13_6bc17ad7-d56a-49c8-a97d-1f400086b18c.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_13_6bc17ad7-d56a-49c8-a97d-1f400086b18c.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3163,7 +3163,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:13:57 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3179,7 +3179,7 @@
     },
     {
       "Route": "images/categories/category_14_7276af30-ebfa-4e23-8c9b-e0520fa7cb7c.i31n60vkuz.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_14_7276af30-ebfa-4e23-8c9b-e0520fa7cb7c.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_14_7276af30-ebfa-4e23-8c9b-e0520fa7cb7c.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3200,7 +3200,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:10:45 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3224,7 +3224,7 @@
     },
     {
       "Route": "images/categories/category_14_7276af30-ebfa-4e23-8c9b-e0520fa7cb7c.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_14_7276af30-ebfa-4e23-8c9b-e0520fa7cb7c.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_14_7276af30-ebfa-4e23-8c9b-e0520fa7cb7c.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3245,7 +3245,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:10:45 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3261,7 +3261,7 @@
     },
     {
       "Route": "images/categories/category_15_210313f1-2e10-4dc5-98ae-c7ec74ab2f4a.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_15_210313f1-2e10-4dc5-98ae-c7ec74ab2f4a.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_15_210313f1-2e10-4dc5-98ae-c7ec74ab2f4a.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3282,7 +3282,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:23:42 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3298,7 +3298,7 @@
     },
     {
       "Route": "images/categories/category_15_210313f1-2e10-4dc5-98ae-c7ec74ab2f4a.ry4ueqi50t.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_15_210313f1-2e10-4dc5-98ae-c7ec74ab2f4a.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_15_210313f1-2e10-4dc5-98ae-c7ec74ab2f4a.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3319,7 +3319,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:23:42 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3343,7 +3343,7 @@
     },
     {
       "Route": "images/categories/category_16_aad5e30f-1434-43b1-9c65-4cc21683f1bc.da5vcmknqk.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_16_aad5e30f-1434-43b1-9c65-4cc21683f1bc.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_16_aad5e30f-1434-43b1-9c65-4cc21683f1bc.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3364,7 +3364,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:13:10 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3388,7 +3388,7 @@
     },
     {
       "Route": "images/categories/category_16_aad5e30f-1434-43b1-9c65-4cc21683f1bc.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_16_aad5e30f-1434-43b1-9c65-4cc21683f1bc.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_16_aad5e30f-1434-43b1-9c65-4cc21683f1bc.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3409,7 +3409,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:13:10 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3425,7 +3425,7 @@
     },
     {
       "Route": "images/categories/category_18_3ed2ba80-b1bf-4e6e-8264-b001a65a82fb.fd7n87ga4x.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_18_3ed2ba80-b1bf-4e6e-8264-b001a65a82fb.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_18_3ed2ba80-b1bf-4e6e-8264-b001a65a82fb.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3446,7 +3446,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:18:34 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3470,7 +3470,7 @@
     },
     {
       "Route": "images/categories/category_18_3ed2ba80-b1bf-4e6e-8264-b001a65a82fb.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_18_3ed2ba80-b1bf-4e6e-8264-b001a65a82fb.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_18_3ed2ba80-b1bf-4e6e-8264-b001a65a82fb.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3491,7 +3491,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 18 May 2025 20:18:34 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3507,7 +3507,7 @@
     },
     {
       "Route": "images/categories/category_2_83802926-1cb0-4b30-9483-c81df80ffa3d.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_2_83802926-1cb0-4b30-9483-c81df80ffa3d.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_2_83802926-1cb0-4b30-9483-c81df80ffa3d.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3528,7 +3528,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:19:39 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3544,7 +3544,7 @@
     },
     {
       "Route": "images/categories/category_2_83802926-1cb0-4b30-9483-c81df80ffa3d.zbi9krwik1.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_2_83802926-1cb0-4b30-9483-c81df80ffa3d.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_2_83802926-1cb0-4b30-9483-c81df80ffa3d.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3565,7 +3565,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:19:39 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3589,7 +3589,7 @@
     },
     {
       "Route": "images/categories/category_3_4633ca50-4dcc-4839-8b02-7223d424d8c8.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_3_4633ca50-4dcc-4839-8b02-7223d424d8c8.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_3_4633ca50-4dcc-4839-8b02-7223d424d8c8.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3610,7 +3610,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 20:49:31 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3626,7 +3626,7 @@
     },
     {
       "Route": "images/categories/category_3_4633ca50-4dcc-4839-8b02-7223d424d8c8.xtfnjxfae6.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_3_4633ca50-4dcc-4839-8b02-7223d424d8c8.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_3_4633ca50-4dcc-4839-8b02-7223d424d8c8.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3647,7 +3647,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 20:49:31 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3671,7 +3671,7 @@
     },
     {
       "Route": "images/categories/category_4_c77f6666-841d-49e6-82de-0ff19e988aef.i2w2sci3hp.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_4_c77f6666-841d-49e6-82de-0ff19e988aef.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_4_c77f6666-841d-49e6-82de-0ff19e988aef.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3692,7 +3692,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 20:59:46 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3716,7 +3716,7 @@
     },
     {
       "Route": "images/categories/category_4_c77f6666-841d-49e6-82de-0ff19e988aef.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_4_c77f6666-841d-49e6-82de-0ff19e988aef.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_4_c77f6666-841d-49e6-82de-0ff19e988aef.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3737,7 +3737,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 20:59:46 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3753,7 +3753,7 @@
     },
     {
       "Route": "images/categories/category_5_0e201ab9-3566-4a15-98df-c30512655ff1.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_5_0e201ab9-3566-4a15-98df-c30512655ff1.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_5_0e201ab9-3566-4a15-98df-c30512655ff1.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3774,7 +3774,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:05:29 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3790,7 +3790,7 @@
     },
     {
       "Route": "images/categories/category_5_0e201ab9-3566-4a15-98df-c30512655ff1.wpfdq1mo9e.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_5_0e201ab9-3566-4a15-98df-c30512655ff1.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_5_0e201ab9-3566-4a15-98df-c30512655ff1.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3811,7 +3811,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:05:29 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3835,7 +3835,7 @@
     },
     {
       "Route": "images/categories/category_6_67bfb549-17a1-4db4-9644-20bba765e36f.hzx3fe8zjd.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_6_67bfb549-17a1-4db4-9644-20bba765e36f.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_6_67bfb549-17a1-4db4-9644-20bba765e36f.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3856,7 +3856,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:00:54 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3880,7 +3880,7 @@
     },
     {
       "Route": "images/categories/category_6_67bfb549-17a1-4db4-9644-20bba765e36f.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_6_67bfb549-17a1-4db4-9644-20bba765e36f.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_6_67bfb549-17a1-4db4-9644-20bba765e36f.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3901,7 +3901,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:00:54 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3917,7 +3917,7 @@
     },
     {
       "Route": "images/categories/category_7_2f700059-e254-4359-b25d-c3983f7571ee.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_7_2f700059-e254-4359-b25d-c3983f7571ee.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_7_2f700059-e254-4359-b25d-c3983f7571ee.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3938,7 +3938,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:20:29 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3954,7 +3954,7 @@
     },
     {
       "Route": "images/categories/category_7_2f700059-e254-4359-b25d-c3983f7571ee.w2m3d1znyn.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_7_2f700059-e254-4359-b25d-c3983f7571ee.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_7_2f700059-e254-4359-b25d-c3983f7571ee.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3975,7 +3975,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:20:29 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3999,7 +3999,7 @@
     },
     {
       "Route": "images/categories/category_8_5be53174-0fd3-4158-8e63-5eb4166d0fc1.d49d2u97zy.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_8_5be53174-0fd3-4158-8e63-5eb4166d0fc1.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_8_5be53174-0fd3-4158-8e63-5eb4166d0fc1.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4020,7 +4020,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:16:18 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4044,7 +4044,7 @@
     },
     {
       "Route": "images/categories/category_8_5be53174-0fd3-4158-8e63-5eb4166d0fc1.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_8_5be53174-0fd3-4158-8e63-5eb4166d0fc1.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_8_5be53174-0fd3-4158-8e63-5eb4166d0fc1.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4065,7 +4065,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:16:18 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4081,7 +4081,7 @@
     },
     {
       "Route": "images/categories/category_9_ef6fde0b-e8aa-46fa-9b56-6a738cc87077.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_9_ef6fde0b-e8aa-46fa-9b56-6a738cc87077.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_9_ef6fde0b-e8aa-46fa-9b56-6a738cc87077.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4102,7 +4102,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:18:11 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4118,7 +4118,7 @@
     },
     {
       "Route": "images/categories/category_9_ef6fde0b-e8aa-46fa-9b56-6a738cc87077.wj88muoxwd.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_9_ef6fde0b-e8aa-46fa-9b56-6a738cc87077.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_9_ef6fde0b-e8aa-46fa-9b56-6a738cc87077.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4139,7 +4139,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 13 May 2025 21:18:11 GMT"
+          "Value": "Tue, 27 May 2025 18:59:28 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4163,7 +4163,7 @@
     },
     {
       "Route": "images/d708f70b-5133-4e04-9400-f15e13443094.webp",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\d708f70b-5133-4e04-9400-f15e13443094.webp",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\d708f70b-5133-4e04-9400-f15e13443094.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4184,7 +4184,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4200,7 +4200,7 @@
     },
     {
       "Route": "images/d708f70b-5133-4e04-9400-f15e13443094.wqh0qyuk87.webp",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\d708f70b-5133-4e04-9400-f15e13443094.webp",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\d708f70b-5133-4e04-9400-f15e13443094.webp",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4221,7 +4221,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4245,7 +4245,7 @@
     },
     {
       "Route": "images/e2bfbc3f-740c-423c-a732-cd365af77715.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\e2bfbc3f-740c-423c-a732-cd365af77715.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\e2bfbc3f-740c-423c-a732-cd365af77715.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4266,7 +4266,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4282,7 +4282,7 @@
     },
     {
       "Route": "images/e2bfbc3f-740c-423c-a732-cd365af77715.bj6be9l04o.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\e2bfbc3f-740c-423c-a732-cd365af77715.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\e2bfbc3f-740c-423c-a732-cd365af77715.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4303,7 +4303,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4327,7 +4327,7 @@
     },
     {
       "Route": "images/e3f8bd1b-ca0f-4f17-8e59-7f37c26e57ce.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\e3f8bd1b-ca0f-4f17-8e59-7f37c26e57ce.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\e3f8bd1b-ca0f-4f17-8e59-7f37c26e57ce.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4348,7 +4348,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4364,7 +4364,7 @@
     },
     {
       "Route": "images/e3f8bd1b-ca0f-4f17-8e59-7f37c26e57ce.o3qcul39o4.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\e3f8bd1b-ca0f-4f17-8e59-7f37c26e57ce.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\e3f8bd1b-ca0f-4f17-8e59-7f37c26e57ce.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4385,7 +4385,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4409,7 +4409,7 @@
     },
     {
       "Route": "images/fec3dc2f-022d-456b-8f42-2949585ecfbf.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\fec3dc2f-022d-456b-8f42-2949585ecfbf.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\fec3dc2f-022d-456b-8f42-2949585ecfbf.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4430,7 +4430,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4446,7 +4446,7 @@
     },
     {
       "Route": "images/fec3dc2f-022d-456b-8f42-2949585ecfbf.vpmccqqtar.avif",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\fec3dc2f-022d-456b-8f42-2949585ecfbf.avif",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\fec3dc2f-022d-456b-8f42-2949585ecfbf.avif",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4467,7 +4467,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4491,7 +4491,7 @@
     },
     {
       "Route": "images/profiles/3aaf9662-06ac-4c9c-9646-fb9da2a41ca2.7f2lzwkn23.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\profiles\\3aaf9662-06ac-4c9c-9646-fb9da2a41ca2.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\profiles\\3aaf9662-06ac-4c9c-9646-fb9da2a41ca2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4512,7 +4512,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4536,7 +4536,7 @@
     },
     {
       "Route": "images/profiles/3aaf9662-06ac-4c9c-9646-fb9da2a41ca2.png",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\profiles\\3aaf9662-06ac-4c9c-9646-fb9da2a41ca2.png",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\profiles\\3aaf9662-06ac-4c9c-9646-fb9da2a41ca2.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4557,7 +4557,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4573,7 +4573,7 @@
     },
     {
       "Route": "images/profiles/7b29b3d1-88d8-4a0e-add2-b2cf32c09bda.jpg",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\profiles\\7b29b3d1-88d8-4a0e-add2-b2cf32c09bda.jpg",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\profiles\\7b29b3d1-88d8-4a0e-add2-b2cf32c09bda.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4594,7 +4594,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4610,7 +4610,7 @@
     },
     {
       "Route": "images/profiles/7b29b3d1-88d8-4a0e-add2-b2cf32c09bda.nvvswu01xh.jpg",
-      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\profiles\\7b29b3d1-88d8-4a0e-add2-b2cf32c09bda.jpg",
+      "AssetFile": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\profiles\\7b29b3d1-88d8-4a0e-add2-b2cf32c09bda.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4631,7 +4631,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 12 May 2025 17:58:30 GMT"
+          "Value": "Tue, 27 May 2025 18:59:22 GMT"
         },
         {
           "Name": "Cache-Control",
