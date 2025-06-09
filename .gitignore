@@ -3,3 +3,6 @@ obj/
 
 # Папка Visual Studio
 .vs/
+/HomeFuBack/obj/Release/net8.0
+/HomeFuBack/obj/Release
+/HomeFuBack/obj
