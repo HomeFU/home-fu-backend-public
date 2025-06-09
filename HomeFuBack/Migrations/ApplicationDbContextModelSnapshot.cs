@@ -83,9 +83,6 @@ namespace HomeFuBack.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("CardDetailId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime?>("EndDate")
                         .HasColumnType("datetime2");
 
@@ -104,7 +101,7 @@ namespace HomeFuBack.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                        .HasColumnType("decimal(18, 2)");
 
                     b.Property<int?>("Rating")
                         .HasColumnType("int");
@@ -113,10 +110,6 @@ namespace HomeFuBack.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CardDetailId")
-                        .IsUnique()
-                        .HasFilter("[CardDetailId] IS NOT NULL");
 
                     b.HasIndex("LocationId");
 
@@ -141,10 +134,7 @@ namespace HomeFuBack.Migrations
             modelBuilder.Entity("HomeFuBack.Models.Housing.CardDetail", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -170,9 +160,6 @@ namespace HomeFuBack.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("NumberOfGuests")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("RatingId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -336,17 +323,11 @@ namespace HomeFuBack.Migrations
 
             modelBuilder.Entity("HomeFuBack.Models.Housing.Card", b =>
                 {
-                    b.HasOne("HomeFuBack.Models.Housing.CardDetail", "CardDetail")
-                        .WithOne()
-                        .HasForeignKey("HomeFuBack.Models.Housing.Card", "CardDetailId");
-
                     b.HasOne("HomeFuBack.Models.Housing.Location", "Location")
                         .WithMany("Cards")
                         .HasForeignKey("LocationId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("CardDetail");
 
                     b.Navigation("Location");
                 });
@@ -377,6 +358,14 @@ namespace HomeFuBack.Migrations
                         .HasForeignKey("HostId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.HasOne("HomeFuBack.Models.Housing.Card", "Card")
+                        .WithOne("CardDetail")
+                        .HasForeignKey("HomeFuBack.Models.Housing.CardDetail", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Card");
 
                     b.Navigation("Host");
                 });
@@ -414,6 +403,8 @@ namespace HomeFuBack.Migrations
             modelBuilder.Entity("HomeFuBack.Models.Housing.Card", b =>
                 {
                     b.Navigation("CardCategories");
+
+                    b.Navigation("CardDetail");
                 });
 
             modelBuilder.Entity("HomeFuBack.Models.Housing.CardDetail", b =>
