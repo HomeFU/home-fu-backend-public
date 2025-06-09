@@ -48,8 +48,8 @@ namespace HomeFuBack.Models.Housing
 
         public Card()
         {
-            CardCategories = new List<CardCategory>();
-            ImageUrls = new List<string>();
+            CardCategories = [];
+            ImageUrls = [];
             IsDeleted = false;
         }
     }

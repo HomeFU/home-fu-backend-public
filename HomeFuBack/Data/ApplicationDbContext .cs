@@ -21,6 +21,7 @@ namespace HomeFuBack.Data
         public DbSet<CardDetail> CardDetails { get; set; }
         public DbSet<Rating> Ratings { get; set; }
         public DbSet<CardDetailAmenity> CardDetailAmenities { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -79,6 +80,22 @@ namespace HomeFuBack.Data
                 .WithMany() // User может быть хостом для многих CardDetails
                 .HasForeignKey(cd => cd.HostId)
                 .OnDelete(DeleteBehavior.Restrict); // Предотвратить каскадное удаление хозяина при удалении CardDetail
+
+            // 5. Связь Reservation с User (один User - много Reservations)
+            modelBuilder.Entity<Reservation>()
+                .HasOne<User>() // Убедись, что тип User правильный (из HomeFuBack.Models.Users.User)
+                .WithMany()     // Если в модели User есть public ICollection<Reservation> Reservations { get; set; },
+                                // то используй .WithMany(u => u.Reservations)
+                .HasForeignKey(r => r.UserId)
+                .IsRequired();  // Так как UserId в Reservation помечен [Required]
+
+            // 6. Связь Reservation с Card (одна Card - много Reservations)
+            modelBuilder.Entity<Reservation>()
+                .HasOne(r => r.Card) // Используется навигационное свойство Card в Reservation
+                .WithMany()      // Если в модели Card есть public ICollection<Reservation> Reservations { get; set; },
+                                 // то используй .WithMany(c => c.Reservations)
+                .HasForeignKey(r => r.CardId)
+                .IsRequired();   // Так как CardId в Reservation помечен [Required]
         }
     }
 }
