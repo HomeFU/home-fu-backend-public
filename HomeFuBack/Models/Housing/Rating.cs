@@ -34,6 +34,7 @@ namespace HomeFuBack.Models.Housing
         public double Value { get; set; } // Соотношение цена/качество
 
         // Можно добавить среднюю оценку, если это необходимо
+        // [NotMapped] // Не маппится в базу данных
         // public double OverallRating => (Cleanliness + Accuracy + CheckIn + Communication + Location + Value) / 6.0;
     }
 }

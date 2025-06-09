@@ -2,16 +2,22 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Collections.Generic;
-using HomeFuBack.Models.Users;
-
+using HomeFuBack.Models.Users; // Для User
 
 namespace HomeFuBack.Models.Housing
 {
     public class CardDetail
     {
         [Key]
-        public int Id { get; set; } // Id будет совпадать с Id Card, если это 1-к-1 связь
+        [DatabaseGenerated(DatabaseGeneratedOption.None)] // <--- КЛЮЧЕВОЕ ИЗМЕНЕНИЕ: Id не автогенерируется
+        public int Id { get; set; }
 
+        // Связь один-к-одному с Card (Shared Primary Key)
+        // Id CardDetail является первичным ключом CardDetail И внешним ключом к Card.
+        [ForeignKey("Id")] // Указывает, что Id CardDetail является внешним ключом к Card.
+        public Card Card { get; set; } = null!; // Навигационное свойство к Card
+
+        // ... остальная часть вашей модели CardDetail
         // Общая информация
         public int NumberOfGuests { get; set; }
         public int NumberOfBedrooms { get; set; }
@@ -22,7 +28,7 @@ namespace HomeFuBack.Models.Housing
         [Required]
         public Guid HostId { get; set; }
         [ForeignKey("HostId")]
-        public User Host { get; set; } // Навигационное свойство для связи с моделью User
+        public User Host { get; set; } = null!; // Навигационное свойство для связи с моделью User
 
         [Required]
         [MaxLength(2000)]
@@ -32,13 +38,15 @@ namespace HomeFuBack.Models.Housing
         public double Latitude { get; set; }
         public double Longitude { get; set; }
 
-        // Связь один-к-одному с Rating
-        // Если у каждой CardDetail есть Rating, это можно сделать не nullable
-        public int? RatingId { get; set; } // Foreign Key для Rating
-        [ForeignKey("RatingId")]
-        public Rating? Ratings { get; set; } // Навигационное свойство
+        // УДАЛЯЕМ: Связь один-к-одному с Rating
+        // public int? RatingId { get; set; } // Foreign Key для Rating
+        // [ForeignKey("RatingId")]
+        // public Rating? Ratings { get; set; } // Навигационное свойство
+
+        // Добавляем навигационное свойство для 1:1 связи, где Rating является зависимой сущностью
+        public Rating? Ratings { get; set; } // CardDetail может иметь один Rating
 
         // Связь со списком удобств (многие-ко-многим)
-        public ICollection<CardDetailAmenity> CardDetailAmenities { get; set; }
+        public ICollection<CardDetailAmenity> CardDetailAmenities { get; set; } = new List<CardDetailAmenity>(); // Инициализация
     }
 }

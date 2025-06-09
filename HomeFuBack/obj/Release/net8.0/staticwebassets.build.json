@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "S6IL7Lwq2ehvS5HXpNBjO/Uvsc4f0Grl+g1RAGk7yRk=",
+  "Hash": "OMeT3zBKUpbtF48NtLXN0V5Kjx8OsbYlwy3VYAhkxSI=",
   "Source": "HomeFuBack",
   "BasePath": "_content/HomeFuBack",
   "Mode": "Default",
@@ -456,6 +456,174 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\bc5a576f-c93d-4e73-b535-50cb01b23ef9.avif"
+    },
+    {
+      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\385d13f2-d154-45c2-8209-3f6a6161434b.jpg",
+      "SourceId": "HomeFuBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "BasePath": "_content/HomeFuBack",
+      "RelativePath": "images/cards/385d13f2-d154-45c2-8209-3f6a6161434b#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "84vy21sajk",
+      "Integrity": "+AdCMORIY/rod6JD8npWkAVGR1zVK4Egq4dzdUMPGk8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cards\\385d13f2-d154-45c2-8209-3f6a6161434b.jpg"
+    },
+    {
+      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\39a282a4-93fe-4379-8ef9-80aa592ebb1a.jpg",
+      "SourceId": "HomeFuBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "BasePath": "_content/HomeFuBack",
+      "RelativePath": "images/cards/39a282a4-93fe-4379-8ef9-80aa592ebb1a#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "84vy21sajk",
+      "Integrity": "+AdCMORIY/rod6JD8npWkAVGR1zVK4Egq4dzdUMPGk8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cards\\39a282a4-93fe-4379-8ef9-80aa592ebb1a.jpg"
+    },
+    {
+      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\4d869af1-fecb-431a-be12-552bcd6ad062.jpg",
+      "SourceId": "HomeFuBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "BasePath": "_content/HomeFuBack",
+      "RelativePath": "images/cards/4d869af1-fecb-431a-be12-552bcd6ad062#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "84vy21sajk",
+      "Integrity": "+AdCMORIY/rod6JD8npWkAVGR1zVK4Egq4dzdUMPGk8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cards\\4d869af1-fecb-431a-be12-552bcd6ad062.jpg"
+    },
+    {
+      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\57df072e-de88-4a61-930e-bba71a5c0fbc.jpg",
+      "SourceId": "HomeFuBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "BasePath": "_content/HomeFuBack",
+      "RelativePath": "images/cards/57df072e-de88-4a61-930e-bba71a5c0fbc#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "84vy21sajk",
+      "Integrity": "+AdCMORIY/rod6JD8npWkAVGR1zVK4Egq4dzdUMPGk8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cards\\57df072e-de88-4a61-930e-bba71a5c0fbc.jpg"
+    },
+    {
+      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\5c09a150-050a-4b4c-83e8-d6166d87eff2.png",
+      "SourceId": "HomeFuBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "BasePath": "_content/HomeFuBack",
+      "RelativePath": "images/cards/5c09a150-050a-4b4c-83e8-d6166d87eff2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ehvhy0m5dz",
+      "Integrity": "oruvJibWnUNluuhbfKW1K9TmfrrhvneBl5rOG1jG2ic=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cards\\5c09a150-050a-4b4c-83e8-d6166d87eff2.png"
+    },
+    {
+      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\5c6acaed-e0f8-47c9-a7df-8a10876b449b.png",
+      "SourceId": "HomeFuBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "BasePath": "_content/HomeFuBack",
+      "RelativePath": "images/cards/5c6acaed-e0f8-47c9-a7df-8a10876b449b#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ehvhy0m5dz",
+      "Integrity": "oruvJibWnUNluuhbfKW1K9TmfrrhvneBl5rOG1jG2ic=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cards\\5c6acaed-e0f8-47c9-a7df-8a10876b449b.png"
+    },
+    {
+      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\749418cb-37b3-4050-9096-88a88a77c88f.png",
+      "SourceId": "HomeFuBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "BasePath": "_content/HomeFuBack",
+      "RelativePath": "images/cards/749418cb-37b3-4050-9096-88a88a77c88f#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ehvhy0m5dz",
+      "Integrity": "oruvJibWnUNluuhbfKW1K9TmfrrhvneBl5rOG1jG2ic=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cards\\749418cb-37b3-4050-9096-88a88a77c88f.png"
+    },
+    {
+      "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\e3d6c055-0d6e-4f36-a5eb-b55cc0a8ba77.png",
+      "SourceId": "HomeFuBack",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\",
+      "BasePath": "_content/HomeFuBack",
+      "RelativePath": "images/cards/e3d6c055-0d6e-4f36-a5eb-b55cc0a8ba77#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ehvhy0m5dz",
+      "Integrity": "oruvJibWnUNluuhbfKW1K9TmfrrhvneBl5rOG1jG2ic=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\cards\\e3d6c055-0d6e-4f36-a5eb-b55cc0a8ba77.png"
     },
     {
       "Identity": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\categories\\category_1_130aedbf-c800-4a98-ad4c-a6473b02749c.png",
@@ -2682,6 +2850,662 @@
         {
           "Name": "integrity",
           "Value": "sha256-nv+wgDJyiEYYkb09jEmY3I+g+td1ETfYP1QPWdV6jPM="
+        }
+      ]
+    },
+    {
+      "Route": "images/cards/385d13f2-d154-45c2-8209-3f6a6161434b.84vy21sajk.jpg",
+      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\385d13f2-d154-45c2-8209-3f6a6161434b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "546156"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+AdCMORIY/rod6JD8npWkAVGR1zVK4Egq4dzdUMPGk8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 11:49:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "84vy21sajk"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cards/385d13f2-d154-45c2-8209-3f6a6161434b.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+AdCMORIY/rod6JD8npWkAVGR1zVK4Egq4dzdUMPGk8="
+        }
+      ]
+    },
+    {
+      "Route": "images/cards/385d13f2-d154-45c2-8209-3f6a6161434b.jpg",
+      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\385d13f2-d154-45c2-8209-3f6a6161434b.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "546156"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+AdCMORIY/rod6JD8npWkAVGR1zVK4Egq4dzdUMPGk8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 11:49:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+AdCMORIY/rod6JD8npWkAVGR1zVK4Egq4dzdUMPGk8="
+        }
+      ]
+    },
+    {
+      "Route": "images/cards/39a282a4-93fe-4379-8ef9-80aa592ebb1a.84vy21sajk.jpg",
+      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\39a282a4-93fe-4379-8ef9-80aa592ebb1a.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "546156"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+AdCMORIY/rod6JD8npWkAVGR1zVK4Egq4dzdUMPGk8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 11:55:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "84vy21sajk"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cards/39a282a4-93fe-4379-8ef9-80aa592ebb1a.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+AdCMORIY/rod6JD8npWkAVGR1zVK4Egq4dzdUMPGk8="
+        }
+      ]
+    },
+    {
+      "Route": "images/cards/39a282a4-93fe-4379-8ef9-80aa592ebb1a.jpg",
+      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\39a282a4-93fe-4379-8ef9-80aa592ebb1a.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "546156"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+AdCMORIY/rod6JD8npWkAVGR1zVK4Egq4dzdUMPGk8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 11:55:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+AdCMORIY/rod6JD8npWkAVGR1zVK4Egq4dzdUMPGk8="
+        }
+      ]
+    },
+    {
+      "Route": "images/cards/4d869af1-fecb-431a-be12-552bcd6ad062.84vy21sajk.jpg",
+      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\4d869af1-fecb-431a-be12-552bcd6ad062.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "546156"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+AdCMORIY/rod6JD8npWkAVGR1zVK4Egq4dzdUMPGk8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 11:44:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "84vy21sajk"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cards/4d869af1-fecb-431a-be12-552bcd6ad062.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+AdCMORIY/rod6JD8npWkAVGR1zVK4Egq4dzdUMPGk8="
+        }
+      ]
+    },
+    {
+      "Route": "images/cards/4d869af1-fecb-431a-be12-552bcd6ad062.jpg",
+      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\4d869af1-fecb-431a-be12-552bcd6ad062.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "546156"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+AdCMORIY/rod6JD8npWkAVGR1zVK4Egq4dzdUMPGk8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 11:44:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+AdCMORIY/rod6JD8npWkAVGR1zVK4Egq4dzdUMPGk8="
+        }
+      ]
+    },
+    {
+      "Route": "images/cards/57df072e-de88-4a61-930e-bba71a5c0fbc.84vy21sajk.jpg",
+      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\57df072e-de88-4a61-930e-bba71a5c0fbc.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "546156"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+AdCMORIY/rod6JD8npWkAVGR1zVK4Egq4dzdUMPGk8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 10:59:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "84vy21sajk"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cards/57df072e-de88-4a61-930e-bba71a5c0fbc.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+AdCMORIY/rod6JD8npWkAVGR1zVK4Egq4dzdUMPGk8="
+        }
+      ]
+    },
+    {
+      "Route": "images/cards/57df072e-de88-4a61-930e-bba71a5c0fbc.jpg",
+      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\57df072e-de88-4a61-930e-bba71a5c0fbc.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "546156"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+AdCMORIY/rod6JD8npWkAVGR1zVK4Egq4dzdUMPGk8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 10:59:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+AdCMORIY/rod6JD8npWkAVGR1zVK4Egq4dzdUMPGk8="
+        }
+      ]
+    },
+    {
+      "Route": "images/cards/5c09a150-050a-4b4c-83e8-d6166d87eff2.ehvhy0m5dz.png",
+      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\5c09a150-050a-4b4c-83e8-d6166d87eff2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11063620"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oruvJibWnUNluuhbfKW1K9TmfrrhvneBl5rOG1jG2ic=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 11:55:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ehvhy0m5dz"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cards/5c09a150-050a-4b4c-83e8-d6166d87eff2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oruvJibWnUNluuhbfKW1K9TmfrrhvneBl5rOG1jG2ic="
+        }
+      ]
+    },
+    {
+      "Route": "images/cards/5c09a150-050a-4b4c-83e8-d6166d87eff2.png",
+      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\5c09a150-050a-4b4c-83e8-d6166d87eff2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11063620"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oruvJibWnUNluuhbfKW1K9TmfrrhvneBl5rOG1jG2ic=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 11:55:47 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oruvJibWnUNluuhbfKW1K9TmfrrhvneBl5rOG1jG2ic="
+        }
+      ]
+    },
+    {
+      "Route": "images/cards/5c6acaed-e0f8-47c9-a7df-8a10876b449b.ehvhy0m5dz.png",
+      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\5c6acaed-e0f8-47c9-a7df-8a10876b449b.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11063620"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oruvJibWnUNluuhbfKW1K9TmfrrhvneBl5rOG1jG2ic=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 11:49:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ehvhy0m5dz"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cards/5c6acaed-e0f8-47c9-a7df-8a10876b449b.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oruvJibWnUNluuhbfKW1K9TmfrrhvneBl5rOG1jG2ic="
+        }
+      ]
+    },
+    {
+      "Route": "images/cards/5c6acaed-e0f8-47c9-a7df-8a10876b449b.png",
+      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\5c6acaed-e0f8-47c9-a7df-8a10876b449b.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11063620"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oruvJibWnUNluuhbfKW1K9TmfrrhvneBl5rOG1jG2ic=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 11:49:57 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oruvJibWnUNluuhbfKW1K9TmfrrhvneBl5rOG1jG2ic="
+        }
+      ]
+    },
+    {
+      "Route": "images/cards/749418cb-37b3-4050-9096-88a88a77c88f.ehvhy0m5dz.png",
+      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\749418cb-37b3-4050-9096-88a88a77c88f.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11063620"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oruvJibWnUNluuhbfKW1K9TmfrrhvneBl5rOG1jG2ic=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 11:44:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ehvhy0m5dz"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cards/749418cb-37b3-4050-9096-88a88a77c88f.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oruvJibWnUNluuhbfKW1K9TmfrrhvneBl5rOG1jG2ic="
+        }
+      ]
+    },
+    {
+      "Route": "images/cards/749418cb-37b3-4050-9096-88a88a77c88f.png",
+      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\749418cb-37b3-4050-9096-88a88a77c88f.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11063620"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oruvJibWnUNluuhbfKW1K9TmfrrhvneBl5rOG1jG2ic=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 11:44:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oruvJibWnUNluuhbfKW1K9TmfrrhvneBl5rOG1jG2ic="
+        }
+      ]
+    },
+    {
+      "Route": "images/cards/e3d6c055-0d6e-4f36-a5eb-b55cc0a8ba77.ehvhy0m5dz.png",
+      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\e3d6c055-0d6e-4f36-a5eb-b55cc0a8ba77.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11063620"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oruvJibWnUNluuhbfKW1K9TmfrrhvneBl5rOG1jG2ic=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 10:59:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ehvhy0m5dz"
+        },
+        {
+          "Name": "label",
+          "Value": "images/cards/e3d6c055-0d6e-4f36-a5eb-b55cc0a8ba77.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oruvJibWnUNluuhbfKW1K9TmfrrhvneBl5rOG1jG2ic="
+        }
+      ]
+    },
+    {
+      "Route": "images/cards/e3d6c055-0d6e-4f36-a5eb-b55cc0a8ba77.png",
+      "AssetFile": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\wwwroot\\images\\cards\\e3d6c055-0d6e-4f36-a5eb-b55cc0a8ba77.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11063620"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oruvJibWnUNluuhbfKW1K9TmfrrhvneBl5rOG1jG2ic=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Jun 2025 10:59:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oruvJibWnUNluuhbfKW1K9TmfrrhvneBl5rOG1jG2ic="
         }
       ]
     },

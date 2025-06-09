@@ -322,6 +322,593 @@
         }
       }
     },
+    "/api/carddetails": {
+      "get": {
+        "tags": [
+          "CardDetails"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CardDetailResponseDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CardDetailResponseDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CardDetailResponseDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CardDetails"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "CardName",
+                  "Description",
+                  "HostId",
+                  "Latitude",
+                  "LocationId",
+                  "Longitude",
+                  "NumberOfGuests",
+                  "Price",
+                  "StartDate"
+                ],
+                "type": "object",
+                "properties": {
+                  "NumberOfGuests": {
+                    "maximum": 2147483647,
+                    "minimum": 1,
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "NumberOfBedrooms": {
+                    "maximum": 2147483647,
+                    "minimum": 0,
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "NumberOfBeds": {
+                    "maximum": 2147483647,
+                    "minimum": 0,
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "NumberOfBathrooms": {
+                    "maximum": 2147483647,
+                    "minimum": 0,
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "HostId": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "Description": {
+                    "maxLength": 2000,
+                    "minLength": 10,
+                    "type": "string"
+                  },
+                  "Latitude": {
+                    "maximum": 90,
+                    "minimum": -90,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Longitude": {
+                    "maximum": 180,
+                    "minimum": -180,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "AmenityIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer",
+                      "format": "int32"
+                    }
+                  },
+                  "CardName": {
+                    "maxLength": 200,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "LocationId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "StartDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "EndDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "Rating": {
+                    "maximum": 5,
+                    "minimum": 0,
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "CardImages": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  },
+                  "Price": {
+                    "minimum": 0,01,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "InitialCleanliness": {
+                    "maximum": 5,
+                    "minimum": 0,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "InitialAccuracy": {
+                    "maximum": 5,
+                    "minimum": 0,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "InitialCheckIn": {
+                    "maximum": 5,
+                    "minimum": 0,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "InitialCommunication": {
+                    "maximum": 5,
+                    "minimum": 0,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "InitialLocationRating": {
+                    "maximum": 5,
+                    "minimum": 0,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "InitialValue": {
+                    "maximum": 5,
+                    "minimum": 0,
+                    "type": "number",
+                    "format": "double"
+                  }
+                }
+              },
+              "encoding": {
+                "NumberOfGuests": {
+                  "style": "form"
+                },
+                "NumberOfBedrooms": {
+                  "style": "form"
+                },
+                "NumberOfBeds": {
+                  "style": "form"
+                },
+                "NumberOfBathrooms": {
+                  "style": "form"
+                },
+                "HostId": {
+                  "style": "form"
+                },
+                "Description": {
+                  "style": "form"
+                },
+                "Latitude": {
+                  "style": "form"
+                },
+                "Longitude": {
+                  "style": "form"
+                },
+                "AmenityIds": {
+                  "style": "form"
+                },
+                "CardName": {
+                  "style": "form"
+                },
+                "LocationId": {
+                  "style": "form"
+                },
+                "StartDate": {
+                  "style": "form"
+                },
+                "EndDate": {
+                  "style": "form"
+                },
+                "Rating": {
+                  "style": "form"
+                },
+                "CardImages": {
+                  "style": "form"
+                },
+                "Price": {
+                  "style": "form"
+                },
+                "InitialCleanliness": {
+                  "style": "form"
+                },
+                "InitialAccuracy": {
+                  "style": "form"
+                },
+                "InitialCheckIn": {
+                  "style": "form"
+                },
+                "InitialCommunication": {
+                  "style": "form"
+                },
+                "InitialLocationRating": {
+                  "style": "form"
+                },
+                "InitialValue": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CardDetailResponseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CardDetailResponseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CardDetailResponseDto"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/carddetails/{id}": {
+      "get": {
+        "tags": [
+          "CardDetails"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CardDetailResponseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CardDetailResponseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CardDetailResponseDto"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "CardDetails"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "NumberOfGuests": {
+                    "maximum": 2147483647,
+                    "minimum": 1,
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "NumberOfBedrooms": {
+                    "maximum": 2147483647,
+                    "minimum": 0,
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "NumberOfBeds": {
+                    "maximum": 2147483647,
+                    "minimum": 0,
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "NumberOfBathrooms": {
+                    "maximum": 2147483647,
+                    "minimum": 0,
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "HostId": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "Description": {
+                    "maxLength": 2000,
+                    "minLength": 10,
+                    "type": "string"
+                  },
+                  "Latitude": {
+                    "maximum": 90,
+                    "minimum": -90,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Longitude": {
+                    "maximum": 180,
+                    "minimum": -180,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "AmenityIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer",
+                      "format": "int32"
+                    }
+                  },
+                  "AmenitiesToRemove": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer",
+                      "format": "int32"
+                    }
+                  },
+                  "CardName": {
+                    "maxLength": 200,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "LocationId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "StartDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "EndDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "Rating": {
+                    "maximum": 5,
+                    "minimum": 0,
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "CardImages": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "format": "binary"
+                    }
+                  },
+                  "ImageUrlsToRemove": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "Price": {
+                    "minimum": 0,01,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "IsDeleted": {
+                    "type": "boolean"
+                  },
+                  "Cleanliness": {
+                    "maximum": 5,
+                    "minimum": 0,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Accuracy": {
+                    "maximum": 5,
+                    "minimum": 0,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "CheckIn": {
+                    "maximum": 5,
+                    "minimum": 0,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Communication": {
+                    "maximum": 5,
+                    "minimum": 0,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "LocationRating": {
+                    "maximum": 5,
+                    "minimum": 0,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Value": {
+                    "maximum": 5,
+                    "minimum": 0,
+                    "type": "number",
+                    "format": "double"
+                  }
+                }
+              },
+              "encoding": {
+                "NumberOfGuests": {
+                  "style": "form"
+                },
+                "NumberOfBedrooms": {
+                  "style": "form"
+                },
+                "NumberOfBeds": {
+                  "style": "form"
+                },
+                "NumberOfBathrooms": {
+                  "style": "form"
+                },
+                "HostId": {
+                  "style": "form"
+                },
+                "Description": {
+                  "style": "form"
+                },
+                "Latitude": {
+                  "style": "form"
+                },
+                "Longitude": {
+                  "style": "form"
+                },
+                "AmenityIds": {
+                  "style": "form"
+                },
+                "AmenitiesToRemove": {
+                  "style": "form"
+                },
+                "CardName": {
+                  "style": "form"
+                },
+                "LocationId": {
+                  "style": "form"
+                },
+                "StartDate": {
+                  "style": "form"
+                },
+                "EndDate": {
+                  "style": "form"
+                },
+                "Rating": {
+                  "style": "form"
+                },
+                "CardImages": {
+                  "style": "form"
+                },
+                "ImageUrlsToRemove": {
+                  "style": "form"
+                },
+                "Price": {
+                  "style": "form"
+                },
+                "IsDeleted": {
+                  "style": "form"
+                },
+                "Cleanliness": {
+                  "style": "form"
+                },
+                "Accuracy": {
+                  "style": "form"
+                },
+                "CheckIn": {
+                  "style": "form"
+                },
+                "Communication": {
+                  "style": "form"
+                },
+                "LocationRating": {
+                  "style": "form"
+                },
+                "Value": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "CardDetails"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Cards": {
       "get": {
         "tags": [
@@ -1130,6 +1717,86 @@
         }
       }
     },
+    "/api/carddetails/{cardDetailId}/ratings": {
+      "get": {
+        "tags": [
+          "Ratings"
+        ],
+        "parameters": [
+          {
+            "name": "cardDetailId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Rating"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Rating"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Rating"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Ratings"
+        ],
+        "parameters": [
+          {
+            "name": "cardDetailId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RatingDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RatingDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RatingDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/users/{id}": {
       "get": {
         "tags": [
@@ -1411,6 +2078,24 @@
         },
         "additionalProperties": false
       },
+      "AmenityResponseDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "imageUrl": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "Card": {
         "required": [
           "name"
@@ -1466,11 +2151,6 @@
             "type": "number",
             "format": "currency"
           },
-          "cardDetailId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
           "cardDetail": {
             "$ref": "#/components/schemas/CardDetail"
           },
@@ -1511,6 +2191,9 @@
             "type": "integer",
             "format": "int32"
           },
+          "card": {
+            "$ref": "#/components/schemas/Card"
+          },
           "numberOfGuests": {
             "type": "integer",
             "format": "int32"
@@ -1547,11 +2230,6 @@
             "type": "number",
             "format": "double"
           },
-          "ratingId": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
           "ratings": {
             "$ref": "#/components/schemas/Rating"
           },
@@ -1581,6 +2259,69 @@
           },
           "amenity": {
             "$ref": "#/components/schemas/Amenity"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CardDetailResponseDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numberOfGuests": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numberOfBedrooms": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numberOfBeds": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numberOfBathrooms": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hostId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "hostName": {
+            "type": "string",
+            "nullable": true
+          },
+          "hostAvatarUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "latitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "longitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "amenities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AmenityResponseDto"
+            },
+            "nullable": true
+          },
+          "ratings": {
+            "$ref": "#/components/schemas/RatingDto"
+          },
+          "card": {
+            "$ref": "#/components/schemas/CardResponseDto"
           }
         },
         "additionalProperties": false
@@ -1709,6 +2450,48 @@
           "cardDetail": {
             "$ref": "#/components/schemas/CardDetail"
           },
+          "cleanliness": {
+            "maximum": 5,
+            "minimum": 0,
+            "type": "number",
+            "format": "double"
+          },
+          "accuracy": {
+            "maximum": 5,
+            "minimum": 0,
+            "type": "number",
+            "format": "double"
+          },
+          "checkIn": {
+            "maximum": 5,
+            "minimum": 0,
+            "type": "number",
+            "format": "double"
+          },
+          "communication": {
+            "maximum": 5,
+            "minimum": 0,
+            "type": "number",
+            "format": "double"
+          },
+          "location": {
+            "maximum": 5,
+            "minimum": 0,
+            "type": "number",
+            "format": "double"
+          },
+          "value": {
+            "maximum": 5,
+            "minimum": 0,
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "RatingDto": {
+        "type": "object",
+        "properties": {
           "cleanliness": {
             "maximum": 5,
             "minimum": 0,

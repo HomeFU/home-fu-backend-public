@@ -1,8 +1,8 @@
 ﻿using HomeFuBack.Data.Entities;
-using HomeFuBack.Models.Housing; // Возможно, это пространство имен для Location, Category, Card
+using HomeFuBack.Models.Housing; // Для Location, Category, Card, CardDetail, Rating, CardDetailAmenity
 using HomeFuBack.Models.Users; // Для User
 using Microsoft.EntityFrameworkCore;
-using HomeFuBack.Models; // Добавьте это, чтобы получить доступ к Amenity, CardDetail, Rating, CardDetailAmenity
+using HomeFuBack.Models; // Если Amenity, CardDetail, Rating, CardDetailAmenity находятся здесь
 
 namespace HomeFuBack.Data
 {
@@ -17,7 +17,6 @@ namespace HomeFuBack.Data
         public DbSet<Card> Cards { get; set; }
         public DbSet<CardCategory> CardsCategories { get; set; }
 
-        // Добавляем новые DbSet для моделей CardDetail, Amenity, Rating и промежуточной таблицы
         public DbSet<Amenity> Amenities { get; set; }
         public DbSet<CardDetail> CardDetails { get; set; }
         public DbSet<Rating> Ratings { get; set; }
@@ -32,34 +31,33 @@ namespace HomeFuBack.Data
             modelBuilder.Entity<CardCategory>()
                 .HasKey(cc => new { cc.CardId, cc.CategoryId });
 
-            // Настройка связи Token с User (уже есть, но можно уточнить)
-            modelBuilder.Entity<Entities.Token>() // Используйте полное имя, если есть конфликт
+            // Настройка связи Token с User
+            modelBuilder.Entity<Entities.Token>()
                 .HasOne(t => t.User)
-                .WithMany() // User может иметь много токенов
+                .WithMany()
                 .HasForeignKey(t => t.UserId)
-                .OnDelete(DeleteBehavior.Cascade); // При удалении пользователя, удалять его токены
+                .OnDelete(DeleteBehavior.Cascade);
 
-            // --- НОВЫЕ НАСТРОЙКИ СВЯЗЕЙ ---
+            // --- КОРРЕКТНЫЕ НАСТРОЙКИ СВЯЗЕЙ ---
 
-            // 1. Настройка связи один-к-одному между Card и CardDetail
-            // Предполагаем, что Id CardDetail будет совпадать с Id Card, и CardDetailId в Card ссылается на CardDetail
+            // 1. Настройка связи один-к-одному между Card и CardDetail (Shared Primary Key)
+            // Id CardDetail является первичным ключом CardDetail И внешним ключом к Card.Id
             modelBuilder.Entity<Card>()
-                .HasOne(c => c.CardDetail) // Card имеет один CardDetail
-                .WithOne() // CardDetail имеет одну Card (нет навигационного свойства обратно, если не нужно)
-                .HasForeignKey<Card>("CardDetailId") // Внешний ключ находится в модели Card (поле CardDetailId)
-                .IsRequired(false); // Делаем его необязательным, если Card может существовать без CardDetail изначально
+                .HasOne(c => c.CardDetail) // Card имеет один CardDetail (навигационное свойство в Card)
+                .WithOne(cd => cd.Card)    // CardDetail относится к одной Card (навигационное свойство в CardDetail)
+                                           // Указываем, что CardDetail.Id является внешним ключом к Card.
+                                           // ВАЖНО: ForeignKey здесь относится к зависимой сущности (CardDetail).
+                .HasForeignKey<CardDetail>(cd => cd.Id); // CardDetail.Id - это и PK, и FK к Card.Id
 
-            // Альтернативная настройка 1-к-1, если Id CardDetail является первичным ключом и внешним ключом к Card.Id
-            // modelBuilder.Entity<CardDetail>()
-            //     .HasOne(cd => cd.Card)
-            //     .WithOne(c => c.CardDetail)
-            //     .HasForeignKey<CardDetail>(cd => cd.Id); // Id CardDetail - FK к Card.Id
 
             // 2. Настройка связи один-к-одному между CardDetail и Rating
+            // CardDetail является принципалом, Rating - зависимая сущность.
+            // Rating.CardDetailId является внешним ключом к CardDetail.Id.
             modelBuilder.Entity<CardDetail>()
-                .HasOne(cd => cd.Ratings) // CardDetail имеет одну Rating
-                .WithOne(r => r.CardDetail) // Rating имеет одну CardDetail
-                .HasForeignKey<Rating>(r => r.CardDetailId); // CardDetailId в Rating является внешним ключом
+                .HasOne(cd => cd.Ratings)      // CardDetail имеет один Rating (навигационное свойство в CardDetail)
+                .WithOne(r => r.CardDetail)    // Rating относится к одному CardDetail (навигационное свойство в Rating)
+                                               // Указываем, что Rating.CardDetailId является внешним ключом к CardDetail.
+                .HasForeignKey<Rating>(r => r.CardDetailId);
 
             // 3. Настройка связи многие-ко-многим между CardDetail и Amenity
             modelBuilder.Entity<CardDetailAmenity>()
@@ -67,12 +65,12 @@ namespace HomeFuBack.Data
 
             modelBuilder.Entity<CardDetailAmenity>()
                 .HasOne(cda => cda.CardDetail)
-                .WithMany(cd => cd.CardDetailAmenities) // CardDetail имеет коллекцию CardDetailAmenity
+                .WithMany(cd => cd.CardDetailAmenities)
                 .HasForeignKey(cda => cda.CardDetailId);
 
             modelBuilder.Entity<CardDetailAmenity>()
                 .HasOne(cda => cda.Amenity)
-                .WithMany() // Amenity не обязательно имеет навигационное свойство к CardDetailAmenities
+                .WithMany() // Amenity может иметь много CardDetailAmenity, но не обязательно имеет обратную ссылку
                 .HasForeignKey(cda => cda.AmenityId);
 
             // 4. Настройка связи HostId в CardDetail к User
