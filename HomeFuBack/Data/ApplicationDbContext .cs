@@ -39,8 +39,6 @@ namespace HomeFuBack.Data
                 .HasForeignKey(t => t.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // --- КОРРЕКТНЫЕ НАСТРОЙКИ СВЯЗЕЙ ---
-
             // 1. Настройка связи один-к-одному между Card и CardDetail (Shared Primary Key)
             // Id CardDetail является первичным ключом CardDetail И внешним ключом к Card.Id
             modelBuilder.Entity<Card>()
@@ -57,7 +55,7 @@ namespace HomeFuBack.Data
             modelBuilder.Entity<CardDetail>()
                 .HasOne(cd => cd.Ratings)      // CardDetail имеет один Rating (навигационное свойство в CardDetail)
                 .WithOne(r => r.CardDetail)    // Rating относится к одному CardDetail (навигационное свойство в Rating)
-                                               // Указываем, что Rating.CardDetailId является внешним ключом к CardDetail.
+
                 .HasForeignKey<Rating>(r => r.CardDetailId);
 
             // 3. Настройка связи многие-ко-многим между CardDetail и Amenity

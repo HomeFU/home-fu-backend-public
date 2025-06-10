@@ -62,7 +62,7 @@ namespace HomeFuBack.Controllers
             return user;
         }
 
-        [HttpGet("me")] // Новый эндпоинт
+        [HttpGet("me")]
         public async Task<ActionResult<User>> GetCurrentUser()
         {
             // Получаем ID пользователя из JWT токена
@@ -70,8 +70,7 @@ namespace HomeFuBack.Controllers
 
             if (string.IsNullOrEmpty(userIdFromToken))
             {
-                // Это не должно произойти, если [Authorize] работает корректно,
-                // но всегда лучше проверить
+                // Это не должно произойти, если [Authorize] работает корректно
                 return Unauthorized("User ID not found in token.");
             }
 
@@ -87,7 +86,6 @@ namespace HomeFuBack.Controllers
             if (user == null)
             {
                 // Пользователь не найден в базе данных, хотя токен был валиден.
-                // Это может указывать на удаленный аккаунт или проблему с данными.
                 return NotFound("User not found.");
             }
 

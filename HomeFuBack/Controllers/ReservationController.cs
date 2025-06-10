@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using HomeFuBack.Data; // Ваш ApplicationDbContext
-using HomeFuBack.Models.Housing; // Ваша модель Reservation, Card, ReservationStatus
-using HomeFuBack.Models.Users; // Ваша модель User (если используется навигационное свойство User)
-using HomeFuBack.Data.DTO; // Ваши DTO (ReservationDto, ReservationUpdateDto, ReservationResponseDto)
+using HomeFuBack.Data;
+using HomeFuBack.Models.Housing;
+using HomeFuBack.Models.Users;
+using HomeFuBack.Data.DTO;
 using System.Security.Claims; // Для получения ID пользователя из Claims
 using Microsoft.AspNetCore.Authorization; // Для авторизации
 
@@ -19,8 +19,6 @@ namespace HomeFuBack.Controllers
         {
             _context = context;
         }
-
-        // --- Вспомогательные методы для ручного маппинга ---
 
         // Маппинг из Reservation в ReservationResponseDto
         private ReservationResponseDto MapToReservationResponseDto(Reservation reservation)
@@ -38,19 +36,13 @@ namespace HomeFuBack.Controllers
                 CardName = reservation.Card?.Name, // Используем оператор ? для Null-Conditional
                 CardImageUrls = reservation.Card?.ImageUrls ?? new List<string>(), // Null-Coalescing для List<string>
                 UserId = reservation.UserId,
-                UserName = reservation.User?.FirstName, // Предполагается, что у User есть UserName
-                UserEmail = reservation.User?.Email,   // Предполагается, что у User есть Email
+                UserName = reservation.User?.FirstName,
+                UserEmail = reservation.User?.Email,
                 CreatedAt = reservation.CreatedAt,
                 Status = reservation.Status.ToString() // Преобразуем enum в string
             };
         }
 
-        // --- GET Endpoints ---
-
-        /// <summary>
-        /// Получает список всех резерваций. Только для администраторов.
-        /// </summary>
-        /// <returns>Список ReservationResponseDto.</returns>
         [HttpGet]
         [Authorize(Roles = "Admin")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -60,18 +52,13 @@ namespace HomeFuBack.Controllers
         {
             var reservations = await _context.Reservations
                 .Include(r => r.Card)
-                .Include(r => r.User) // Предполагается, что у вас есть DbSet<User> и навигационное свойство
+                .Include(r => r.User) 
                 .ToListAsync();
 
             var reservationDtos = reservations.Select(r => MapToReservationResponseDto(r)).ToList();
             return Ok(reservationDtos);
         }
 
-        /// <summary>
-        /// Получает резервацию по ID. Только владелец или администратор.
-        /// </summary>
-        /// <param name="id">ID резервации.</param>
-        /// <returns>ReservationResponseDto.</returns>
         [HttpGet("{id}")]
         [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -99,10 +86,7 @@ namespace HomeFuBack.Controllers
             return Ok(MapToReservationResponseDto(reservation));
         }
 
-        /// <summary>
-        /// Получает все резервации для текущего авторизованного пользователя.
-        /// </summary>
-        /// <returns>Список ReservationResponseDto.</returns>
+
         [HttpGet("user")]
         [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -131,13 +115,7 @@ namespace HomeFuBack.Controllers
             return Ok(reservationDtos);
         }
 
-        // --- POST Endpoints ---
 
-        /// <summary>
-        /// Создает новую резервацию для текущего пользователя.
-        /// </summary>
-        /// <param name="reservationDto">Данные для создания резервации.</param>
-        /// <returns>Созданная ReservationResponseDto.</returns>
         [HttpPost]
         [Authorize]
         [ProducesResponseType(StatusCodes.Status201Created)]
@@ -219,22 +197,13 @@ namespace HomeFuBack.Controllers
             await _context.SaveChangesAsync();
 
             // Загрузка связанных данных для корректного маппинга в ResponseDto
-            // Эти .LoadAsync() нужны, только если вы хотите, чтобы MapToReservationResponseDto
-            // имел доступ к Card.Name, Card.ImageUrls, User.UserName и User.Email сразу после сохранения
             await _context.Entry(reservation).Reference(r => r.Card).LoadAsync();
             await _context.Entry(reservation).Reference(r => r.User).LoadAsync();
 
             return CreatedAtAction(nameof(GetReservation), new { id = reservation.Id }, MapToReservationResponseDto(reservation));
         }
 
-        // --- PUT Endpoints ---
 
-        /// <summary>
-        /// Обновляет существующую резервацию. Только владелец или администратор.
-        /// </summary>
-        /// <param name="id">ID резервации для обновления.</param>
-        /// <param name="reservationUpdateDto">Данные для обновления резервации.</param>
-        /// <returns>NoContent.</returns>
         [HttpPut("{id}")]
         [Authorize]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -292,7 +261,6 @@ namespace HomeFuBack.Controllers
 
             if (reservationUpdateDto.Status.HasValue)
                 reservation.Status = reservationUpdateDto.Status.Value;
-            // Если Status в DTO был string, здесь бы потребовался Enum.TryParse
 
             // Валидация дат после обновления
             if (reservation.CheckInDate >= reservation.CheckOutDate)
@@ -345,11 +313,7 @@ namespace HomeFuBack.Controllers
             return NoContent();
         }
 
-        /// <summary>
-        /// Отменяет резервацию (изменяет статус на "Cancelled"). Только владелец или администратор.
-        /// </summary>
-        /// <param name="id">ID резервации для отмены.</param>
-        /// <returns>NoContent.</returns>
+
         [HttpPost("{id}/cancel")]
         [Authorize]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -383,11 +347,7 @@ namespace HomeFuBack.Controllers
             return NoContent();
         }
 
-        /// <summary>
-        /// Удаляет резервацию. Только для администраторов. (Физическое удаление)
-        /// </summary>
-        /// <param name="id">ID резервации для удаления.</param>
-        /// <returns>NoContent.</returns>
+
         [HttpDelete("{id}")]
         [Authorize(Roles = "Admin")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]

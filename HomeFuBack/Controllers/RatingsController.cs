@@ -8,7 +8,6 @@ namespace HomeFuBack.Controllers
 {
     [ApiController]
     [Route("api/carddetails/{cardDetailId}/ratings")] // Маршрут привязан к CardDetail
-    // [Authorize] // Возможно, только авторизованные пользователи могут видеть/изменять оценки
     public class RatingsController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -18,12 +17,7 @@ namespace HomeFuBack.Controllers
             _context = context;
         }
 
-        // GET: api/carddetails/{cardDetailId}/ratings
-        /// <summary>
-        /// Получает оценки для указанной детальной карточки.
-        /// </summary>
-        /// <param name="cardDetailId">ID детальной карточки.</param>
-        /// <returns>Объект Rating или NotFound.</returns>
+
         [HttpGet]
         public async Task<ActionResult<Rating>> GetRatingByCardDetailId(int cardDetailId)
         {
@@ -39,16 +33,8 @@ namespace HomeFuBack.Controllers
             return rating;
         }
 
-        // PUT: api/carddetails/{cardDetailId}/ratings
-        /// <summary>
-        /// Обновляет оценки для указанной детальной карточки.
-        /// Если оценок для данной CardDetail нет, вернет NotFound.
-        /// </summary>
-        /// <param name="cardDetailId">ID детальной карточки.</param>
-        /// <param name="ratingDto">Обновленные данные оценок.</param>
-        /// <returns>NoContent, если обновление успешно, или BadRequest/NotFound.</returns>
         [HttpPut]
-        // [Authorize(Roles = "User")] // Возможно, только авторизованные пользователи могут обновлять оценки
+        // [Authorize(Roles = "User")] // Только авторизованные пользователи могут обновлять оценки
         public async Task<IActionResult> PutRatingForCardDetail(int cardDetailId, [FromBody] RatingDto ratingDto)
         {
             // Ищем существующую запись оценок для этой CardDetail

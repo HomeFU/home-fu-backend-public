@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Http; // Для IFormFile
+﻿using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System;
-using HomeFuBack.Models; // Для RatingDto
+using HomeFuBack.Models;
 
 namespace HomeFuBack.Data.DTO
 {
@@ -21,10 +21,10 @@ namespace HomeFuBack.Data.DTO
         public int NumberOfBeds { get; set; }
 
         [Range(0, int.MaxValue, ErrorMessage = "Количество ванных комнат должно быть неотрицательным.")]
-        public int NumberOfBathrooms { get; set; } // Согласно вашей модели, это int
+        public int NumberOfBathrooms { get; set; }
 
         [Required(ErrorMessage = "ID хоста обязательно.")]
-        public Guid HostId { get; set; } // Теперь Guid
+        public Guid HostId { get; set; }
 
         [Required(ErrorMessage = "Описание обязательно.")]
         [StringLength(2000, MinimumLength = 10, ErrorMessage = "Описание должно быть от 10 до 2000 символов.")]
@@ -54,7 +54,7 @@ namespace HomeFuBack.Data.DTO
         public DateTime? EndDate { get; set; }
 
         [Range(0, 5, ErrorMessage = "Рейтинг должен быть от 0 до 5.")]
-        public int? Rating { get; set; } // Средний рейтинг карточки (обычно агрегируется из CardDetail.Rating)
+        public int? Rating { get; set; } // Средний рейтинг карточки
 
         public List<IFormFile>? CardImages { get; set; } // Файлы изображений для карточки
 
@@ -63,7 +63,6 @@ namespace HomeFuBack.Data.DTO
         public decimal Price { get; set; }
 
         // --- Поля для создания связанного Rating (начальные значения) ---
-        // Эти поля можно сделать опциональными, если хотите использовать значения по умолчанию
         [Range(0.0, 5.0)]
         public double InitialCleanliness { get; set; } = 0.0;
         [Range(0.0, 5.0)]
@@ -130,8 +129,8 @@ namespace HomeFuBack.Data.DTO
         public bool? IsDeleted { get; set; } // Флаг для мягкого удаления карточки
 
         // --- Поля для связанного Rating (для обновления) ---
-        // Если вы обновляете через этот контроллер, то обновляете существующий Rating,
-        // а не создаете новый ID
+        // Если обновлять через этот контроллер, то обновляется существующий Rating,
+        // а не создается новый ID
         [Range(0.0, 5.0)]
         public double? Cleanliness { get; set; }
         [Range(0.0, 5.0)]

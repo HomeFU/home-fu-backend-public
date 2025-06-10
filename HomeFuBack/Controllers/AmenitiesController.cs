@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using HomeFuBack.Data;
-using HomeFuBack.Models.Housing; // Убедитесь, что ваша модель Amenity находится здесь
-using HomeFuBack.Data.DTO; // Если вы используете AmenityDto для входных данных
+using HomeFuBack.Models.Housing; 
+using HomeFuBack.Data.DTO;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,11 +15,11 @@ namespace HomeFuBack.Controllers
 {
     [ApiController]
     [Route("api/amenities")]
-    // [Authorize(Roles = "Admin")] // Возможно, доступ к управлению удобствами будет только у администраторов
+    // [Authorize(Roles = "Admin")]
     public class AmenitiesController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
-        private readonly IWebHostEnvironment _environment; // Переименовал в _environment для соответствия CategoryController
+        private readonly IWebHostEnvironment _environment;
 
         public AmenitiesController(ApplicationDbContext context, IWebHostEnvironment environment)
         {
@@ -28,10 +28,6 @@ namespace HomeFuBack.Controllers
         }
 
         // GET: api/amenities
-        /// <summary>
-        /// Получает список всех удобств.
-        /// </summary>
-        /// <returns>Список объектов Amenity.</returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Amenity>>> GetAmenities()
         {
@@ -39,11 +35,6 @@ namespace HomeFuBack.Controllers
         }
 
         // GET: api/amenities/{id}
-        /// <summary>
-        /// Получает удобство по его ID.
-        /// </summary>
-        /// <param name="id">ID удобства.</param>
-        /// <returns>Объект Amenity или NotFound, если удобство не найдено.</returns>
         [HttpGet("{id}")]
         public async Task<ActionResult<Amenity>> GetAmenity(int id)
         {
@@ -58,11 +49,6 @@ namespace HomeFuBack.Controllers
         }
 
         // POST: api/amenities
-        /// <summary>
-        /// Создает новое удобство с опциональным файлом изображения.
-        /// </summary>
-        /// <param name="amenityDto">Данные для создания удобства, включая файл изображения.</param>
-        /// <returns>Созданное удобство.</returns>
         [HttpPost]
         public async Task<ActionResult<Amenity>> PostAmenity([FromForm] AmenityDto amenityDto)
         {
@@ -89,8 +75,6 @@ namespace HomeFuBack.Controllers
                 var fileExtension = Path.GetExtension(amenityDto.ImageFile.FileName).ToLowerInvariant();
                 if (!allowedExtensions.Contains(fileExtension))
                 {
-                    // Если формат не поддерживается, удаляем ранее сохраненное удобство (если его ID уже присвоен)
-                    // или обрабатываем ошибку. Для простоты сейчас просто возвращаем BadRequest.
                     _context.Amenities.Remove(amenity); // Откатываем добавление
                     await _context.SaveChangesAsync();
                     return BadRequest("Неподдерживаемый формат изображения.");
@@ -119,12 +103,6 @@ namespace HomeFuBack.Controllers
         }
 
         // PUT: api/amenities/{id}
-        /// <summary>
-        /// Обновляет существующее удобство. Можно обновить имя и/или изображение.
-        /// </summary>
-        /// <param name="id">ID удобства для обновления.</param>
-        /// <param name="amenityUpdateDto">Обновленные данные удобства.</param>
-        /// <returns>NoContent, если обновление успешно, или BadRequest/NotFound.</returns>
         [HttpPut("{id}")]
         public async Task<IActionResult> PutAmenity(int id, [FromForm] AmenityUpdateDto amenityUpdateDto)
         {
@@ -208,11 +186,6 @@ namespace HomeFuBack.Controllers
         }
 
         // DELETE: api/amenities/{id}
-        /// <summary>
-        /// Удаляет удобство по его ID и связанный файл изображения.
-        /// </summary>
-        /// <param name="id">ID удобства для удаления.</param>
-        /// <returns>NoContent, если удаление успешно, или NotFound.</returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAmenity(int id)
         {
@@ -235,12 +208,6 @@ namespace HomeFuBack.Controllers
         }
 
         // POST: api/amenities/{id}/image
-        /// <summary>
-        /// Загружает или обновляет изображение для существующего удобства.
-        /// </summary>
-        /// <param name="id">ID удобства.</param>
-        /// <param name="file">Файл изображения.</param>
-        /// <returns>URL загруженного изображения.</returns>
         [HttpPost("{id}/image")]
         public async Task<IActionResult> UploadAmenityImage(int id, IFormFile file)
         {
@@ -311,7 +278,6 @@ namespace HomeFuBack.Controllers
                 catch (Exception ex)
                 {
                     Console.WriteLine($"Ошибка при удалении изображения {filePathOnDisk}: {ex.Message}");
-                    // Здесь можно добавить логирование
                 }
             }
         }

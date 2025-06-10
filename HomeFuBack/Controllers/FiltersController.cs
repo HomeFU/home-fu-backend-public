@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using HomeFuBack.Data;
-using HomeFuBack.Data.DTO; // Убедитесь, что используете DTO
+using HomeFuBack.Data.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using HomeFuBack.Models.Housing; // Для доступа к Card, Reservation, ReservationStatus, CardDetail, Location
-using Microsoft.AspNetCore.Http; // Для StatusCodes
+using HomeFuBack.Models.Housing;
+using Microsoft.AspNetCore.Http;
 
 namespace HomeFuBack.Controllers
 {
@@ -22,11 +22,7 @@ namespace HomeFuBack.Controllers
             _context = context;
         }
 
-        /// <summary>
-        /// Фильтрует карточки жилья по датам и количеству гостей (взрослые, дети, младенцы, питомцы).
-        /// </summary>
-        /// <param name="filterDto">Параметры фильтрации.</param>
-        /// <returns>Список доступных карточек жилья.</returns>
+
         [HttpGet("availability")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
@@ -53,10 +49,9 @@ namespace HomeFuBack.Controllers
             // 2. Расчет общего количества гостей
             var totalGuestsForCapacity = filterDto.Adults + filterDto.Children;
             // Младенцы (Infants) не учитываются в общей вместимости "NumberOfGuests" по умолчанию.
-            // Если totalGuestsForCapacity == 0, но есть Infants/Pets, установим минимум 1 для корректной работы
             if (totalGuestsForCapacity == 0 && (filterDto.Infants > 0 || filterDto.Pets > 0))
             {
-                totalGuestsForCapacity = 1; // Устанавливаем минимум 1, если есть младенцы или питомцы, но нет взрослых/детей
+                totalGuestsForCapacity = 1;
             }
             else if (totalGuestsForCapacity == 0) // Если вообще никого нет
             {
@@ -66,7 +61,7 @@ namespace HomeFuBack.Controllers
 
             // 3. Строим LINQ-запрос к карточкам
             var query = _context.Cards
-                .Include(c => c.CardDetail) // Включаем CardDetail для NumberOfGuests
+                .Include(c => c.CardDetail)
                 .Include(c => c.Location) // Для LocationId и LocationName
                 .Include(c => c.CardCategories) // Для CategoryIds
                     .ThenInclude(cc => cc.Category)
@@ -80,7 +75,7 @@ namespace HomeFuBack.Controllers
                 c.CardDetail.NumberOfGuests >= totalGuestsForCapacity
             );
 
-            // 5. Фильтрация по питомцам (если добавите AllowsPets в CardDetail)
+            // 5. Фильтрация по питомцам
             //if (filterDto.Pets > 0)
             //{
             //    query = query.Where(c => c.CardDetail != null && c.CardDetail.AllowsPets);
@@ -111,7 +106,7 @@ namespace HomeFuBack.Controllers
                 Id = card.Id,
                 Name = card.Name,
                 LocationId = card.LocationId,
-                LocationName = card.Location?.Name ?? string.Empty, // Предполагаем, что у Location есть поле Name
+                LocationName = card.Location?.Name ?? string.Empty,
                 StartDate = card.StartDate,
                 EndDate = card.EndDate,
                 Rating = card.Rating, // Используем Rating из самой Card

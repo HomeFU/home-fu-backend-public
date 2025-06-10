@@ -9,7 +9,7 @@ namespace HomeFuBack.Models.Housing
     public class CardDetail
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)] // <--- КЛЮЧЕВОЕ ИЗМЕНЕНИЕ: Id не автогенерируется
+        [DatabaseGenerated(DatabaseGeneratedOption.None)] // Id не автогенерируется
         public int Id { get; set; }
 
         // Связь один-к-одному с Card (Shared Primary Key)
@@ -17,7 +17,6 @@ namespace HomeFuBack.Models.Housing
         [ForeignKey("Id")] // Указывает, что Id CardDetail является внешним ключом к Card.
         public Card Card { get; set; } = null!; // Навигационное свойство к Card
 
-        // ... остальная часть вашей модели CardDetail
         // Общая информация
         public int NumberOfGuests { get; set; }
         public int NumberOfBedrooms { get; set; }
@@ -37,11 +36,6 @@ namespace HomeFuBack.Models.Housing
         // Координаты
         public double Latitude { get; set; }
         public double Longitude { get; set; }
-
-        // УДАЛЯЕМ: Связь один-к-одному с Rating
-        // public int? RatingId { get; set; } // Foreign Key для Rating
-        // [ForeignKey("RatingId")]
-        // public Rating? Ratings { get; set; } // Навигационное свойство
 
         // Добавляем навигационное свойство для 1:1 связи, где Rating является зависимой сущностью
         public Rating? Ratings { get; set; } // CardDetail может иметь один Rating

@@ -27,10 +27,6 @@ namespace HomeFuBack.Data.DTO
 
     public class ReservationUpdateDto
     {
-        // Убрал Id, CardId, UserId - обычно их не обновляют
-        // public int? Id { get; set; } // Если у вас было это
-        // public int? CardId { get; set; }
-        // public Guid? UserId { get; set; }
 
         [DataType(DataType.Date)]
         public DateTime? CheckInDate { get; set; }
@@ -50,8 +46,7 @@ namespace HomeFuBack.Data.DTO
         [Range(0, int.MaxValue, ErrorMessage = "Количество питомцев должно быть неотрицательным.")]
         public int? Pets { get; set; }
 
-        // Если вы хотите, чтобы фронтенд мог отправлять "Pending", "Confirmed" и т.д.,
-        // то Status должен быть string?, а не ReservationStatus?
+        // Status должен быть string?, а не ReservationStatus?
         // Затем в контроллере парсим string в enum.
         public ReservationStatus? Status { get; set; } // Если фронтенд отправляет числовые значения enum
         // public string? Status { get; set; } // Если фронтенд отправляет строковые значения enum

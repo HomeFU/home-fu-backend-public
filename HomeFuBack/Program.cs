@@ -6,8 +6,8 @@ using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using System.Text.Json.Serialization;
-using Microsoft.AspNetCore.StaticFiles; // Добавляем этот using
-using System.Collections.Generic; // Добавляем этот using
+using Microsoft.AspNetCore.StaticFiles;
+using System.Collections.Generic;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +17,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options => options.EnableRetryOnFailure()
     ));
 
-// Разрешаем CORS, если фронт отдельно (например, React, Angular, Vue)
+// Разрешаем CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
@@ -71,7 +71,7 @@ var provider = new FileExtensionContentTypeProvider(new Dictionary<string, strin
     [".jpeg"] = "image/jpeg",
     [".png"] = "image/png",
     [".svg"] = "image/svg+xml",
-    // Добавьте другие MIME-типы, если необходимо
+
 });
 
 app.UseStaticFiles(new StaticFileOptions
@@ -79,7 +79,7 @@ app.UseStaticFiles(new StaticFileOptions
     FileProvider = new PhysicalFileProvider(
         Path.Combine(builder.Environment.WebRootPath, "images")),
     RequestPath = "/images",
-    ContentTypeProvider = provider // Используем наш FileExtensionContentTypeProvider
+    ContentTypeProvider = provider // Используем FileExtensionContentTypeProvider
 });
 
 app.UseHttpsRedirection();

@@ -165,7 +165,7 @@ namespace HomeFuBack.Controllers
         }
 
         // PUT: api/cards/{id}
-        // [Authorize(Roles = "Admin")] // Раскомментируйте, если требуется авторизация для администраторов
+        // [Authorize(Roles = "Admin")] // Усли требуется авторизация для администраторов
         [HttpPut("{id}")]
         public async Task<IActionResult> PutCard(int id, CardUpdateDto cardUpdateDto)
         {
@@ -176,7 +176,6 @@ namespace HomeFuBack.Controllers
             }
 
             // Базовая валидация DTO перед началом обработки
-            // (например, если у вас есть [Required] или другие атрибуты валидации в DTO, не nullable поля)
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -191,7 +190,6 @@ namespace HomeFuBack.Controllers
                 return NotFound($"Карточка с ID {id} не найдена.");
             }
 
-            // --- Ручное обновление полей Card, только если они предоставлены в DTO ---
             // Благодаря nullable-типам в CardUpdateDto, мы можем проверить .HasValue или != null
 
             if (cardUpdateDto.Name != null)

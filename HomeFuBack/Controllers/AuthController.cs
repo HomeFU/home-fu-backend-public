@@ -94,7 +94,7 @@ public class AuthController : ControllerBase
         {
             new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
             new Claim(ClaimTypes.Email, user.Email),
-            new Claim(ClaimTypes.Role, user.Role ?? "User") // Убедимся, что роль всегда есть в токене
+            new Claim(ClaimTypes.Role, user.Role ?? "User")
         };
 
         var tokenDescriptor = new SecurityTokenDescriptor

@@ -16,7 +16,7 @@ namespace HomeFuBack.Controllers
 {
     [ApiController]
     [Route("api/carddetails")]
-    // [Authorize] // Возможно, только авторизованные пользователи могут создавать/изменять
+    // [Authorize]
     public class CardDetailsController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -28,10 +28,7 @@ namespace HomeFuBack.Controllers
             _environment = environment;
         }
 
-        // GET: api/carddetails
-        /// <summary>
-        /// Получает список всех детальных карточек с их связанными данными (Card, Rating, User, Amenities).
-        /// </summary>
+ 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CardDetailResponseDto>>> GetCardDetails()
         {
@@ -51,10 +48,6 @@ namespace HomeFuBack.Controllers
         }
 
         // GET: api/carddetails/{id}
-        /// <summary>
-        /// Получает детальную карточку по ее ID с ее связанными данными (Card, Rating, User, Amenities).
-        /// </summary>
-        /// <param name="id">ID детальной карточки.</param>
         [HttpGet("{id}")]
         public async Task<ActionResult<CardDetailResponseDto>> GetCardDetail(int id)
         {
@@ -78,10 +71,6 @@ namespace HomeFuBack.Controllers
         }
 
         // POST: api/carddetails
-        /// <summary>
-        /// Создает новую детальную карточку, а также связанную с ней основную карточку и записи оценок.
-        /// </summary>
-        /// <param name="dto">Данные для создания детальной карточки.</param>
         [HttpPost]
         [Consumes("multipart/form-data")]
         public async Task<ActionResult<CardDetailResponseDto>> CreateCardDetail([FromForm] CardDetailCreateDto dto)
@@ -228,11 +217,6 @@ namespace HomeFuBack.Controllers
         }
 
         // PUT: api/carddetails/{id}
-        /// <summary>
-        /// Обновляет существующую детальную карточку, а также связанную с ней основную карточку и записи оценок.
-        /// </summary>
-        /// <param name="id">ID детальной карточки.</param>
-        /// <param name="dto">Обновленные данные детальной карточки.</param>
         [HttpPut("{id}")]
         [Consumes("multipart/form-data")]
         public async Task<IActionResult> UpdateCardDetail(int id, [FromForm] CardDetailUpdateDto dto)
@@ -356,11 +340,6 @@ namespace HomeFuBack.Controllers
                 }
             }
 
-            // Обновление категорий Card (если CardCategories есть в CardDto, нужно будет обновить)
-            // В вашем DTO (CardDetailUpdateDto) нет полей для CategoryIds для Card,
-            // поэтому я не включил логику обновления категорий Card здесь.
-            // Если они вам нужны, добавьте List<int>? CardCategoryIds в CardDetailUpdateDto.
-
             // --- Обновление Rating ---
             if (rating != null) // Если Rating существует (должен существовать, т.к. создается с CardDetail)
             {
@@ -402,10 +381,6 @@ namespace HomeFuBack.Controllers
         }
 
         // DELETE: api/carddetails/{id}
-        /// <summary>
-        /// Удаляет детальную карточку, а также связанные с ней основную карточку, записи оценок и файлы изображений.
-        /// </summary>
-        /// <param name="id">ID детальной карточки для удаления.</param>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCardDetail(int id)
         {
@@ -429,11 +404,6 @@ namespace HomeFuBack.Controllers
                 }
             }
 
-            // Удаление связанных сущностей (EF Core может сделать это каскадно, если настроено)
-            // Важно: если CardDetail.Id и Card.Id одинаковые, то удаление CardDetail автоматически удалит Card.
-            // Если Card.CardDetailId nullable, то при удалении CardDetail, Card.CardDetailId станет null, а Card останется.
-            // В вашем случае, если Id CardDetail совпадает с Id Card, то они - одна и та же запись в логическом смысле.
-            // Поэтому, если мы удаляем CardDetail, то и Card должна быть удалена.
             if (cardDetail.Card != null)
             {
                 _context.Cards.Remove(cardDetail.Card);
@@ -510,13 +480,13 @@ namespace HomeFuBack.Controllers
                 NumberOfBedrooms = cardDetail.NumberOfBedrooms,
                 NumberOfBeds = cardDetail.NumberOfBeds,
                 NumberOfBathrooms = cardDetail.NumberOfBathrooms,
-                HostId = cardDetail.HostId, // Убедитесь, что Id хоста доступен
-                HostName = cardDetail.Host.FirstName!, // Предполагаем, что Host имеет UserName
-                HostAvatarUrl = cardDetail.Host?.ProfileImageUrl, // Предполагаем, что Host имеет ProfilePictureUrl
+                HostId = cardDetail.HostId,
+                HostName = cardDetail.Host.FirstName!,
+                HostAvatarUrl = cardDetail.Host?.ProfileImageUrl,
                 Description = cardDetail.Description,
                 Latitude = cardDetail.Latitude,
                 Longitude = cardDetail.Longitude,
-                Amenities = cardDetail.CardDetailAmenities?.Select(cda => new AmenityResponseDto // Убедитесь, что AmenityDto соответствует
+                Amenities = cardDetail.CardDetailAmenities?.Select(cda => new AmenityResponseDto 
                 {
                     Id = cda.Amenity.Id,
                     Name = cda.Amenity.Name,
@@ -524,7 +494,7 @@ namespace HomeFuBack.Controllers
                 }).ToList() ?? new List<AmenityResponseDto>(), // Обработка null
 
                 // Маппинг оценок
-                Ratings = cardDetail.Ratings != null ? new RatingDto // Убедитесь, что RatingDto соответствует
+                Ratings = cardDetail.Ratings != null ? new RatingDto
                 {
                     Cleanliness = cardDetail.Ratings.Cleanliness,
                     Accuracy = cardDetail.Ratings.Accuracy,
@@ -534,20 +504,19 @@ namespace HomeFuBack.Controllers
                     Value = cardDetail.Ratings.Value
                 } : null, // Обработка null
 
-                Card = cardDetail.Card != null ? new CardResponseDto // Убедитесь, что CardResponseDto соответствует
+                Card = cardDetail.Card != null ? new CardResponseDto 
                 {
                     Id = cardDetail.Card.Id,
                     Name = cardDetail.Card.Name,
                     LocationId = cardDetail.Card.LocationId,
-                    LocationName = cardDetail.Card.Location?.Name, // Доступ к Location.Name благодаря Include
+                    LocationName = cardDetail.Card.Location?.Name, 
                     StartDate = cardDetail.Card.StartDate,
                     EndDate = cardDetail.Card.EndDate,
                     Rating = cardDetail.Card.Rating,
                     Price = cardDetail.Card.Price,
                     IsDeleted = cardDetail.Card.IsDeleted,
                     ImageUrls = cardDetail.Card.ImageUrls,
-                    // ВОТ ГДЕ ПРОИСХОДИТ МАППИНГ CategoryIds
-                    CategoryIds = cardDetail.Card.CardCategories?.Select(cc => cc.CategoryId).ToList() ?? new List<int>() // Обработка null
+                    CategoryIds = cardDetail.Card.CardCategories?.Select(cc => cc.CategoryId).ToList() ?? new List<int>() 
                 } : null
             };
         }
