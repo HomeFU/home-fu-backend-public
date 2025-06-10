@@ -59,12 +59,12 @@
       "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\models\\housing\\carddetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|c:\\adesk\\project\\home-fu-backend-public\\homefuback\\data\\dto\\filtersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\data\\dto\\filtersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|c:\\adesk\\project\\home-fu-backend-public\\homefuback\\controllers\\filterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\controllers\\filterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|c:\\adesk\\project\\home-fu-backend-public\\homefuback\\data\\dto\\filtersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\data\\dto\\filtersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|c:\\adesk\\project\\home-fu-backend-public\\homefuback\\controllers\\carddetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -91,7 +91,6 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< HEAD
           "SelectedChildIndex": 2,
           "Children": [
             {
@@ -114,12 +113,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
               "Title": "CardDetailsController.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\CardDetailsController.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Controllers\\CardDetailsController.cs",
               "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\CardDetailsController.cs",
               "RelativeToolTip": "HomeFuBack\\Controllers\\CardDetailsController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAvwDoAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwCwAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-10T09:55:18.224Z",
               "EditorCaption": ""
@@ -135,40 +135,11 @@
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-10T09:48:15.683Z",
-=======
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CardDetail.cs",
-              "DocumentMoniker": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\CardDetail.cs",
-              "RelativeDocumentMoniker": "HomeFuBack\\Models\\Housing\\CardDetail.cs",
-              "ToolTip": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\CardDetail.cs",
-              "RelativeToolTip": "HomeFuBack\\Models\\Housing\\CardDetail.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T08:23:58.01Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CardResponseDto.cs",
-              "DocumentMoniker": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\Data\\DTO\\CardResponseDto.cs",
-              "RelativeDocumentMoniker": "HomeFuBack\\Data\\DTO\\CardResponseDto.cs",
-              "ToolTip": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\Data\\DTO\\CardResponseDto.cs",
-              "RelativeToolTip": "HomeFuBack\\Data\\DTO\\CardResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T16:02:44.015Z",
->>>>>>> Filters
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-<<<<<<< HEAD
               "Title": "AmenitiesController.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\AmenitiesController.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Controllers\\AmenitiesController.cs",
@@ -287,6 +258,32 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T11:33:46.994Z"
 =======
+              "Title": "CardDetail.cs",
+              "DocumentMoniker": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\CardDetail.cs",
+              "RelativeDocumentMoniker": "HomeFuBack\\Models\\Housing\\CardDetail.cs",
+              "ToolTip": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\CardDetail.cs",
+              "RelativeToolTip": "HomeFuBack\\Models\\Housing\\CardDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T08:23:58.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CardResponseDto.cs",
+              "DocumentMoniker": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\Data\\DTO\\CardResponseDto.cs",
+              "RelativeDocumentMoniker": "HomeFuBack\\Data\\DTO\\CardResponseDto.cs",
+              "ToolTip": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\Data\\DTO\\CardResponseDto.cs",
+              "RelativeToolTip": "HomeFuBack\\Data\\DTO\\CardResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T16:02:44.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "CardDetailsController.cs",
               "DocumentMoniker": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\Controllers\\CardDetailsController.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Controllers\\CardDetailsController.cs",
@@ -312,26 +309,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FiltersDto.cs",
               "DocumentMoniker": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\Data\\DTO\\FiltersDto.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Data\\DTO\\FiltersDto.cs",
               "ToolTip": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\Data\\DTO\\FiltersDto.cs",
               "RelativeToolTip": "HomeFuBack\\Data\\DTO\\FiltersDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T13:28:40.522Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "FiltersController.cs",
               "DocumentMoniker": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\Controllers\\FiltersController.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Controllers\\FiltersController.cs",
               "ToolTip": "C:\\Adesk\\Project\\home-fu-backend-public\\HomeFuBack\\Controllers\\FiltersController.cs",
               "RelativeToolTip": "HomeFuBack\\Controllers\\FiltersController.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAAAFYAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAAD8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T12:48:10.042Z",
               "EditorCaption": ""
