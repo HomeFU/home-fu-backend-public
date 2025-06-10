@@ -4,6 +4,8 @@ D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\O
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\HomeFuBack.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\HomeFuBack.runtimeconfig.json
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\HomeFuBack.pdb
+D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\AutoMapper.dll
+D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\Azure.Core.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\Azure.Identity.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\BCrypt.Net-Next.dll

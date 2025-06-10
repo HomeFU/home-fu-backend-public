@@ -165,54 +165,118 @@ namespace HomeFuBack.Controllers
         }
 
         // PUT: api/cards/{id}
+        // [Authorize(Roles = "Admin")] // Раскомментируйте, если требуется авторизация для администраторов
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutCard(int id, CardDto cardDto)
+        public async Task<IActionResult> PutCard(int id, CardUpdateDto cardUpdateDto)
         {
-            if (id != cardDto.Id)
+            // Проверка, что ID в URL соответствует ID в теле запроса
+            if (id != cardUpdateDto.Id)
             {
-                return BadRequest();
+                return BadRequest("ID в URL не соответствует ID в теле запроса.");
             }
 
-            if (!await _context.Locations.AnyAsync(l => l.Id == cardDto.LocationId))
+            // Базовая валидация DTO перед началом обработки
+            // (например, если у вас есть [Required] или другие атрибуты валидации в DTO, не nullable поля)
+            if (!ModelState.IsValid)
             {
-                return BadRequest("Invalid LocationId");
+                return BadRequest(ModelState);
             }
 
             var existingCard = await _context.Cards
-                .Include(c => c.CardCategories)
+                .Include(c => c.CardCategories) // Включаем категории, так как их будем обновлять
                 .FirstOrDefaultAsync(c => c.Id == id);
 
             if (existingCard == null)
             {
-                return NotFound();
+                return NotFound($"Карточка с ID {id} не найдена.");
             }
 
-            existingCard.Name = cardDto.Name;
-            existingCard.LocationId = cardDto.LocationId;
-            existingCard.StartDate = cardDto.StartDate;
-            existingCard.EndDate = cardDto.EndDate;
-            existingCard.Rating = cardDto.Rating;
-            existingCard.Price = cardDto.Price;
-            existingCard.IsDeleted = cardDto.IsDeleted;
+            // --- Ручное обновление полей Card, только если они предоставлены в DTO ---
+            // Благодаря nullable-типам в CardUpdateDto, мы можем проверить .HasValue или != null
 
-            if (cardDto.CategoryIds != null)
+            if (cardUpdateDto.Name != null)
             {
-                existingCard.CardCategories.RemoveAll(cc => !cardDto.CategoryIds.Contains(cc.CategoryId));
-
-                foreach (var categoryId in cardDto.CategoryIds)
+                existingCard.Name = cardUpdateDto.Name;
+            }
+            if (cardUpdateDto.LocationId.HasValue)
+            {
+                // Проверяем LocationId только если он предоставлен
+                // и убеждаемся, что такой Location существует
+                if (!await _context.Locations.AnyAsync(l => l.Id == cardUpdateDto.LocationId.Value))
                 {
-                    if (!existingCard.CardCategories.Any(cc => cc.CategoryId == categoryId))
+                    return BadRequest("Некорректный LocationId: Локация не найдена.");
+                }
+                existingCard.LocationId = cardUpdateDto.LocationId.Value;
+            }
+            if (cardUpdateDto.StartDate.HasValue)
+            {
+                existingCard.StartDate = cardUpdateDto.StartDate.Value;
+            }
+            if (cardUpdateDto.EndDate.HasValue)
+            {
+                existingCard.EndDate = cardUpdateDto.EndDate.Value;
+            }
+            if (cardUpdateDto.Price.HasValue)
+            {
+                existingCard.Price = cardUpdateDto.Price.Value;
+            }
+            if (cardUpdateDto.IsDeleted.HasValue)
+            {
+                existingCard.IsDeleted = cardUpdateDto.IsDeleted.Value;
+            }
+
+            // Обновление ImageUrls (предполагаем, что это List<string> в модели Card)
+            // Если ImageUrls предоставлены, заменяем существующий список.
+            // Если ImageUrls == null, то это поле не меняется.
+            // Если ImageUrls = [], то список очищается.
+            if (cardUpdateDto.ImageUrls != null)
+            {
+                existingCard.ImageUrls = cardUpdateDto.ImageUrls;
+            }
+
+            // --- Обновление категорий (CardCategories - отношение "многие ко многим") ---
+            // Логика обрабатывает добавление новых категорий и удаление отсутствующих.
+            if (cardUpdateDto.CategoryIds != null) // Проверяем, что список CategoryIds был предоставлен
+            {
+                // Получаем текущие ID категорий, связанные с карточкой
+                var currentCategoryIds = existingCard.CardCategories.Select(cc => cc.CategoryId).ToList();
+
+                // Идентификаторы категорий, которые нужно добавить (новые ID, которых нет в текущих)
+                var categoriesToAdd = cardUpdateDto.CategoryIds.Except(currentCategoryIds).ToList();
+
+                // Идентификаторы категорий, которые нужно удалить (текущие ID, которых нет в новом списке)
+                var categoriesToRemove = currentCategoryIds.Except(cardUpdateDto.CategoryIds).ToList();
+
+                // Удаляем CardCategory сущности, которые больше не нужны
+                foreach (var categoryIdToRemove in categoriesToRemove)
+                {
+                    var cardCategoryToRemove = existingCard.CardCategories.FirstOrDefault(cc => cc.CategoryId == categoryIdToRemove);
+                    if (cardCategoryToRemove != null)
                     {
-                        var category = await _context.Categories.FindAsync(categoryId);
-                        if (category == null)
-                        {
-                            return BadRequest($"Category with ID {categoryId} not found.");
-                        }
-                        existingCard.CardCategories.Add(new CardCategory { CardId = id, CategoryId = categoryId });
+                        _context.CardsCategories.Remove(cardCategoryToRemove); // Удаляем из DbSet для отслеживания EF
                     }
+                }
+
+                // Добавляем новые CardCategory сущности
+                foreach (var categoryIdToAdd in categoriesToAdd)
+                {
+                    var categoryExists = await _context.Categories.AnyAsync(c => c.Id == categoryIdToAdd);
+                    if (!categoryExists)
+                    {
+                        return BadRequest($"Категория с ID {categoryIdToAdd} не найдена.");
+                    }
+                    existingCard.CardCategories.Add(new CardCategory { CardId = id, CategoryId = categoryIdToAdd });
                 }
             }
 
+            // --- Поля CardDetail (и CardDetailAmenities) отсутствуют в вашем DTO.
+            // --- Поэтому логика для их обновления здесь не включена.
+            // --- Если вы захотите их обновлять, вам нужно будет добавить их в CardUpdateDto
+            // --- (например, через вложенный CardDetailUpdateDto).
+
+            // Помечаем основную сущность Card как измененную.
+            // EF Core автоматически отследит изменения в CardCategories
+            // благодаря тому, что мы добавляли/удаляли их из отслеживаемых коллекций и контекста.
             _context.Entry(existingCard).State = EntityState.Modified;
 
             try
@@ -221,17 +285,27 @@ namespace HomeFuBack.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
+                // Обработка конфликтов конкуренции: если карточка была изменена другим пользователем.
                 if (!CardExists(id))
                 {
-                    return NotFound();
+                    return NotFound("Карточка не найдена (возможно, была удалена другим пользователем).");
                 }
                 else
                 {
-                    throw;
+                    // Это означает, что кто-то изменил карточку между чтением и сохранением.
+                    // Вы можете логировать эту ошибку или предоставить более детальную информацию
+                    // клиенту (например, отправить текущую версию карточки).
+                    throw; // Перебрасываем исключение, чтобы оно было поймано глобальным обработчиком ошибок или отлажено.
                 }
             }
+            catch (Exception ex) // Общий обработчик для других возможных ошибок при сохранении
+            {
+                // Здесь вы можете использовать ILogger для логирования ошибки:
+                // _logger.LogError(ex, "Ошибка при сохранении карточки с ID {CardId}", id);
+                return StatusCode(500, $"Внутренняя ошибка сервера: {ex.Message}");
+            }
 
-            return NoContent();
+            return NoContent(); // Успешно обновлено, нет содержимого для возврата
         }
 
         // DELETE: api/cards/{id}

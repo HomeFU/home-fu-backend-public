@@ -42,6 +42,8 @@ namespace HomeFuBack.Controllers
                     .ThenInclude(cda => cda.Amenity)
                 .Include(cd => cd.Card) // Включаем связанную Card
                     .ThenInclude(c => c.Location) // Включаем Location для Card
+                .Include(cd => cd.Card) // Снова включаем Card для отдельного ThenInclude
+                    .ThenInclude(c => c.CardCategories)
                 .ToListAsync();
 
             var response = cardDetails.Select(cd => MapCardDetailToResponseDto(cd)).ToList();
@@ -63,6 +65,8 @@ namespace HomeFuBack.Controllers
                     .ThenInclude(cda => cda.Amenity)
                 .Include(cd => cd.Card) // Включаем связанную Card
                     .ThenInclude(c => c.Location) // Включаем Location для Card
+                .Include(cd => cd.Card) // Снова включаем Card для отдельного ThenInclude
+                    .ThenInclude(c => c.CardCategories)
                 .FirstOrDefaultAsync(cd => cd.Id == id);
 
             if (cardDetail == null)
@@ -497,6 +501,8 @@ namespace HomeFuBack.Controllers
         // --- Вспомогательный метод для маппинга в DTO ответа ---
         private CardDetailResponseDto MapCardDetailToResponseDto(CardDetail cardDetail)
         {
+            if (cardDetail == null) return null;
+
             return new CardDetailResponseDto
             {
                 Id = cardDetail.Id,
@@ -504,19 +510,21 @@ namespace HomeFuBack.Controllers
                 NumberOfBedrooms = cardDetail.NumberOfBedrooms,
                 NumberOfBeds = cardDetail.NumberOfBeds,
                 NumberOfBathrooms = cardDetail.NumberOfBathrooms,
-                HostId = cardDetail.HostId,
-                HostName = cardDetail.Host?.FirstName ?? "N/A", // Получаем UserName из связанного User
-                HostAvatarUrl = cardDetail.Host?.ProfileImageUrl, // Если у User есть ProfilePictureUrl
+                HostId = cardDetail.HostId, // Убедитесь, что Id хоста доступен
+                HostName = cardDetail.Host.FirstName!, // Предполагаем, что Host имеет UserName
+                HostAvatarUrl = cardDetail.Host?.ProfileImageUrl, // Предполагаем, что Host имеет ProfilePictureUrl
                 Description = cardDetail.Description,
                 Latitude = cardDetail.Latitude,
                 Longitude = cardDetail.Longitude,
-                Amenities = cardDetail.CardDetailAmenities?.Select(cda => new AmenityResponseDto // Маппинг удобств
+                Amenities = cardDetail.CardDetailAmenities?.Select(cda => new AmenityResponseDto // Убедитесь, что AmenityDto соответствует
                 {
                     Id = cda.Amenity.Id,
                     Name = cda.Amenity.Name,
                     ImageUrl = cda.Amenity.IconPath
-                }).ToList() ?? new List<AmenityResponseDto>(),
-                Ratings = cardDetail.Ratings != null ? new RatingDto // Маппинг оценок
+                }).ToList() ?? new List<AmenityResponseDto>(), // Обработка null
+
+                // Маппинг оценок
+                Ratings = cardDetail.Ratings != null ? new RatingDto // Убедитесь, что RatingDto соответствует
                 {
                     Cleanliness = cardDetail.Ratings.Cleanliness,
                     Accuracy = cardDetail.Ratings.Accuracy,
@@ -524,20 +532,22 @@ namespace HomeFuBack.Controllers
                     Communication = cardDetail.Ratings.Communication,
                     Location = cardDetail.Ratings.Location,
                     Value = cardDetail.Ratings.Value
-                } : null,
-                Card = cardDetail.Card != null ? new CardResponseDto // Маппинг основной карточки
+                } : null, // Обработка null
+
+                Card = cardDetail.Card != null ? new CardResponseDto // Убедитесь, что CardResponseDto соответствует
                 {
                     Id = cardDetail.Card.Id,
                     Name = cardDetail.Card.Name,
                     LocationId = cardDetail.Card.LocationId,
-                    LocationName = cardDetail.Card.Location?.Name!,
+                    LocationName = cardDetail.Card.Location?.Name, // Доступ к Location.Name благодаря Include
                     StartDate = cardDetail.Card.StartDate,
                     EndDate = cardDetail.Card.EndDate,
                     Rating = cardDetail.Card.Rating,
                     Price = cardDetail.Card.Price,
                     IsDeleted = cardDetail.Card.IsDeleted,
                     ImageUrls = cardDetail.Card.ImageUrls,
-                    CategoryIds = cardDetail.Card.CardCategories?.Select(cc => cc.CategoryId).ToList() ?? new List<int>()
+                    // ВОТ ГДЕ ПРОИСХОДИТ МАППИНГ CategoryIds
+                    CategoryIds = cardDetail.Card.CardCategories?.Select(cc => cc.CategoryId).ToList() ?? new List<int>() // Обработка null
                 } : null
             };
         }
