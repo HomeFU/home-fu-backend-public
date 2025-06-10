@@ -878,6 +878,71 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "HomeFuBack.Controllers.FiltersController",
+    "Method": "FilterByAvailability",
+    "RelativePath": "api/filters/availability",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CheckInDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "CheckOutDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Adults",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Children",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Infants",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pets",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "LocationId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HomeFuBack.Data.DTO.CardResponseDto, HomeFuBack, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      },
+      {
+        "Type": "Microsoft.AspNetCore.Mvc.ProblemDetails",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 400
+      }
+    ]
+  },
+  {
     "ContainingType": "HomeFuBack.Controllers.LocationsController",
     "Method": "GetLocations",
     "RelativePath": "api/Locations",
