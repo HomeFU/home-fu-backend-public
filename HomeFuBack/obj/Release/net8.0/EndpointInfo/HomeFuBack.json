@@ -3111,6 +3111,14 @@
             "type": "string",
             "nullable": true
           },
+          "hostNum": {
+            "type": "string",
+            "nullable": true
+          },
+          "hostMail": {
+            "type": "string",
+            "nullable": true
+          },
           "hostAvatarUrl": {
             "type": "string",
             "nullable": true

@@ -155,6 +155,9 @@ namespace HomeFuBack.Data.DTO
         public int NumberOfBathrooms { get; set; }
         public Guid HostId { get; set; }
         public string HostName { get; set; } // Имя хоста из User
+        public string HostNum { get; set; } // Имя хоста из User
+        public string HostMail { get; set; } // Имя хоста из User
+
         public string? HostAvatarUrl { get; set; } // Аватар хоста из User (если есть)
         public string Description { get; set; }
         public double Latitude { get; set; }

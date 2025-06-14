@@ -482,6 +482,8 @@ namespace HomeFuBack.Controllers
                 NumberOfBathrooms = cardDetail.NumberOfBathrooms,
                 HostId = cardDetail.HostId,
                 HostName = cardDetail.Host.FirstName!,
+                HostNum = cardDetail.Host.PhoneNumber!,
+                HostMail = cardDetail.Host.Email!,
                 HostAvatarUrl = cardDetail.Host?.ProfileImageUrl,
                 Description = cardDetail.Description,
                 Latitude = cardDetail.Latitude,
