@@ -176,3 +176,5 @@ D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Debug\net8.0\refint\Hom
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Debug\net8.0\HomeFuBack.pdb
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Debug\net8.0\HomeFuBack.genruntimeconfig.cache
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Debug\net8.0\ref\HomeFuBack.dll
+D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\bin\Debug\net8.0\AutoMapper.dll
+D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

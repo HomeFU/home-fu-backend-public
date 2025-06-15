@@ -328,84 +328,6 @@
     ]
   },
   {
-    "ContainingType": "HomeFuBack.Controllers.CommentsController",
-    "Method": "GetCommentsForCardDetail",
-    "RelativePath": "api/carddetails/{cardDetailId}/comments",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "cardDetailId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[HomeFuBack.Data.DTO.CommentResponseDto, HomeFuBack, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "HomeFuBack.Controllers.CommentsController",
-    "Method": "CreateComment",
-    "RelativePath": "api/carddetails/{cardDetailId}/comments",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "cardDetailId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "dto",
-        "Type": "HomeFuBack.Data.DTO.CommentCreateDto",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "HomeFuBack.Data.DTO.CommentResponseDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "HomeFuBack.Controllers.CommentsController",
-    "Method": "DeleteComment",
-    "RelativePath": "api/carddetails/{cardDetailId}/comments/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "cardDetailId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "HomeFuBack.Controllers.RatingsController",
     "Method": "GetRatingByCardDetailId",
     "RelativePath": "api/carddetails/{cardDetailId}/ratings",
@@ -453,9 +375,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "HomeFuBack.Controllers.UserRatingsController",
-    "Method": "GetUserRatingsForCardDetail",
-    "RelativePath": "api/carddetails/{cardDetailId}/ratings",
+    "ContainingType": "HomeFuBack.Controllers.CommentsController",
+    "Method": "GetReviewsForCardDetail",
+    "RelativePath": "api/carddetails/{cardDetailId}/reviews",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -468,7 +390,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[HomeFuBack.Data.DTO.UserRatingResponseDto, HomeFuBack, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[HomeFuBack.Data.DTO.CommentResponseDto, HomeFuBack, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -479,9 +401,9 @@
     ]
   },
   {
-    "ContainingType": "HomeFuBack.Controllers.UserRatingsController",
-    "Method": "CreateUserRating",
-    "RelativePath": "api/carddetails/{cardDetailId}/ratings",
+    "ContainingType": "HomeFuBack.Controllers.CommentsController",
+    "Method": "CreateReview",
+    "RelativePath": "api/carddetails/{cardDetailId}/reviews",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -493,13 +415,13 @@
       },
       {
         "Name": "dto",
-        "Type": "HomeFuBack.Data.DTO.UserRatingCreateDto",
+        "Type": "HomeFuBack.Data.DTO.ReviewCreateDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "HomeFuBack.Data.DTO.UserRatingResponseDto",
+        "Type": "HomeFuBack.Data.DTO.CommentResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -510,40 +432,9 @@
     ]
   },
   {
-    "ContainingType": "HomeFuBack.Controllers.UserRatingsController",
-    "Method": "GetUserRating",
-    "RelativePath": "api/carddetails/{cardDetailId}/ratings/{ratingId}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "cardDetailId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "ratingId",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "HomeFuBack.Data.DTO.UserRatingResponseDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "HomeFuBack.Controllers.UserRatingsController",
-    "Method": "UpdateUserRating",
-    "RelativePath": "api/carddetails/{cardDetailId}/ratings/{ratingId}",
+    "ContainingType": "HomeFuBack.Controllers.CommentsController",
+    "Method": "UpdateReview",
+    "RelativePath": "api/carddetails/{cardDetailId}/reviews/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -554,22 +445,22 @@
         "IsRequired": true
       },
       {
-        "Name": "ratingId",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       },
       {
         "Name": "dto",
-        "Type": "HomeFuBack.Data.DTO.UserRatingCreateDto",
+        "Type": "HomeFuBack.Data.DTO.ReviewCreateDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "HomeFuBack.Controllers.UserRatingsController",
-    "Method": "DeleteUserRating",
-    "RelativePath": "api/carddetails/{cardDetailId}/ratings/{ratingId}",
+    "ContainingType": "HomeFuBack.Controllers.CommentsController",
+    "Method": "DeleteReview",
+    "RelativePath": "api/carddetails/{cardDetailId}/reviews/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -580,7 +471,7 @@
         "IsRequired": true
       },
       {
-        "Name": "ratingId",
+        "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
       }

@@ -168,6 +168,8 @@ namespace HomeFuBack.Data.DTO
         public RatingDto? Ratings { get; set; } // Вложенный DTO для оценок
 
         public CardResponseDto? Card { get; set; } // Вложенный DTO для основной карточки
+
+        public List<CommentResponseDto> Reviews { get; set; }
     }
 
     // DTO для Amenity, чтобы его можно было использовать внутри CardDetailResponseDto

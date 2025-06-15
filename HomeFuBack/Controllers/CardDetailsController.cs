@@ -60,6 +60,8 @@ namespace HomeFuBack.Controllers
                     .ThenInclude(c => c.Location) // Включаем Location для Card
                 .Include(cd => cd.Card) // Снова включаем Card для отдельного ThenInclude
                     .ThenInclude(c => c.CardCategories)
+                .Include(cd => cd.Comments)
+                    .ThenInclude(c => c.User)
                 .FirstOrDefaultAsync(cd => cd.Id == id);
 
             if (cardDetail == null)
@@ -541,6 +543,28 @@ namespace HomeFuBack.Controllers
         {
             if (cardDetail == null) return null;
 
+            // Вспомогательный метод для маппинга Comment в CommentResponseDto (скопируйте из CommentsController)
+            Func<Comment, CommentResponseDto> mapCommentToResponseDto = (comment) =>
+            {
+                return new CommentResponseDto
+                {
+                    Id = comment.Id,
+                    Text = comment.Text,
+                    CreatedAt = comment.CreatedAt,
+                    CardDetailId = comment.CardDetailId,
+                    UserId = comment.UserId,
+                    UserName = comment.User?.FirstName ?? "Unknown User",
+                    UserProfileImageUrl = comment.User?.ProfileImageUrl,
+                    Cleanliness = comment.Cleanliness,
+                    Accuracy = comment.Accuracy,
+                    CheckIn = comment.CheckIn,
+                    Communication = comment.Communication,
+                    Location = comment.Location,
+                    Value = comment.Value,
+                    OverallRating = comment.OverallRating
+                };
+            };
+
             return new CardDetailResponseDto
             {
                 Id = cardDetail.Id,
@@ -550,20 +574,19 @@ namespace HomeFuBack.Controllers
                 NumberOfBathrooms = cardDetail.NumberOfBathrooms,
                 HostId = cardDetail.HostId,
                 HostName = cardDetail.Host.FirstName!,
-                HostNum = cardDetail.Host.PhoneNumber!,
-                HostMail = cardDetail.Host.Email!,
                 HostAvatarUrl = cardDetail.Host?.ProfileImageUrl,
+                HostMail = cardDetail.Host!.Email,
+                HostNum = cardDetail.Host.PhoneNumber!,
                 Description = cardDetail.Description,
                 Latitude = cardDetail.Latitude,
                 Longitude = cardDetail.Longitude,
-                Amenities = cardDetail.CardDetailAmenities?.Select(cda => new AmenityResponseDto 
+                Amenities = cardDetail.CardDetailAmenities?.Select(cda => new AmenityResponseDto
                 {
                     Id = cda.Amenity.Id,
                     Name = cda.Amenity.Name,
                     ImageUrl = cda.Amenity.IconPath
-                }).ToList() ?? new List<AmenityResponseDto>(), // Обработка null
+                }).ToList() ?? new List<AmenityResponseDto>(),
 
-                // Маппинг оценок
                 Ratings = cardDetail.Ratings != null ? new RatingDto
                 {
                     Cleanliness = cardDetail.Ratings.Cleanliness,
@@ -572,22 +595,25 @@ namespace HomeFuBack.Controllers
                     Communication = cardDetail.Ratings.Communication,
                     Location = cardDetail.Ratings.Location,
                     Value = cardDetail.Ratings.Value
-                } : null, // Обработка null
+                } : null,
 
-                Card = cardDetail.Card != null ? new CardResponseDto 
+                Card = cardDetail.Card != null ? new CardResponseDto
                 {
                     Id = cardDetail.Card.Id,
                     Name = cardDetail.Card.Name,
                     LocationId = cardDetail.Card.LocationId,
-                    LocationName = cardDetail.Card.Location?.Name, 
+                    LocationName = cardDetail.Card.Location?.Name!,
                     StartDate = cardDetail.Card.StartDate,
                     EndDate = cardDetail.Card.EndDate,
                     Rating = cardDetail.Card.Rating,
                     Price = cardDetail.Card.Price,
                     IsDeleted = cardDetail.Card.IsDeleted,
                     ImageUrls = cardDetail.Card.ImageUrls,
-                    CategoryIds = cardDetail.Card.CardCategories?.Select(cc => cc.CategoryId).ToList() ?? new List<int>() 
-                } : null
+                    CategoryIds = cardDetail.Card.CardCategories?.Select(cc => cc.CategoryId).ToList() ?? new List<int>()
+                } : null,
+
+                // НОВОЕ: Заполняем список отзывов
+                Reviews = cardDetail.Comments?.Select(mapCommentToResponseDto).ToList() ?? new List<CommentResponseDto>()
             };
         }
     }

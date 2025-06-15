@@ -23,8 +23,6 @@ namespace HomeFuBack.Data
         public DbSet<CardDetailAmenity> CardDetailAmenities { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Comment> Comments { get; set; }
-        public DbSet<UserRating> UserRatings { get; set; }
-
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -111,23 +109,9 @@ namespace HomeFuBack.Data
                 .HasForeignKey(c => c.UserId)
                 .OnDelete(DeleteBehavior.Restrict); // Не удалять пользователя, если у него есть комментарии
 
-            // 9. Настройка связи UserRating с CardDetail
-            modelBuilder.Entity<UserRating>()
-                .HasOne(ur => ur.CardDetail)
-                .WithMany(cd => cd.UserRatings) // CardDetail имеет много UserRatings
-                .HasForeignKey(ur => ur.CardDetailId)
-                .OnDelete(DeleteBehavior.Cascade); // Если CardDetail удаляется, удалять и все связанные UserRating
-
-            // 10. Настройка связи UserRating с User
-            modelBuilder.Entity<UserRating>()
-                .HasOne(ur => ur.User)
-                .WithMany() // User может иметь много UserRatings
-                .HasForeignKey(ur => ur.UserId)
-                .OnDelete(DeleteBehavior.Restrict); // Не удалять пользователя, если у него есть оценки
-
-            // 11. Пользователь мог оставлять только одну оценку на одну карточку
-            modelBuilder.Entity<UserRating>()
-                .HasIndex(ur => new { ur.CardDetailId, ur.UserId })
+            // 9. Пользователь мог оставлять только ОДИН ОТЗЫВ (комментарий+оценка) на одну карточку
+            modelBuilder.Entity<Comment>()
+                .HasIndex(c => new { c.CardDetailId, c.UserId })
                 .IsUnique();
         }
     }

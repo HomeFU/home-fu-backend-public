@@ -45,6 +45,5 @@ namespace HomeFuBack.Models.Housing
 
         public ICollection<Comment> Comments { get; set; } = [];
 
-        public ICollection<UserRating> UserRatings { get; set; } = [];
     }
 }
