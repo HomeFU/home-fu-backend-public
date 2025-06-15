@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\HomeFuBack",
-    "\\HomeFuBack\\Data"
+    "\\HomeFuBack\\Controllers",
+    "\\HomeFuBack\\Data",
+    "\\HomeFuBack\\Models",
+    "\\HomeFuBack\\Models\\Housing"
   ],
-  "SelectedNode": "\\HomeFuBack\\Data\\ApplicationDbContext .cs",
+  "SelectedNode": "\\HomeFuBack\\Controllers\\CardDetailsController.cs",
   "PreviewInSolutionExplorer": false
 }

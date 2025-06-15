@@ -443,11 +443,16 @@ namespace HomeFuBack.Controllers
                 return NotFound($"Детальная карточка с ID {id} не найдена.");
             }
 
+<<<<<<< HEAD
             var card = cardDetail.Card;
             if (card == null)
             {
                 return NotFound($"Связанная основная карточка для CardDetail с ID {id} не найдена.");
             }
+=======
+            _context.CardDetails.Remove(cardDetail);
+            await _context.SaveChangesAsync(); 
+>>>>>>> FiltersV2
 
             // 2. Проверяем, действительно ли карточка была "удалена" (IsDeleted = true)
             if (!card.IsDeleted)

@@ -1552,6 +1552,13 @@
               "type": "integer",
               "format": "int32"
             }
+          },
+          {
+            "name": "SearchTerm",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
           }
         ],
         "responses": {

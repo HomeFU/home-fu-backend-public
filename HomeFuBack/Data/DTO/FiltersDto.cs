@@ -23,5 +23,6 @@ namespace HomeFuBack.Data.DTO
         [Range(0, int.MaxValue, ErrorMessage = "Количество питомцев должно быть неотрицательным.")]
         public int Pets { get; set; } = 0;
         public int? LocationId { get; set; }
+        public string? SearchTerm { get; set; }
     }
 }
