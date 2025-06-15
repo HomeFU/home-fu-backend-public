@@ -41,6 +41,10 @@ namespace HomeFuBack.Models.Housing
         public Rating? Ratings { get; set; } // CardDetail может иметь один Rating
 
         // Связь со списком удобств (многие-ко-многим)
-        public ICollection<CardDetailAmenity> CardDetailAmenities { get; set; } = new List<CardDetailAmenity>(); // Инициализация
+        public ICollection<CardDetailAmenity> CardDetailAmenities { get; set; } = []; // Инициализация
+
+        public ICollection<Comment> Comments { get; set; } = [];
+
+        public ICollection<UserRating> UserRatings { get; set; } = [];
     }
 }

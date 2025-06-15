@@ -384,40 +384,106 @@ namespace HomeFuBack.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCardDetail(int id)
         {
+            // Загружаем CardDetail и связанную Card, так как IsDeleted находится в Card
             var cardDetail = await _context.CardDetails
                 .Include(cd => cd.Card)
-                .Include(cd => cd.Ratings)
-                .Include(cd => cd.CardDetailAmenities)
                 .FirstOrDefaultAsync(cd => cd.Id == id);
 
             if (cardDetail == null)
             {
-                return NotFound();
+                return NotFound($"Детальная карточка с ID {id} не найдена.");
             }
 
-            // Удаляем связанные изображения карточки
-            if (cardDetail.Card != null && cardDetail.Card.ImageUrls != null)
+            var card = cardDetail.Card;
+            if (card == null)
             {
-                foreach (var imageUrl in cardDetail.Card.ImageUrls)
+                return NotFound($"Связанная основная карточка для CardDetail с ID {id} не найдена.");
+            }
+
+            card.IsDeleted = true;
+
+            _context.Entry(card).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                // Обработка конфликтов параллельного обновления, если применимо
+                if (!CardDetailExists(id)) // Проверяем, существует ли CardDetail (или Card)
                 {
-                    DeleteImage(imageUrl);
+                    return NotFound();
+                }
+                else
+                {
+                    throw; // Что-то другое пошло не так
                 }
             }
-
-            if (cardDetail.Card != null)
+            catch (Exception ex)
             {
-                _context.Cards.Remove(cardDetail.Card);
+                Console.WriteLine($"Ошибка при мягком удалении CardDetail {id}: {ex.Message}");
+                return StatusCode(500, "Внутренняя ошибка сервера при мягком удалении.");
             }
-            if (cardDetail.Ratings != null)
+
+            return NoContent(); // 204 No Content - успешное выполнение
+        }
+
+        // PATCH: api/carddetails/{id}/restore
+        [HttpPatch("{id}/restore")]
+        public async Task<IActionResult> RestoreCardDetail(int id)
+        {
+            // 1. Находим CardDetail и связанную Card
+            var cardDetail = await _context.CardDetails
+                .Include(cd => cd.Card) // Обязательно загружаем связанную Card
+                .FirstOrDefaultAsync(cd => cd.Id == id);
+
+            if (cardDetail == null)
             {
-                _context.Ratings.Remove(cardDetail.Ratings);
+                return NotFound($"Детальная карточка с ID {id} не найдена.");
             }
-            _context.CardDetailAmenities.RemoveRange(cardDetail.CardDetailAmenities); // Удаляем связи с удобствами
 
-            _context.CardDetails.Remove(cardDetail);
-            await _context.SaveChangesAsync();
+            var card = cardDetail.Card;
+            if (card == null)
+            {
+                return NotFound($"Связанная основная карточка для CardDetail с ID {id} не найдена.");
+            }
 
-            return NoContent();
+            // 2. Проверяем, действительно ли карточка была "удалена" (IsDeleted = true)
+            if (!card.IsDeleted)
+            {
+                return BadRequest($"Карточка с ID {id} уже активна и не требует восстановления.");
+            }
+
+            // 3. Устанавливаем IsDeleted в false
+            card.IsDeleted = false;
+
+            // 4. Отмечаем Card как измененную
+            // Хотя EF Core часто отслеживает изменения в загруженных сущностях, явное указание не повредит
+            _context.Entry(card).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!CardDetailExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка при восстановлении CardDetail {id}: {ex.Message}");
+                return StatusCode(500, "Внутренняя ошибка сервера при восстановлении карточки.");
+            }
+
+            return NoContent(); // 204 No Content - успешное выполнение без возврата содержимого
         }
 
         private bool CardDetailExists(int id)

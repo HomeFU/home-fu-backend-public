@@ -22,6 +22,8 @@ namespace HomeFuBack.Data
         public DbSet<Rating> Ratings { get; set; }
         public DbSet<CardDetailAmenity> CardDetailAmenities { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<UserRating> UserRatings { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -94,6 +96,39 @@ namespace HomeFuBack.Data
                                  // то используй .WithMany(c => c.Reservations)
                 .HasForeignKey(r => r.CardId)
                 .IsRequired();   // Так как CardId в Reservation помечен [Required]
+
+            // 7. Настройка связи Comment с CardDetail
+            modelBuilder.Entity<Comment>()
+                .HasOne(c => c.CardDetail)
+                .WithMany(cd => cd.Comments)
+                .HasForeignKey(c => c.CardDetailId)
+                .OnDelete(DeleteBehavior.Cascade); // Если CardDetail удаляется, удалять и все связанные комментарии
+
+            // 8. Настройка связи Comment с User
+            modelBuilder.Entity<Comment>()
+                .HasOne(c => c.User)
+                .WithMany() // Если у User нет коллекции комментариев, используем WithMany()
+                .HasForeignKey(c => c.UserId)
+                .OnDelete(DeleteBehavior.Restrict); // Не удалять пользователя, если у него есть комментарии
+
+            // 9. Настройка связи UserRating с CardDetail
+            modelBuilder.Entity<UserRating>()
+                .HasOne(ur => ur.CardDetail)
+                .WithMany(cd => cd.UserRatings) // CardDetail имеет много UserRatings
+                .HasForeignKey(ur => ur.CardDetailId)
+                .OnDelete(DeleteBehavior.Cascade); // Если CardDetail удаляется, удалять и все связанные UserRating
+
+            // 10. Настройка связи UserRating с User
+            modelBuilder.Entity<UserRating>()
+                .HasOne(ur => ur.User)
+                .WithMany() // User может иметь много UserRatings
+                .HasForeignKey(ur => ur.UserId)
+                .OnDelete(DeleteBehavior.Restrict); // Не удалять пользователя, если у него есть оценки
+
+            // 11. Пользователь мог оставлять только одну оценку на одну карточку
+            modelBuilder.Entity<UserRating>()
+                .HasIndex(ur => new { ur.CardDetailId, ur.UserId })
+                .IsUnique();
         }
     }
 }
