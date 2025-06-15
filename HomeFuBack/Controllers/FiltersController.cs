@@ -95,13 +95,13 @@ namespace HomeFuBack.Controllers
                 query = query.Where(c => c.LocationId == filterDto.LocationId.Value);
             }
 
-            // Фильтруем карточки, которые имеют EndDate меньше или равно запрашиваемой CheckOutDate
+            // Фильтруем карточки, которые имеют EndDate запрашиваемой CheckOutDate
             if (filterDto.CheckOutDate.HasValue)
             {
                 // Фильтруем карточки:
                 // 1. Убеждаемся, что EndDate не равно null (c.EndDate.HasValue)
                 // 2. Сравниваем только часть с датой (c.EndDate.Value.Date)
-                query = query.Where(c => c.EndDate.HasValue && c.EndDate.Value.Date <= filterDto.CheckOutDate.Value.Date);
+                query = query.Where(c => c.EndDate.HasValue && c.EndDate.Value.Date == filterDto.CheckOutDate.Value.Date);
             }
 
             // Фильтруем карточки, которые имеют StartDate запрашиваемой CheckInDate
