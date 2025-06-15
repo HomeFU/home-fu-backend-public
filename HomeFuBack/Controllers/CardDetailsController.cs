@@ -415,7 +415,7 @@ namespace HomeFuBack.Controllers
             _context.CardDetailAmenities.RemoveRange(cardDetail.CardDetailAmenities); // Удаляем связи с удобствами
 
             _context.CardDetails.Remove(cardDetail);
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync(); 
 
             return NoContent();
         }
