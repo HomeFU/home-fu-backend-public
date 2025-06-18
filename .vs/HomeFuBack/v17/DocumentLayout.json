@@ -3,32 +3,24 @@
   "WorkspaceRootPath": "D:\\Projects\\Diplom\\home-fu-backend-public\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\data\\dto\\reviewcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\data\\dto\\reviewcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\helpers\\claimsprincipalextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\helpers\\claimsprincipalextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\controllers\\carddetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\controllers\\carddetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\data\\dto\\carddetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\data\\dto\\carddetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\data\\dto\\commentresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\data\\dto\\commentresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\data\\applicationdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,6 +29,34 @@
     {
       "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\models\\housing\\carddetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\models\\housing\\carddetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\data\\dal\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\data\\dal\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\data\\dto\\carddetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\data\\dto\\carddetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\helpers\\claimsprincipalextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\helpers\\claimsprincipalextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\data\\dto\\reviewcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\data\\dto\\reviewcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\data\\dto\\commentresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\data\\dto\\commentresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\models\\housing\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\data\\dto\\userratingcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\data\\dto\\userratingcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\models\\housing\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -83,10 +99,6 @@
       "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\data\\dal\\dataaccessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\helpers\\uniquefilename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\helpers\\uniquefilename.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -101,10 +113,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\controllers\\cardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\controllers\\cardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|solutionrelative:homefuback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CD85A4A9-645E-410F-A818-CE78F7B64F88}|HomeFuBack\\HomeFuBack.csproj|d:\\projects\\diplom\\home-fu-backend-public\\homefuback\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -130,7 +138,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -139,6 +147,80 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\appsettings.json",
+              "RelativeDocumentMoniker": "HomeFuBack\\appsettings.json",
+              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\appsettings.json",
+              "RelativeToolTip": "HomeFuBack\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-17T16:30:10.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ReviewCreateDto.cs",
+              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\DTO\\ReviewCreateDto.cs",
+              "RelativeDocumentMoniker": "HomeFuBack\\Data\\DTO\\ReviewCreateDto.cs",
+              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\DTO\\ReviewCreateDto.cs",
+              "RelativeToolTip": "HomeFuBack\\Data\\DTO\\ReviewCreateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T11:26:08.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CardDetail.cs",
+              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\CardDetail.cs",
+              "RelativeDocumentMoniker": "HomeFuBack\\Models\\Housing\\CardDetail.cs",
+              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\CardDetail.cs",
+              "RelativeToolTip": "HomeFuBack\\Models\\Housing\\CardDetail.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T06:59:53.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ApplicationDbContext .cs",
+              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\ApplicationDbContext .cs",
+              "RelativeDocumentMoniker": "HomeFuBack\\Data\\ApplicationDbContext .cs",
+              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\ApplicationDbContext .cs",
+              "RelativeToolTip": "HomeFuBack\\Data\\ApplicationDbContext .cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAUwGoAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T06:58:14.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CardDetailDto.cs",
+              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\DTO\\CardDetailDto.cs",
+              "RelativeDocumentMoniker": "HomeFuBack\\Data\\DTO\\CardDetailDto.cs",
+              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\DTO\\CardDetailDto.cs",
+              "RelativeToolTip": "HomeFuBack\\Data\\DTO\\CardDetailDto.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAIA1wKsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T06:38:01.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CardDetailsController.cs",
+              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\CardDetailsController.cs",
+              "RelativeDocumentMoniker": "HomeFuBack\\Controllers\\CardDetailsController.cs",
+              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\CardDetailsController.cs",
+              "RelativeToolTip": "HomeFuBack\\Controllers\\CardDetailsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T18:13:29.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "ClaimsPrincipalExtensions.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Helpers\\ClaimsPrincipalExtensions.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Helpers\\ClaimsPrincipalExtensions.cs",
@@ -150,97 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CommentsController.cs",
-              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\CommentsController.cs",
-              "RelativeDocumentMoniker": "HomeFuBack\\Controllers\\CommentsController.cs",
-              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\CommentsController.cs",
-              "RelativeToolTip": "HomeFuBack\\Controllers\\CommentsController.cs",
-              "ViewState": "AgIAAAsBAAAAAAAAAAAAAB0BAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T11:34:43.321Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CommentResponseDto.cs",
-              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\DTO\\CommentResponseDto.cs",
-              "RelativeDocumentMoniker": "HomeFuBack\\Data\\DTO\\CommentResponseDto.cs",
-              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\DTO\\CommentResponseDto.cs",
-              "RelativeToolTip": "HomeFuBack\\Data\\DTO\\CommentResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T11:33:44.275Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ReviewCreateDto.cs",
-              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\DTO\\ReviewCreateDto.cs",
-              "RelativeDocumentMoniker": "HomeFuBack\\Data\\DTO\\ReviewCreateDto.cs",
-              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\DTO\\ReviewCreateDto.cs",
-              "RelativeToolTip": "HomeFuBack\\Data\\DTO\\ReviewCreateDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T11:26:08.062Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CardDetail.cs",
-              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\CardDetail.cs",
-              "RelativeDocumentMoniker": "HomeFuBack\\Models\\Housing\\CardDetail.cs",
-              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\CardDetail.cs",
-              "RelativeToolTip": "HomeFuBack\\Models\\Housing\\CardDetail.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAmwC8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T06:59:53.382Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ApplicationDbContext .cs",
-              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\ApplicationDbContext .cs",
-              "RelativeDocumentMoniker": "HomeFuBack\\Data\\ApplicationDbContext .cs",
-              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\ApplicationDbContext .cs",
-              "RelativeToolTip": "HomeFuBack\\Data\\ApplicationDbContext .cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T06:58:14.179Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CardDetailDto.cs",
-              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\DTO\\CardDetailDto.cs",
-              "RelativeDocumentMoniker": "HomeFuBack\\Data\\DTO\\CardDetailDto.cs",
-              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\DTO\\CardDetailDto.cs",
-              "RelativeToolTip": "HomeFuBack\\Data\\DTO\\CardDetailDto.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAIA9wKsAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T06:38:01.689Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CardDetailsController.cs",
-              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\CardDetailsController.cs",
-              "RelativeDocumentMoniker": "HomeFuBack\\Controllers\\CardDetailsController.cs",
-              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\CardDetailsController.cs",
-              "RelativeToolTip": "HomeFuBack\\Controllers\\CardDetailsController.cs",
-              "ViewState": "AgIAAEwCAAAAAAAAAAAUwFwCAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T18:13:29.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "Comment.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\Comment.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Models\\Housing\\Comment.cs",
@@ -248,24 +240,98 @@
               "RelativeToolTip": "HomeFuBack\\Models\\Housing\\Comment.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAAwCAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T11:18:04.558Z",
+              "WhenOpened": "2025-06-15T11:18:04.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Program.cs",
+              "RelativeDocumentMoniker": "HomeFuBack\\Program.cs",
+              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Program.cs",
+              "RelativeToolTip": "HomeFuBack\\Program.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T18:27:54.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "HomeFuBack\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "HomeFuBack\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAGAAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T18:22:33.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CommentResponseDto.cs",
+              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\DTO\\CommentResponseDto.cs",
+              "RelativeDocumentMoniker": "HomeFuBack\\Data\\DTO\\CommentResponseDto.cs",
+              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\DTO\\CommentResponseDto.cs",
+              "RelativeToolTip": "HomeFuBack\\Data\\DTO\\CommentResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T11:33:44.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "HomeFuBack\\appsettings.Development.json",
+              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\appsettings.Development.json",
+              "RelativeToolTip": "HomeFuBack\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-06-14T06:31:21.566Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
+              "Title": "CommentsController.cs",
+              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\CommentsController.cs",
+              "RelativeDocumentMoniker": "HomeFuBack\\Controllers\\CommentsController.cs",
+              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\CommentsController.cs",
+              "RelativeToolTip": "HomeFuBack\\Controllers\\CommentsController.cs",
+              "ViewState": "AgIAAAgBAAAAAAAAAIBJwB0BAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-15T11:34:43.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserDao.cs",
+              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\DAL\\UserDao.cs",
+              "RelativeDocumentMoniker": "HomeFuBack\\Data\\DAL\\UserDao.cs",
+              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\DAL\\UserDao.cs",
+              "RelativeToolTip": "HomeFuBack\\Data\\DAL\\UserDao.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T19:07:58.432Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "FiltersController.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\FiltersController.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Controllers\\FiltersController.cs",
               "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\FiltersController.cs",
               "RelativeToolTip": "HomeFuBack\\Controllers\\FiltersController.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAAFwAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAIBJwFwAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-10T17:58:28.862Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "UsersController.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Controllers\\UsersController.cs",
@@ -273,12 +339,11 @@
               "RelativeToolTip": "HomeFuBack\\Controllers\\UsersController.cs",
               "ViewState": "AgIAAD4AAAAAAAAAAAAwwF0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T17:49:48.202Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T17:49:48.202Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "UserRatingCreateDto.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\DTO\\UserRatingCreateDto.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Data\\DTO\\UserRatingCreateDto.cs",
@@ -290,19 +355,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "Card.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\Card.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Models\\Housing\\Card.cs",
               "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\Card.cs",
               "RelativeToolTip": "HomeFuBack\\Models\\Housing\\Card.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwBAAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-11T07:11:22.146Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "UserRatingResponseDto.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\DTO\\UserRatingResponseDto.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Data\\DTO\\UserRatingResponseDto.cs",
@@ -310,12 +375,11 @@
               "RelativeToolTip": "HomeFuBack\\Data\\DTO\\UserRatingResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T11:59:03.602Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-15T11:59:03.602Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "UniqueFileName.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Helpers\\UniqueFileName.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Helpers\\UniqueFileName.cs",
@@ -327,19 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "HomeFuBack\\appsettings.Development.json",
-              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\appsettings.Development.json",
-              "RelativeToolTip": "HomeFuBack\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-14T06:31:21.566Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "SecretKeyGenerator.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Helpers\\SecretKeyGenerator.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Helpers\\SecretKeyGenerator.cs",
@@ -351,19 +403,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Helpers\\MappingProfile.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Helpers\\MappingProfile.cs",
               "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Helpers\\MappingProfile.cs",
               "RelativeToolTip": "HomeFuBack\\Helpers\\MappingProfile.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-11T06:59:05.469Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "DataAccessor.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\DAL\\DataAccessor.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Data\\DAL\\DataAccessor.cs",
@@ -375,7 +427,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "Location.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\Location.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Models\\Housing\\Location.cs",
@@ -383,12 +435,11 @@
               "RelativeToolTip": "HomeFuBack\\Models\\Housing\\Location.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T08:19:12.076Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T08:19:12.076Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "Amenity.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Models\\Housing\\Amenity.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Models\\Housing\\Amenity.cs",
@@ -396,12 +447,11 @@
               "RelativeToolTip": "HomeFuBack\\Models\\Housing\\Amenity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T08:19:18.423Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T08:19:18.423Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "AmenitiesController.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\AmenitiesController.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Controllers\\AmenitiesController.cs",
@@ -413,7 +463,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "Token.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Data\\Entities\\Token.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Data\\Entities\\Token.cs",
@@ -421,36 +471,11 @@
               "RelativeToolTip": "HomeFuBack\\Data\\Entities\\Token.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T06:58:56.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T06:58:56.566Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Program.cs",
-              "RelativeDocumentMoniker": "HomeFuBack\\Program.cs",
-              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Program.cs",
-              "RelativeToolTip": "HomeFuBack\\Program.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAIBJwEQAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T18:27:54.922Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "HomeFuBack\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "HomeFuBack\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAIwGAAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T18:22:33.377Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 27,
               "Title": "CardsController.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\CardsController.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Controllers\\CardsController.cs",
@@ -462,7 +487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 28,
               "Title": "CategoriesController.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\CategoriesController.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Controllers\\CategoriesController.cs",
@@ -474,7 +499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "LocationController.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\LocationController.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Controllers\\LocationController.cs",
@@ -486,7 +511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 30,
               "Title": "RatingsController.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\RatingsController.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Controllers\\RatingsController.cs",
@@ -498,7 +523,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 31,
               "Title": "ReservationController.cs",
               "DocumentMoniker": "D:\\Projects\\Diplom\\home-fu-backend-public\\HomeFuBack\\Controllers\\ReservationController.cs",
               "RelativeDocumentMoniker": "HomeFuBack\\Controllers\\ReservationController.cs",
@@ -506,8 +531,7 @@
               "RelativeToolTip": "HomeFuBack\\Controllers\\ReservationController.cs",
               "ViewState": "AgIAAIMBAAAAAAAAAAAkwF0BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-10T17:51:53.36Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-10T17:51:53.36Z"
             }
           ]
         }

@@ -450,8 +450,6 @@ namespace HomeFuBack.Controllers
             {
                 return NotFound($"Связанная основная карточка для CardDetail с ID {id} не найдена.");
             }
-            _context.CardDetails.Remove(cardDetail);
-            await _context.SaveChangesAsync(); 
 
             // 2. Проверяем, действительно ли карточка была "удалена" (IsDeleted = true)
             if (!card.IsDeleted)
