@@ -69,7 +69,6 @@ namespace HomeFuBack.Data.DTO
         public Guid UserId { get; set; }
         public string? UserName { get; set; } // Имя пользователя
         public string? UserEmail { get; set; } // Email пользователя
-
         public DateTime CreatedAt { get; set; }
         public string Status { get; set; } // Статус как строка
     }

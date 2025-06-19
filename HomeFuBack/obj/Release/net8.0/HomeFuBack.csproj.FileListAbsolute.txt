@@ -360,3 +360,12 @@ D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\bin\Release\net8.0\MailKit.
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\bin\Release\net8.0\MimeKit.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\bin\Release\net8.0\System.Security.Cryptography.Pkcs.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\bin\Release\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Adesk\Project\home-fu-backend-public\HomeFuBack\bin\Release\net8.0\BouncyCastle.Cryptography.dll
+C:\Adesk\Project\home-fu-backend-public\HomeFuBack\bin\Release\net8.0\MailKit.dll
+C:\Adesk\Project\home-fu-backend-public\HomeFuBack\bin\Release\net8.0\MimeKit.dll
+C:\Adesk\Project\home-fu-backend-public\HomeFuBack\bin\Release\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Adesk\Project\home-fu-backend-public\HomeFuBack\bin\Release\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Adesk\Project\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\rpswa.dswa.cache.json
+C:\Adesk\Project\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\rjimswa.dswa.cache.json
+C:\Adesk\Project\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\rjsmrazor.dswa.cache.json
+C:\Adesk\Project\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\rjsmcshtml.dswa.cache.json

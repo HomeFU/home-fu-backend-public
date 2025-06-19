@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using HomeFuBack.Data;
+﻿using HomeFuBack.Data;
+using HomeFuBack.Data.DTO;
 using HomeFuBack.Models.Housing;
 using HomeFuBack.Models.Users;
-using HomeFuBack.Data.DTO;
-using System.Security.Claims; // Для получения ID пользователя из Claims
 using Microsoft.AspNetCore.Authorization; // Для авторизации
+using HomeFuBack.Helpers.Interfaces;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System.Security.Claims; // Для получения ID пользователя из Claims
 
 namespace HomeFuBack.Controllers
 {
@@ -14,10 +15,12 @@ namespace HomeFuBack.Controllers
     public class ReservationController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly IEmailSender _emailSender;
 
-        public ReservationController(ApplicationDbContext context)
+        public ReservationController(ApplicationDbContext context, IEmailSender emailSender)
         {
             _context = context;
+            _emailSender = emailSender;
         }
 
         // Маппинг из Reservation в ReservationResponseDto
@@ -123,6 +126,7 @@ namespace HomeFuBack.Controllers
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status409Conflict)]
+        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<ReservationResponseDto>> PostReservation([FromBody] ReservationDto reservationDto)
         {
             if (!ModelState.IsValid)
@@ -148,9 +152,12 @@ namespace HomeFuBack.Controllers
                 return BadRequest(ModelState);
             }
 
+            // Получение данных о жилье, включая детали и информацию о владельце (хосте)
             var card = await _context.Cards
                                      .Include(c => c.CardDetail)
+                                         .ThenInclude(cd => cd.Host) // Загружаем Host из CardDetail
                                      .FirstOrDefaultAsync(c => c.Id == reservationDto.CardId);
+
             if (card == null)
             {
                 return NotFound("Жилье не найдено.");
@@ -161,7 +168,12 @@ namespace HomeFuBack.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Детальная информация о жилье недоступна.");
             }
 
-            var totalGuests = reservationDto.Adults + reservationDto.Children + reservationDto.Infants;
+            if (card.CardDetail.Host == null)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Не удалось определить владельца жилья.");
+            }
+
+            var totalGuests = reservationDto.Adults + reservationDto.Children;
             if (totalGuests > card.CardDetail.NumberOfGuests)
             {
                 ModelState.AddModelError(nameof(reservationDto.Adults), $"Общее количество гостей ({totalGuests}) превышает максимально допустимое для этого жилья ({card.CardDetail.NumberOfGuests}).");
@@ -190,15 +202,70 @@ namespace HomeFuBack.Controllers
                 CardId = reservationDto.CardId,
                 UserId = userIdGuid,
                 CreatedAt = DateTime.UtcNow,
-                Status = ReservationStatus.Pending
+                Status = ReservationStatus.Confirmed
             };
 
             _context.Reservations.Add(reservation);
             await _context.SaveChangesAsync();
 
-            // Загрузка связанных данных для корректного маппинга в ResponseDto
-            await _context.Entry(reservation).Reference(r => r.Card).LoadAsync();
+            // Загрузка данных клиента для использования в письме
             await _context.Entry(reservation).Reference(r => r.User).LoadAsync();
+
+            try
+            {
+                var client = reservation.User;
+                var host = card.CardDetail.Host;
+
+                var numberOfNights = (reservation.CheckOutDate - reservation.CheckInDate).Days;
+                var totalPrice = numberOfNights * card.Price;
+
+                // --- Письмо для клиента ---
+                var clientSubject = $"Ваша резервация в {card.Name} подтверждена!";
+                var clientMessage = $@"
+            <h1>Резервация успешна!</h1>
+            <p>Здравствуйте, {client!.FirstName},</p>
+            <p>Ваша резервация для жилья ""{card.Name}"" была успешно создана и подтверждена.</p>
+            <h3>Детали вашей поездки:</h3>
+            <ul>
+                <li><strong>Дата заезда:</strong> {reservation.CheckInDate:dd MMMM yyyy}</li>
+                <li><strong>Дата выезда:</strong> {reservation.CheckOutDate:dd MMMM yyyy}</li>
+                <li><strong>Количество ночей:</strong> {numberOfNights}</li>
+                <li><strong>Гости:</strong> {reservation.Adults} взрослых, {reservation.Children} детей, {reservation.Infants} младенцев</li>
+                <li><strong>Питомцы:</strong> {reservation.Pets}</li>
+                <li><strong>Итоговая сумма:</strong> {totalPrice:C}</li>
+            </ul>
+            <p>Спасибо, что выбрали HomeFu!</p>";
+
+                await _emailSender.SendEmailAsync(client.Email, clientSubject, clientMessage);
+
+                // --- Письмо для хоста ---
+                if (host.Email != client.Email)
+                {
+                    var hostSubject = $"Новая резервация вашего жилья: {card.Name}";
+                    var hostMessage = $@"
+                <h1>У вас новая резервация!</h1>
+                <p>Здравствуйте, {host.FirstName},</p>
+                <p>Ваше жилье ""{card.Name}"" было зарезервировано.</p>
+                <h3>Детали резервации:</h3>
+                <ul>
+                    <li><strong>Имя гостя:</strong> {client.FirstName} {client.LastName}</li>
+                    <li><strong>Email гостя:</strong> {client.Email}</li>
+                    <li><strong>Дата заезда:</strong> {reservation.CheckInDate:dd MMMM yyyy}</li>
+                    <li><strong>Дата выезда:</strong> {reservation.CheckOutDate:dd MMMM yyyy}</li>
+                    <li><strong>Гости:</strong> {reservation.Adults} взрослых, {reservation.Children} детей, {reservation.Infants} младенцев</li>
+                    <li><strong>Питомцы:</strong> {reservation.Pets}</li>
+                    <li><strong>Итоговая сумма:</strong> {totalPrice:C}</li>
+                </ul>
+                <p>Вы можете управлять резервациями в вашей панели управления HomeFu.</p>";
+
+                    await _emailSender.SendEmailAsync(host.Email, hostSubject, hostMessage);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Логируем ошибку, но не прерываем основной процесс.
+                Console.WriteLine($"[WARNING] Ошибка при отправке email-уведомлений для резервации ID:{reservation.Id}. Ошибка: {ex.Message}");
+            }
 
             return CreatedAtAction(nameof(GetReservation), new { id = reservation.Id }, MapToReservationResponseDto(reservation));
         }

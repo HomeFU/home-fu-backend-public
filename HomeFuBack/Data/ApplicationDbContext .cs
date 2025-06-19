@@ -81,7 +81,7 @@ namespace HomeFuBack.Data
 
             // 5. Связь Reservation с User (один User - много Reservations)
             modelBuilder.Entity<Reservation>()
-                .HasOne<User>() // Убедись, что тип User правильный (из HomeFuBack.Models.Users.User)
+                .HasOne(r => r.User) // Убедись, что тип User правильный (из HomeFuBack.Models.Users.User)
                 .WithMany()     // Если в модели User есть public ICollection<Reservation> Reservations { get; set; },
                                 // то используй .WithMany(u => u.Reservations)
                 .HasForeignKey(r => r.UserId)

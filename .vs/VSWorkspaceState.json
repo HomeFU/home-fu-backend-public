@@ -4,9 +4,8 @@
     "\\HomeFuBack",
     "\\HomeFuBack\\Controllers",
     "\\HomeFuBack\\Data",
-    "\\HomeFuBack\\Models",
     "\\HomeFuBack\\Models\\Housing"
   ],
-  "SelectedNode": "\\HomeFuBack\\Controllers\\CardDetailsController.cs",
+  "SelectedNode": "\\HomeFuBack\\Controllers\\AuthController.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -26,6 +26,7 @@ namespace HomeFuBack.Controllers
         [HttpGet("availability")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)] // Добавлен для случая, когда нет доступных карточек
         public async Task<ActionResult<IEnumerable<CardResponseDto>>> FilterByAvailability([FromQuery] FiltersDto filterDto)
         {
             if (!ModelState.IsValid)
@@ -34,36 +35,39 @@ namespace HomeFuBack.Controllers
             }
 
             // 1. Подготовка дат для запроса
+            // Если CheckInDate не указана, используем текущую дату UTC
             var checkIn = filterDto.CheckInDate?.Date ?? DateTime.UtcNow.Date;
+            // Если CheckOutDate не указана, устанавливаем её на 1 год вперед от checkIn
             var checkOut = filterDto.CheckOutDate?.Date ?? checkIn.AddYears(1);
 
-            //if (checkIn >= checkOut)
-            //{
-            //    return BadRequest("Дата выезда должна быть после даты заезда.");
-            //}
-            //if (checkIn < DateTime.UtcNow.Date)
-            //{
-            //    return BadRequest("Дата заезда не может быть в прошлом.");
-            //}
+            // Валидация дат
+            if (checkIn >= checkOut)
+            {
+                return BadRequest("Дата выезда должна быть после даты заезда.");
+            }
+            if (checkIn < DateTime.UtcNow.Date)
+            {
+                return BadRequest("Дата заезда не может быть в прошлом.");
+            }
 
-            // 2. Расчет общего количества гостей
+            // 2. Расчет общего количества гостей для вместимости
             var totalGuestsForCapacity = filterDto.Adults + filterDto.Children;
-            // Младенцы (Infants) не учитываются в общей вместимости "NumberOfGuests" по умолчанию.
+
             if (totalGuestsForCapacity == 0 && (filterDto.Infants > 0 || filterDto.Pets > 0))
             {
                 totalGuestsForCapacity = 1;
             }
-            else if (totalGuestsForCapacity == 0) // Если вообще никого нет
+            else if (totalGuestsForCapacity == 0 && filterDto.Infants == 0 && filterDto.Pets == 0)
             {
                 return BadRequest("Необходимо указать хотя бы 1 взрослого, ребенка, младенца или питомца.");
             }
 
 
-            // 3. Строим LINQ-запрос к карточкам
+            // 3. Строим LINQ-запрос к карточкам, включаем необходимые связанные данные
             var query = _context.Cards
                 .Include(c => c.CardDetail)
-                .Include(c => c.Location) // Для LocationId и LocationName
-                .Include(c => c.CardCategories) // Для CategoryIds
+                .Include(c => c.Location)
+                .Include(c => c.CardCategories)
                     .ThenInclude(cc => cc.Category)
                 .Where(c => !c.IsDeleted) // Исключаем удаленные карточки
                 .AsQueryable();
@@ -71,50 +75,38 @@ namespace HomeFuBack.Controllers
 
             // 4. Фильтрация по вместимости (NumberOfGuests)
             query = query.Where(c =>
-                c.CardDetail != null &&
+                c.CardDetail != null && // Добавлена проверка на null для CardDetail для безопасности
                 c.CardDetail.NumberOfGuests >= totalGuestsForCapacity
             );
 
-            // 5. Фильтрация по питомцам
-            //if (filterDto.Pets > 0)
-            //{
-            //    query = query.Where(c => c.CardDetail != null && c.CardDetail.AllowsPets);
-            //}
+            // 5. Фильтрация по питомцам (если параметр раскомментирован и включен)
+            // if (filterDto.Pets > 0)
+            // {
+            //     query = query.Where(c => c.CardDetail != null && c.CardDetail.AllowsPets);
+            // }
 
             // 6. Фильтрация по поисковому запросу (SearchTerm)
             if (!string.IsNullOrWhiteSpace(filterDto.SearchTerm))
             {
-                // Убираем лишние пробелы и приводим к нижнему регистру для поиска без учета регистра
                 var searchTerm = filterDto.SearchTerm.Trim().ToLower();
                 query = query.Where(c => c.Name != null && c.Name.ToLower().Contains(searchTerm));
             }
 
-            // 7. Фильрация по ID Локации
-            if (filterDto.LocationId.HasValue && filterDto.LocationId.Value > 0) 
+            // 7. Фильтрация по ID Локации
+            if (filterDto.LocationId.HasValue && filterDto.LocationId.Value > 0)
             {
                 query = query.Where(c => c.LocationId == filterDto.LocationId.Value);
             }
 
-            // Фильтруем карточки, которые имеют EndDate запрашиваемой CheckOutDate
-            if (filterDto.CheckOutDate.HasValue)
-            {
-                // Фильтруем карточки:
-                // 1. Убеждаемся, что EndDate не равно null (c.EndDate.HasValue)
-                // 2. Сравниваем только часть с датой (c.EndDate.Value.Date)
-                query = query.Where(c => c.EndDate.HasValue && c.EndDate.Value.Date == filterDto.CheckOutDate.Value.Date);
-            }
-
-            // Фильтруем карточки, которые имеют StartDate запрашиваемой CheckInDate
-            if (filterDto.CheckInDate.HasValue)
-            {
-                query = query.Where(c => c.StartDate.Date == filterDto.CheckInDate.Value.Date);
-            }
-
-            // 8. Фильтрация по доступности дат (отсутствие пересекающихся резерваций)
+            // 8. ГЛАВНАЯ ФИЛЬТРАЦИЯ по доступности дат:
+            // Исключаем карточки, у которых есть АКТИВНЫЕ (не отмененные/завершенные) резервации,
+            // которые пересекаются с запрашиваемым периодом.
             query = query.Where(card => !_context.Reservations.Any(reservation =>
                 reservation.CardId == card.Id &&
                 reservation.Status != ReservationStatus.Cancelled &&
                 reservation.Status != ReservationStatus.Completed &&
+                // Проверка на пересечение диапазонов дат:
+                // [checkIn, checkOut) пересекается с [reservation.CheckInDate, reservation.CheckOutDate)
                 (
                     (checkIn < reservation.CheckOutDate && checkOut > reservation.CheckInDate)
                 )
@@ -123,16 +115,24 @@ namespace HomeFuBack.Controllers
             // 9. Выполняем запрос к базе данных
             var availableCards = await query.ToListAsync();
 
-            // 10. Прямой маппинг результата в CardResponseDto (вместо отдельного метода)
+            // 10. Проверка на наличие результатов и возврат соответствующего ответа
+            if (!availableCards.Any())
+            {
+                // Если список пуст, это значит, что нет карточек,
+                // соответствующих ВСЕМ условиям фильтрации, включая доступность по резервациям.
+                return NotFound("На выбранные даты и с учетом заданных критериев нет доступных вариантов. Попробуйте изменить даты или параметры поиска.");
+            }
+
+            // 11. Прямой маппинг результата в CardResponseDto
             var responseDtos = availableCards.Select(card => new CardResponseDto
             {
                 Id = card.Id,
                 Name = card.Name,
                 LocationId = card.LocationId,
                 LocationName = card.Location?.Name ?? string.Empty,
-                StartDate = card.StartDate,
-                EndDate = card.EndDate,
-                Rating = card.Rating, // Используем Rating из самой Card
+                StartDate = card.StartDate, // Эти поля все еще полезны для отображения
+                EndDate = card.EndDate,     // общего периода карточки во фронтенде
+                Rating = card.Rating,
                 Price = card.Price,
                 IsDeleted = card.IsDeleted,
                 ImageUrls = card.ImageUrls ?? new List<string>(),

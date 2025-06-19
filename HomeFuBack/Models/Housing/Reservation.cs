@@ -1,6 +1,7 @@
-﻿using System;
+﻿using HomeFuBack.Models.Users;
+using System;
 using System.ComponentModel.DataAnnotations;
-using HomeFuBack.Models.Users;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace HomeFuBack.Models.Housing
 {
