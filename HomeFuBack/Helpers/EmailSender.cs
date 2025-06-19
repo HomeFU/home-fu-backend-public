@@ -10,45 +10,27 @@ namespace HomeFuBack.Helpers
 {
     public class EmailSender : IEmailSender
     {
-        private readonly EmailSettings _emailSettings;
+        private readonly EmailSettings _smtpSettings; // Создайте класс SmtpSettings для привязки из appsettings
 
-        public EmailSender(IOptions<EmailSettings> emailSettings)
+        public EmailSender(IOptions<EmailSettings> smtpSettings) // Или IConfiguration
         {
-            _emailSettings = emailSettings.Value;
+            _smtpSettings = smtpSettings.Value;
         }
 
         public async Task SendEmailAsync(string toEmail, string subject, string message)
         {
             var email = new MimeMessage();
-            email.From.Add(new MailboxAddress(_emailSettings.SenderName, _emailSettings.SenderEmail));
+            email.From.Add(new MailboxAddress(_smtpSettings.SenderName, _smtpSettings.SenderEmail));
             email.To.Add(MailboxAddress.Parse(toEmail));
             email.Subject = subject;
-            email.Body = new TextPart(MimeKit.Text.TextFormat.Html) { Text = message }; // Или TextFormat.Plain для обычного текста
+            email.Body = new TextPart(MimeKit.Text.TextFormat.Html) { Text = message };
 
-            using var smtp = new SmtpClient();
-            try
+            using (var client = new SmtpClient())
             {
-                // Подключение
-                await smtp.ConnectAsync(_emailSettings.SmtpServer, _emailSettings.SmtpPort, _emailSettings.EnableSsl);
-
-                // Аутентификация
-                // SmtpSecurity.StartTlsWhenAvailable или SmtpSecurity.SslOnConnect
-                // SecureSocketOptions.Auto будет пытаться определить автоматически
-                await smtp.AuthenticateAsync(_emailSettings.Username, _emailSettings.Password);
-
-                // Отправка письма
-                await smtp.SendAsync(email);
-            }
-            catch (Exception ex)
-            {
-                // TODO: Залогируйте ошибку здесь.
-                Console.WriteLine($"Error sending email to {toEmail}: {ex.Message}");
-                // В продакшене лучше использовать полноценный логгер
-                throw; // Перебросить исключение, чтобы контроллер мог его обработать
-            }
-            finally
-            {
-                await smtp.DisconnectAsync(true);
+                await client.ConnectAsync(_smtpSettings.SmtpServer, _smtpSettings.SmtpPort, SecureSocketOptions.StartTls); // <-- КЛЮЧЕВОЕ ИЗМЕНЕНИЕ
+                await client.AuthenticateAsync(_smtpSettings.Username, _smtpSettings.Password);
+                await client.SendAsync(email);
+                await client.DisconnectAsync(true);
             }
         }
     }

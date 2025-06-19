@@ -126,7 +126,11 @@ public class AuthController : ControllerBase
         // Проверяем, подтвержден ли email (код подтверждения должен быть пустым/null)
         if (!string.IsNullOrEmpty(user.EmailConfirmCode))
         {
-            return Unauthorized("Пожалуйста, подтвердите ваш email, используя код, отправленный на вашу почту.");
+            // Сценарий 2: Email не подтвержден
+            // 403 Forbidden - клиент аутентифицирован (email/пароль верны),
+            // но не имеет права доступа к ресурсу (входа) из-за неподтвержденной почты.
+            // Или 401 Unauthorized, но с более специфичным сообщением в теле ответа.
+            return StatusCode(403, "Пожалуйста, подтвердите ваш email, используя код, отправленный на вашу почту.");
         }
 
         var accessToken = GenerateJwtToken(user);
