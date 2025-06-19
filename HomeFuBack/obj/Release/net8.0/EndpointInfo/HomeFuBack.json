@@ -291,6 +291,37 @@
         }
       }
     },
+    "/api/auth/confirm-email": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfirmEmailDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfirmEmailDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ConfirmEmailDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/auth/login": {
       "post": {
         "tags": [
@@ -467,6 +498,13 @@
                     "type": "number",
                     "format": "double"
                   },
+                  "CategoryIds": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer",
+                      "format": "int32"
+                    }
+                  },
                   "InitialCleanliness": {
                     "maximum": 5,
                     "minimum": 0,
@@ -552,6 +590,9 @@
                   "style": "form"
                 },
                 "Price": {
+                  "style": "form"
+                },
+                "CategoryIds": {
                   "style": "form"
                 },
                 "InitialCleanliness": {
@@ -3672,6 +3713,20 @@
           "overallRating": {
             "type": "number",
             "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConfirmEmailDto": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "confirmCode": {
+            "type": "string",
             "nullable": true
           }
         },

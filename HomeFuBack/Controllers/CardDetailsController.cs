@@ -28,7 +28,7 @@ namespace HomeFuBack.Controllers
             _environment = environment;
         }
 
- 
+
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CardDetailResponseDto>>> GetCardDetails()
         {
@@ -101,8 +101,8 @@ namespace HomeFuBack.Controllers
                 Rating = dto.Rating,
                 Price = dto.Price,
                 IsDeleted = false,
-                ImageUrls = new List<string>(),
-                CardCategories = new List<CardCategory>()
+                ImageUrls = [],
+                CardCategories = []
             };
 
             // Сохранение изображений карточки
@@ -115,6 +115,20 @@ namespace HomeFuBack.Controllers
                         var imageUrl = await SaveImage(imageFile, "cards");
                         card.ImageUrls.Add(imageUrl);
                     }
+                }
+            }
+
+            // Добавление категорий, если они были предоставлены
+            if (dto.CategoryIds != null && dto.CategoryIds.Any())
+            {
+                foreach (var categoryId in dto.CategoryIds)
+                {
+                    var category = await _context.Categories.FindAsync(categoryId); // Предполагается, что у вас есть DbSet<Category>
+                    if (category == null)
+                    {
+                        return BadRequest($"Категория с ID {categoryId} не найдена.");
+                    }
+                    card.CardCategories.Add(new CardCategory { CategoryId = categoryId }); // Связь many-to-many
                 }
             }
 
@@ -430,7 +444,7 @@ namespace HomeFuBack.Controllers
 
             return NoContent(); // 204 No Content - успешное выполнение
         }
-        
+
         // PATCH: api/carddetails/{id}/restore
         [HttpPatch("{id}/restore")]
         public async Task<IActionResult> RestoreCardDetail(int id)

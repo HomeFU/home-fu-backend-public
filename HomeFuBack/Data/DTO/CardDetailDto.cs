@@ -62,6 +62,8 @@ namespace HomeFuBack.Data.DTO
         [Range(0.01, double.MaxValue, ErrorMessage = "Цена должна быть больше нуля.")]
         public decimal Price { get; set; }
 
+        public List<int>? CategoryIds { get; set; }
+
         // --- Поля для создания связанного Rating (начальные значения) ---
         [Range(0.0, 5.0)]
         public double InitialCleanliness { get; set; } = 0.0;

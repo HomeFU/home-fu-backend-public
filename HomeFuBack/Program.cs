@@ -8,6 +8,9 @@ using System.Text;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.StaticFiles;
 using System.Collections.Generic;
+using HomeFuBack.Models.Users;
+using HomeFuBack.Helpers;
+using HomeFuBack.Helpers.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,6 +29,14 @@ builder.Services.AddCors(options =>
 
 // Добавляем контроллеры
 builder.Services.AddControllers();
+
+// 1. Привязываем секцию "EmailSettings" из appsettings.json к классу EmailSettings
+builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+
+// 2. Регистрируем IEmailSender и его реализацию EmailSender в контейнере зависимостей
+// AddScoped означает, что новый экземпляр EmailSender будет создаваться для каждого HTTP-запроса.
+// Это хороший выбор для большинства сервисов.
+builder.Services.AddScoped<IEmailSender, EmailSender>();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>

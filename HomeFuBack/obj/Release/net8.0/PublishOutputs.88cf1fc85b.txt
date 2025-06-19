@@ -9,6 +9,8 @@ D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\O
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\Azure.Core.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\Azure.Identity.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\BCrypt.Net-Next.dll
+D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\BouncyCastle.Cryptography.dll
+D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\MailKit.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\Microsoft.AspNetCore.JsonPatch.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
@@ -38,6 +40,7 @@ D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\O
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\Microsoft.OpenApi.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\Microsoft.SqlServer.Server.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\Microsoft.Win32.SystemEvents.dll
+D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\MimeKit.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\Newtonsoft.Json.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -51,6 +54,7 @@ D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\O
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\System.IO.Pipelines.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\System.Memory.Data.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\System.Runtime.Caching.dll
+D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\System.Security.Cryptography.Pkcs.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\System.Security.Cryptography.ProtectedData.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\System.Security.Permissions.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\System.Text.Encodings.Web.dll
@@ -66,6 +70,7 @@ D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\O
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 D:\Projects\Diplom\home-fu-backend-public\HomeFuBack\obj\Release\net8.0\PubTmp\Out\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
