@@ -208,8 +208,8 @@ namespace HomeFuBack.Controllers
             _context.Reservations.Add(reservation);
             await _context.SaveChangesAsync();
 
-            // Загрузка данных клиента для использования в письме
-            await _context.Entry(reservation).Reference(r => r.User).LoadAsync();
+            
+            await _context.Entry(reservation).Reference(r => r.User).LoadAsync(); // Данных клиента для использования в письме
 
             try
             {
@@ -219,7 +219,7 @@ namespace HomeFuBack.Controllers
                 var numberOfNights = (reservation.CheckOutDate - reservation.CheckInDate).Days;
                 var totalPrice = numberOfNights * card.Price;
 
-                // --- Письмо для клиента ---
+                //Письмо для клиента
                 var clientSubject = $"Ваша резервация в {card.Name} подтверждена!";
                 var clientMessage = $@"
             <h1>Резервация успешна!</h1>
@@ -236,9 +236,9 @@ namespace HomeFuBack.Controllers
             </ul>
             <p>Спасибо, что выбрали HomeFu!</p>";
 
-                await _emailSender.SendEmailAsync(client.Email, clientSubject, clientMessage);
+                await _emailSender.SendEmailAsync(client.Email, clientSubject, clientMessage); // Данных хоста для использования в письме
 
-                // --- Письмо для хоста ---
+                // Письмо для хоста
                 if (host.Email != client.Email)
                 {
                     var hostSubject = $"Новая резервация вашего жилья: {card.Name}";
@@ -392,13 +392,12 @@ namespace HomeFuBack.Controllers
         {
             var reservation = await _context.Reservations.FindAsync(id);
 
-            if (reservation == null)
-            {
-                return NotFound($"Резервация с ID {id} не найдена.");
-            }
+            if (reservation == null) {return NotFound($"Резервация с ID {id} не найдена.");}
 
             var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (!User.IsInRole("Admin") && (string.IsNullOrEmpty(userIdClaim) || !Guid.TryParse(userIdClaim, out Guid userIdGuid) || reservation.UserId != userIdGuid))
+            if (!User.IsInRole("Admin") && (string.IsNullOrEmpty(userIdClaim) 
+                                            || !Guid.TryParse(userIdClaim, out Guid userIdGuid) 
+                                            || reservation.UserId != userIdGuid))
             {
                 return Forbid("Вы можете отменять только свои резервации.");
             }
