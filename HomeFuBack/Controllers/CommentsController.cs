@@ -1,23 +1,16 @@
-﻿// HomeFuBack.Controllers/CommentsController.cs
-
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using HomeFuBack.Data;
 using HomeFuBack.Data.DTO;
 using HomeFuBack.Models.Housing; // Для Comment, CardDetail, Rating
-using HomeFuBack.Models.Users; // Для User
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using HomeFuBack.Helpers;
 
 namespace HomeFuBack.Controllers
 {
     [ApiController]
-    [Route("api/carddetails/{cardDetailId}/reviews")] // Переименуем маршрут для ясности (было /comments)
+    [Route("api/carddetails/{cardDetailId}/reviews")]
     // [Authorize]
-    public class CommentsController : ControllerBase // Можно переименовать в ReviewsController
+    public class CommentsController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
 
@@ -31,7 +24,7 @@ namespace HomeFuBack.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CommentResponseDto>>> GetReviewsForCardDetail(int cardDetailId)
         {
-            var reviews = await _context.Comments // Теперь Comments содержит и отзывы
+            var reviews = await _context.Comments
                 .Where(c => c.CardDetailId == cardDetailId)
                 .Include(c => c.User)
                 .OrderByDescending(c => c.CreatedAt)
@@ -51,7 +44,7 @@ namespace HomeFuBack.Controllers
         public async Task<ActionResult<CommentResponseDto>> CreateReview(int cardDetailId, [FromBody] ReviewCreateDto dto)
         {
             // Получаем UserId из токена авторизованного пользователя
-            var userId = User.GetUserId(); // Используем наш вспомогательный метод
+            var userId = User.GetUserId();
 
             // 1. Проверяем существование CardDetail
             var cardDetail = await _context.CardDetails
@@ -66,11 +59,10 @@ namespace HomeFuBack.Controllers
             var user = await _context.Users.FindAsync(userId);
             if (user == null)
             {
-                // Это маловероятно, если ваша система авторизации настроена корректно
                 return Unauthorized("Пользователь, связанный с токеном, не найден.");
             }
 
-            // 3. (ОПЦИОНАЛЬНО) Проверяем, оставлял ли пользователь уже отзыв для этой карточки
+            // 3. Проверяем, оставлял ли пользователь уже отзыв для этой карточки
             var existingReview = await _context.Comments
                 .AnyAsync(c => c.CardDetailId == cardDetailId && c.UserId == userId); // Используем userId из токена
             if (existingReview)
@@ -237,7 +229,7 @@ namespace HomeFuBack.Controllers
         private async Task UpdateAggregateRatings(int cardDetailId)
         {
             var cardDetail = await _context.CardDetails
-                .Include(cd => cd.Comments) // Теперь агрегируем по Comments
+                .Include(cd => cd.Comments)
                 .Include(cd => cd.Ratings) // Для CardDetail.Ratings
                 .Include(cd => cd.Card) // Для Card.Rating
                 .FirstOrDefaultAsync(cd => cd.Id == cardDetailId);
@@ -290,7 +282,6 @@ namespace HomeFuBack.Controllers
             }
             else // Если оценок нет
             {
-                // Если агрегированная оценка существует, удаляем её
                 if (currentDetailRating != null)
                 {
                     _context.Ratings.Remove(currentDetailRating);

@@ -28,27 +28,50 @@ namespace HomeFuBack.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CardResponseDto>>> GetCards()
         {
-            var cards = await _context.Cards
+            // Загружаем все карточки и их связанные данные
+            var cardsEntities = await _context.Cards
                 .Include(c => c.Location)
                 .Include(c => c.CardCategories)
                     .ThenInclude(cc => cc.Category)
-                .Select(c => new CardResponseDto
-                {
-                    Id = c.Id,
-                    Name = c.Name,
-                    LocationId = c.LocationId,
-                    LocationName = c.Location.Name,
-                    StartDate = c.StartDate,
-                    EndDate = c.EndDate,
-                    Rating = c.Rating,
-                    Price = c.Price,
-                    IsDeleted = c.IsDeleted,
-                    ImageUrls = c.ImageUrls,
-                    CategoryIds = c.CardCategories.Select(cc => cc.CategoryId).ToList()
-                })
                 .ToListAsync();
 
-            return Ok(cards);
+            // Загружаем все *будущие* резервации для всех этих карточек одним запросом
+            var today = DateTime.Today;
+            var allUpcomingReservations = await _context.Reservations
+                .Where(r => (r.Status == ReservationStatus.Confirmed || r.Status == ReservationStatus.Pending) &&
+                            r.CheckOutDate > today)
+                .OrderBy(r => r.CheckInDate)
+                .ToListAsync();
+
+            var cardsResponse = new List<CardResponseDto>();
+
+            foreach (var card in cardsEntities)
+            {
+                // Фильтруем резервации только для текущей карточки
+                var cardReservations = allUpcomingReservations
+                    .Where(r => r.CardId == card.Id)
+                    .OrderBy(r => r.CheckInDate)
+                    .ToList(); // ToList() здесь может быть необязательным, зависит от объема данных
+
+                var (availableStart, availableEnd) = CalculateAvailablePeriod(cardReservations, today);
+
+                cardsResponse.Add(new CardResponseDto
+                {
+                    Id = card.Id,
+                    Name = card.Name,
+                    LocationId = card.LocationId,
+                    LocationName = card.Location.Name,
+                    StartDate = availableStart, // Используем вычисленную свободную дату
+                    EndDate = availableEnd,     // Используем вычисленную свободную дату
+                    Rating = card.Rating,
+                    Price = card.Price,
+                    IsDeleted = card.IsDeleted,
+                    ImageUrls = card.ImageUrls,
+                    CategoryIds = card.CardCategories.Select(cc => cc.CategoryId).ToList()
+                });
+            }
+
+            return Ok(cardsResponse);
         }
 
         // GET: api/cards/{id}
@@ -56,15 +79,18 @@ namespace HomeFuBack.Controllers
         public async Task<ActionResult<CardResponseDto>> GetCard(int id)
         {
             var card = await _context.Cards
-                .Include(c => c.Location)
-                .Include(c => c.CardCategories)
-                    .ThenInclude(cc => cc.Category)
-                .FirstOrDefaultAsync(c => c.Id == id);
+        .Include(c => c.Location)
+        .Include(c => c.CardCategories)
+            .ThenInclude(cc => cc.Category)
+        .FirstOrDefaultAsync(c => c.Id == id);
 
             if (card == null)
             {
                 return NotFound();
             }
+
+            // Вызываем вспомогательный метод для получения ближайшего свободного периода
+            var (availableStart, availableEnd) = await GetNextAvailablePeriod(card.Id);
 
             var responseDto = new CardResponseDto
             {
@@ -72,8 +98,8 @@ namespace HomeFuBack.Controllers
                 Name = card.Name,
                 LocationId = card.LocationId,
                 LocationName = card.Location?.Name!,
-                StartDate = card.StartDate,
-                EndDate = card.EndDate,
+                StartDate = availableStart, // Используем вычисленную свободную дату
+                EndDate = availableEnd,     // Используем вычисленную свободную дату
                 Rating = card.Rating,
                 Price = card.Price,
                 IsDeleted = card.IsDeleted,
@@ -337,33 +363,136 @@ namespace HomeFuBack.Controllers
                 return BadRequest("Please provide at least one category ID.");
             }
 
-            var cards = await _context.Cards
+            // 1. Загружаем отфильтрованные карточки с их связями
+            var cardsEntities = await _context.Cards
                 .Include(c => c.Location)
                 .Include(c => c.CardCategories)
                     .ThenInclude(cc => cc.Category)
                 .Where(c => c.CardCategories.Any(cc => categoryIds.Contains(cc.CategoryId)))
-                .Select(c => new CardResponseDto
-                {
-                    Id = c.Id,
-                    Name = c.Name,
-                    LocationId = c.LocationId,
-                    LocationName = c.Location.Name,
-                    StartDate = c.StartDate,
-                    EndDate = c.EndDate,
-                    Rating = c.Rating,
-                    Price = c.Price,
-                    IsDeleted = c.IsDeleted,
-                    ImageUrls = c.ImageUrls,
-                    CategoryIds = c.CardCategories.Select(cc => cc.CategoryId).ToList()
-                })
                 .ToListAsync();
 
-            if (!cards.Any())
+            if (!cardsEntities.Any())
             {
                 return NotFound($"No cards found for the specified category IDs: {string.Join(", ", categoryIds)}");
             }
 
-            return Ok(cards);
+            // 2. Получаем ID всех найденных карточек
+            var foundCardIds = cardsEntities.Select(c => c.Id).ToList();
+
+            // 3. Загружаем все *будущие* резервации для этих найденных карточек одним запросом
+            var today = DateTime.Today;
+            var allUpcomingReservations = await _context.Reservations
+                .Where(r => foundCardIds.Contains(r.CardId) && // Фильтруем по найденным CardId
+                            (r.Status == ReservationStatus.Confirmed || r.Status == ReservationStatus.Pending) &&
+                            r.CheckOutDate > today)
+                .OrderBy(r => r.CardId) // Для удобства группировки, если понадобится
+                .ToListAsync();
+
+            var cardsResponse = new List<CardResponseDto>();
+
+            // 4. Проходимся по каждой карточке и вычисляем свободный период
+            foreach (var card in cardsEntities)
+            {
+                // Фильтруем резервации только для текущей карточки
+                var cardReservations = allUpcomingReservations
+                    .Where(r => r.CardId == card.Id)
+                    .ToList(); // ToList() здесь может быть необязательным, но полезно для отладки
+
+                var (availableStart, availableEnd) = CalculateAvailablePeriod(cardReservations, today);
+
+                cardsResponse.Add(new CardResponseDto
+                {
+                    Id = card.Id,
+                    Name = card.Name,
+                    LocationId = card.LocationId,
+                    LocationName = card.Location.Name,
+                    StartDate = availableStart, // Используем вычисленную свободную дату
+                    EndDate = availableEnd,     // Используем вычисленную свободную дату
+                    Rating = card.Rating,
+                    Price = card.Price,
+                    IsDeleted = card.IsDeleted,
+                    ImageUrls = card.ImageUrls,
+                    CategoryIds = card.CardCategories.Select(cc => cc.CategoryId).ToList()
+                });
+            }
+
+            if (!cardsEntities.Any())
+            {
+                return NotFound($"No cards found for the specified category IDs: {string.Join(", ", categoryIds)}");
+            }
+
+            return Ok(cardsResponse);
+        }
+
+        private async Task<(DateTime StartDate, DateTime EndDate)> GetNextAvailablePeriod(int cardId)
+        {
+            // Дата, с которой начинаем поиск (сегодняшний день или ближайшее будущее)
+            var today = DateTime.Today;
+
+            // Получаем все *подтвержденные* или *ожидающие* резервации для этой карточки,
+            // которые начинаются сегодня или в будущем, отсортированные по CheckInDate.
+            // Исключаем отмененные и завершенные, если они не влияют на доступность.
+            var upcomingReservations = await _context.Reservations
+                .Where(r => r.CardId == cardId &&
+                            (r.Status == ReservationStatus.Confirmed || r.Status == ReservationStatus.Pending) &&
+                            r.CheckOutDate > today) // Учитываем только будущие или текущие резервации, которые еще не закончились
+                .OrderBy(r => r.CheckInDate)
+                .ToListAsync();
+
+            DateTime currentAvailableStart = today;
+
+            foreach (var reservation in upcomingReservations)
+            {
+                // Если резервация начинается *после* текущей предполагаемой даты начала доступности,
+                // то мы нашли свободное окно.
+                if (reservation.CheckInDate > currentAvailableStart)
+                {
+                    // Свободный период: от currentAvailableStart до CheckInDate этой резервации (исключительно)
+                    // Или до дня перед CheckInDate (включительно)
+                    return (currentAvailableStart, reservation.CheckInDate.AddDays(-1));
+                }
+                else
+                {
+                    // Если резервация начинается *в* или *до* текущей предполагаемой даты начала доступности,
+                    // то доступность начинается после этой резервации.
+                    // Передвигаем currentAvailableStart на день после CheckOutDate текущей резервации.
+                    currentAvailableStart = reservation.CheckOutDate.AddDays(1);
+                }
+            }
+
+            // Если резерваций нет или все они закончились до today,
+            // то карточка свободна с сегодняшнего дня и на неопределенный срок (или до вашей логики "конца")
+            // Здесь можно поставить какое-то условное "очень далекое будущее" или оставить null, если поле nullable.
+            // Например, на год вперед или максимальная дата DateTime.
+            return (currentAvailableStart, DateTime.Today.AddYears(1)); // Или какое-то значение по умолчанию
+        }
+
+        // Новый вспомогательный метод (без Async) для расчета доступности в памяти
+        private (DateTime StartDate, DateTime EndDate) CalculateAvailablePeriod(
+            List<Reservation> cardReservations, DateTime searchFromDate)
+        {
+            DateTime currentAvailableStart = searchFromDate;
+
+            foreach (var reservation in cardReservations)
+            {
+                // Если резервация начинается *после* текущей предполагаемой даты начала доступности,
+                // то мы нашли свободное окно.
+                if (reservation.CheckInDate > currentAvailableStart)
+                {
+                    return (currentAvailableStart, reservation.CheckInDate.AddDays(-1));
+                }
+                else
+                {
+                    // Если резервация начинается *в* или *до* текущей предполагаемой даты начала доступности,
+                    // то доступность начинается после этой резервации.
+                    // Передвигаем currentAvailableStart на день после CheckOutDate текущей резервации.
+                    currentAvailableStart = reservation.CheckOutDate.AddDays(1);
+                }
+            }
+
+            // Если резерваций нет или все они закончились до searchFromDate,
+            // то карточка свободна с searchFromDate и на неопределенный срок
+            return (currentAvailableStart, DateTime.Today.AddYears(1)); // Или другое значение по умолчанию
         }
     }
 }

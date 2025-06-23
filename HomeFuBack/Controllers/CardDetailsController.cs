@@ -69,7 +69,20 @@ namespace HomeFuBack.Controllers
                 return NotFound();
             }
 
-            return Ok(MapCardDetailToResponseDto(cardDetail));
+            DateTime availableStartDate;
+            DateTime availableEndDate;
+
+            if (cardDetail.Card != null)
+            {
+                (availableStartDate, availableEndDate) = await GetNextAvailablePeriod(cardDetail.Card.Id);
+            }
+            else
+            {
+                availableStartDate = DateTime.Today;
+                availableEndDate = DateTime.Today.AddYears(1);
+            }
+
+            return Ok(MapCardDetailToResponseDateDto(cardDetail, availableStartDate, availableEndDate));
         }
 
         // POST: api/carddetails
@@ -139,12 +152,6 @@ namespace HomeFuBack.Controllers
             // 4. Создание CardDetail
             var cardDetail = new CardDetail
             {
-                // Поскольку Id CardDetail должен совпадать с Id Card (Shared Primary Key)
-                // И CardDetail.Id теперь также является внешним ключом к Card
-                // Замените Id = card.Id на присвоение после сохранения Card.
-                // Или позвольте EF Core управлять этим, если OneToOne настроен правильно.
-                // Важно, чтобы cardDetail.Id было установлено ДО того, как она будет использоваться
-                // в Rating.CardDetailId
                 Id = card.Id, // <--- ЭТОТ ШАГ ВАЖЕН ДЛЯ Shared Primary Key
                 NumberOfGuests = dto.NumberOfGuests,
                 NumberOfBedrooms = dto.NumberOfBedrooms,
@@ -154,9 +161,6 @@ namespace HomeFuBack.Controllers
                 Description = dto.Description,
                 Latitude = dto.Latitude,
                 Longitude = dto.Longitude,
-                // RatingId и Ratings здесь не нужны, так как Rating будет ссылаться на CardDetail
-                // RatingId = rating.Id, // УДАЛИТЬ или закомментировать
-                // Ratings = rating // УДАЛИТЬ или закомментировать
             };
             _context.CardDetails.Add(cardDetail); // Добавляем CardDetail в контекст
 
@@ -627,6 +631,113 @@ namespace HomeFuBack.Controllers
                 // НОВОЕ: Заполняем список отзывов
                 Reviews = cardDetail.Comments?.Select(mapCommentToResponseDto).ToList() ?? new List<CommentResponseDto>()
             };
+        }
+
+        private CardDetailResponseDto MapCardDetailToResponseDateDto(
+        CardDetail cardDetail,
+        DateTime availableStartDate, // Получаем вычисленную дату начала
+        DateTime availableEndDate)    // Получаем вычисленную дату окончания
+        {
+            if (cardDetail == null) return null;
+
+            Func<Comment, CommentResponseDto> mapCommentToResponseDto = (comment) =>
+            {
+                return new CommentResponseDto
+                {
+                    Id = comment.Id,
+                    Text = comment.Text,
+                    CreatedAt = comment.CreatedAt,
+                    CardDetailId = comment.CardDetailId,
+                    UserId = comment.UserId,
+                    UserName = comment.User?.FirstName ?? "Unknown User",
+                    UserProfileImageUrl = comment.User?.ProfileImageUrl,
+                    Cleanliness = comment.Cleanliness,
+                    Accuracy = comment.Accuracy,
+                    CheckIn = comment.CheckIn,
+                    Communication = comment.Communication,
+                    Location = comment.Location,
+                    Value = comment.Value,
+                    OverallRating = comment.OverallRating
+                };
+            };
+
+            return new CardDetailResponseDto
+            {
+                Id = cardDetail.Id,
+                NumberOfGuests = cardDetail.NumberOfGuests,
+                NumberOfBedrooms = cardDetail.NumberOfBedrooms,
+                NumberOfBeds = cardDetail.NumberOfBeds,
+                NumberOfBathrooms = cardDetail.NumberOfBathrooms,
+                HostId = cardDetail.HostId,
+                HostName = cardDetail.Host.FirstName!,
+                HostAvatarUrl = cardDetail.Host?.ProfileImageUrl,
+                HostMail = cardDetail.Host!.Email,
+                HostNum = cardDetail.Host.PhoneNumber!,
+                Description = cardDetail.Description,
+                Latitude = cardDetail.Latitude,
+                Longitude = cardDetail.Longitude,
+                Amenities = cardDetail.CardDetailAmenities?.Select(cda => new AmenityResponseDto
+                {
+                    Id = cda.Amenity.Id,
+                    Name = cda.Amenity.Name,
+                    ImageUrl = cda.Amenity.IconPath
+                }).ToList() ?? new List<AmenityResponseDto>(),
+
+                Ratings = cardDetail.Ratings != null ? new RatingDto
+                {
+                    Cleanliness = cardDetail.Ratings.Cleanliness,
+                    Accuracy = cardDetail.Ratings.Accuracy,
+                    CheckIn = cardDetail.Ratings.CheckIn,
+                    Communication = cardDetail.Ratings.Communication,
+                    Location = cardDetail.Ratings.Location,
+                    Value = cardDetail.Ratings.Value
+                } : null,
+
+                Card = cardDetail.Card != null ? new CardResponseDto
+                {
+                    Id = cardDetail.Card.Id,
+                    Name = cardDetail.Card.Name,
+                    LocationId = cardDetail.Card.LocationId,
+                    LocationName = cardDetail.Card.Location?.Name!,
+                    StartDate = availableStartDate,
+                    EndDate = availableEndDate,
+                    Rating = cardDetail.Card.Rating,
+                    Price = cardDetail.Card.Price,
+                    IsDeleted = cardDetail.Card.IsDeleted,
+                    ImageUrls = cardDetail.Card.ImageUrls,
+                    CategoryIds = cardDetail.Card.CardCategories?.Select(cc => cc.CategoryId).ToList() ?? new List<int>()
+                } : null,
+
+                Reviews = cardDetail.Comments?.Select(mapCommentToResponseDto).ToList() ?? new List<CommentResponseDto>()
+            };
+        }
+
+        private async Task<(DateTime StartDate, DateTime EndDate)> GetNextAvailablePeriod(int cardId)
+        {
+            var today = DateTime.Today;
+
+            var upcomingReservations = await _context.Reservations
+                .Where(r => r.CardId == cardId &&
+                            (r.Status == ReservationStatus.Confirmed || r.Status == ReservationStatus.Pending) &&
+                            r.CheckOutDate > today)
+                .OrderBy(r => r.CheckInDate)
+                .ToListAsync();
+
+            DateTime currentAvailableStart = today;
+
+            foreach (var reservation in upcomingReservations)
+            {
+                if (reservation.CheckInDate > currentAvailableStart)
+                {
+                    return (currentAvailableStart, reservation.CheckInDate.AddDays(-1));
+                }
+                else
+                {
+                    currentAvailableStart = reservation.CheckOutDate.AddDays(1);
+                }
+            }
+
+            return (currentAvailableStart, DateTime.Today.AddYears(1)); // Значение по умолчанию
         }
     }
 }

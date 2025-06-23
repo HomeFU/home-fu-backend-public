@@ -37,7 +37,6 @@ namespace HomeFuBack.Controllers
         // [Authorize(Roles = "User")] // Только авторизованные пользователи могут обновлять оценки
         public async Task<IActionResult> PutRatingForCardDetail(int cardDetailId, [FromBody] RatingDto ratingDto)
         {
-            // Ищем существующую запись оценок для этой CardDetail
             var rating = await _context.Ratings
                                        .FirstOrDefaultAsync(r => r.CardDetailId == cardDetailId);
 
@@ -46,7 +45,6 @@ namespace HomeFuBack.Controllers
                 return NotFound($"Оценки для CardDetail с ID {cardDetailId} не найдены. Создайте CardDetail сначала.");
             }
 
-            // Обновляем значения оценок
             rating.Cleanliness = ratingDto.Cleanliness;
             rating.Accuracy = ratingDto.Accuracy;
             rating.CheckIn = ratingDto.CheckIn;
@@ -60,9 +58,8 @@ namespace HomeFuBack.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                // В данном случае DbUpdateConcurrencyException маловероятен для PUT по FK,
-                // но оставляем на всякий случай или для более сложных сценариев.
-                if (!RatingExists(rating.Id)) // Проверяем существование записи по ее собственному ID
+
+                if (!RatingExists(rating.Id)) 
                 {
                     return NotFound();
                 }
@@ -73,7 +70,6 @@ namespace HomeFuBack.Controllers
             }
             catch (Exception ex)
             {
-                // Логирование ошибки
                 Console.WriteLine($"Ошибка при обновлении оценок для CardDetailId {cardDetailId}: {ex.Message}");
                 return StatusCode(500, "Внутренняя ошибка сервера при обновлении оценок.");
             }

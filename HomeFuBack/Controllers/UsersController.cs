@@ -287,8 +287,6 @@ namespace HomeFuBack.Controllers
 
             if (!string.IsNullOrWhiteSpace(newEmail) && newEmail != user.Email)
             {
-                // В реальном приложении здесь должна быть логика проверки уникальности email,
-                // отправка кода подтверждения и т.д.
                 user.Email = newEmail;
                 _context.Update(user);
                 await _context.SaveChangesAsync();

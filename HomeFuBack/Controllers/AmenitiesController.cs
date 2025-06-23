@@ -15,7 +15,6 @@ namespace HomeFuBack.Controllers
 {
     [ApiController]
     [Route("api/amenities")]
-    // [Authorize(Roles = "Admin")]
     public class AmenitiesController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
@@ -154,7 +153,7 @@ namespace HomeFuBack.Controllers
 
                 amenity.IconPath = $"/images/amenities/{uniqueFileName}";
             }
-            else if (amenityUpdateDto.RemoveImage) // Если флаг RemoveImage установлен и нет нового файла
+            else if (amenityUpdateDto.RemoveImage)
             {
                 if (!string.IsNullOrEmpty(amenity.IconPath))
                 {

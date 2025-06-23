@@ -22,7 +22,7 @@ namespace HomeFuBack.Controllers
             _context = context;
         }
 
-        [HttpGet("availability")] // Изменено на более общее название, но 'availability' все еще уместно
+        [HttpGet("availability")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -33,9 +33,6 @@ namespace HomeFuBack.Controllers
                 return BadRequest(ModelState);
             }
 
-            // Определяем, запрашивается ли полная фильтрация по доступности или только общая фильтрация
-            // Если CheckInDate ИЛИ CheckOutDate ИЛИ Adults/Children/Infants/Pets указаны, то это полная фильтрация.
-            // Иначе (только LocationId или SearchTerm), это общая фильтрация.
             bool isFullAvailabilityCheck = filterDto.CheckInDate.HasValue ||
                                            filterDto.CheckOutDate.HasValue ||
                                            filterDto.Adults.HasValue ||
@@ -43,17 +40,16 @@ namespace HomeFuBack.Controllers
                                            filterDto.Infants.HasValue ||
                                            filterDto.Pets.HasValue;
 
+            DateTime today = DateTime.Today;
 
-            // 1. Подготовка дат для запроса (только если это полная проверка доступности)
-            DateTime checkIn = DateTime.MinValue; // Инициализируем минимальными значениями
+            DateTime checkIn = DateTime.MinValue;
             DateTime checkOut = DateTime.MinValue;
 
             if (isFullAvailabilityCheck)
             {
                 checkIn = filterDto.CheckInDate?.Date ?? DateTime.UtcNow.Date;
-                checkOut = filterDto.CheckOutDate?.Date ?? checkIn.AddYears(1); // Большая дефолтная дата
+                checkOut = filterDto.CheckOutDate?.Date ?? checkIn.AddYears(1);
 
-                // Валидация дат для полной проверки
                 if (checkIn >= checkOut)
                 {
                     return BadRequest("Дата выезда должна быть после даты заезда.");
@@ -62,38 +58,28 @@ namespace HomeFuBack.Controllers
                 {
                     return BadRequest("Дата заезда не может быть в прошлом.");
                 }
-            }
 
-
-            // 2. Расчет общего количества гостей для вместимости (только если это полная проверка доступности)
-            int totalGuestsForCapacity = 0; // Инициализируем 0, чтобы не влияло на базовый запрос
-
-            if (isFullAvailabilityCheck)
-            {
-                // Проверка, что есть хотя бы 1 взрослый
                 if (filterDto.Adults.GetValueOrDefault(0) == 0)
                 {
                     return BadRequest("Для бронирования необходимо указать хотя бы 1 взрослого.");
                 }
-
-                // Расчитываем общую вместимость, включая всех гостей
-                totalGuestsForCapacity = filterDto.Adults.Value + // Используем .Value, т.к. уже проверили, что Adults >= 1
-                                         filterDto.Children.GetValueOrDefault(0) +
-                                         filterDto.Infants.GetValueOrDefault(0); // Младенцы тоже учитываются в capacity
             }
 
+            int totalGuestsForCapacity = isFullAvailabilityCheck ?
+                                         (filterDto.Adults.Value +
+                                          filterDto.Children.GetValueOrDefault(0) +
+                                          filterDto.Infants.GetValueOrDefault(0)) : 0;
 
-            // 3. Строим LINQ-запрос к карточкам, включаем необходимые связанные данные
+
             var query = _context.Cards
                 .Include(c => c.CardDetail)
                 .Include(c => c.Location)
                 .Include(c => c.CardCategories)
                     .ThenInclude(cc => cc.Category)
-                .Where(c => !c.IsDeleted) // Исключаем удаленные карточки
+                .Where(c => !c.IsDeleted)
                 .AsQueryable();
 
 
-            // 4. Фильтрация по вместимости (NumberOfGuests) (только при полной проверке доступности)
             if (isFullAvailabilityCheck)
             {
                 query = query.Where(c =>
@@ -102,29 +88,18 @@ namespace HomeFuBack.Controllers
                 );
             }
 
-            // 5. Фильтрация по питомцам 
-            // Применяем только если это полная проверка доступности ИЛИ Pets явно указаны
-            //if (filterDto.Pets.HasValue && filterDto.Pets.Value > 0)
-            //{
-            //    query = query.Where(c => c.CardDetail != null && c.CardDetail.AllowsPets);
-            //}
-
-
-            // 6. Фильтрация по поисковому запросу (SearchTerm) - всегда применяется, если есть
             if (!string.IsNullOrWhiteSpace(filterDto.SearchTerm))
             {
                 var searchTerm = filterDto.SearchTerm.Trim().ToLower();
                 query = query.Where(c => c.Name != null && c.Name.ToLower().Contains(searchTerm) ||
-                                       (c.Location != null && c.Location.Name.ToLower().Contains(searchTerm))); // Добавлено: поиск по названию локации
+                                         (c.Location != null && c.Location.Name.ToLower().Contains(searchTerm)));
             }
 
-            // 7. Фильтрация по ID Локации - всегда применяется, если есть
             if (filterDto.LocationId.HasValue && filterDto.LocationId.Value > 0)
             {
                 query = query.Where(c => c.LocationId == filterDto.LocationId.Value);
             }
 
-            // 8. ГЛАВНАЯ ФИЛЬТРАЦИЯ по доступности дат: (только если это полная проверка доступности)
             if (isFullAvailabilityCheck)
             {
                 query = query.Where(card => !_context.Reservations.Any(reservation =>
@@ -138,29 +113,81 @@ namespace HomeFuBack.Controllers
             // 9. Выполняем запрос к базе данных
             var availableCards = await query.ToListAsync();
 
-            // 10. Проверка на наличие результатов и возврат соответствующего ответа
+            // 10. Если после фильтрации не осталось карточек, возвращаем NotFound
             if (!availableCards.Any())
             {
                 return NotFound("На выбранные даты и с учетом заданных критериев нет доступных вариантов. Попробуйте изменить даты или параметры поиска.");
             }
 
-            // 11. Прямой маппинг результата в CardResponseDto
-            var responseDtos = availableCards.Select(card => new CardResponseDto
+            var cardIdsInResults = availableCards.Select(c => c.Id).ToList();
+            var allUpcomingReservationsForAvailableCards = await _context.Reservations
+                .Where(r => cardIdsInResults.Contains(r.CardId) &&
+                            (r.Status == ReservationStatus.Confirmed || r.Status == ReservationStatus.Pending) &&
+                            r.CheckOutDate >= today) // Используем >= today, чтобы учесть брони после сегодняшнего дня
+                .OrderBy(r => r.CheckInDate)
+                .ToListAsync();
+
+            // 11. Прямой маппинг результата в CardResponseDto с вычислением следующего свободного периода
+            var responseDtos = new List<CardResponseDto>();
+            foreach (var card in availableCards)
             {
-                Id = card.Id,
-                Name = card.Name,
-                LocationId = card.LocationId,
-                LocationName = card.Location?.Name ?? string.Empty,
-                StartDate = card.StartDate,
-                EndDate = card.EndDate,
-                Rating = card.Rating,
-                Price = card.Price,
-                IsDeleted = card.IsDeleted,
-                ImageUrls = card.ImageUrls ?? new List<string>(),
-                CategoryIds = card.CardCategories?.Select(cc => cc.CategoryId).ToList() ?? new List<int>()
-            }).ToList();
+                DateTime displayStartDate;
+                DateTime displayEndDate;
+
+                if (isFullAvailabilityCheck)
+                {
+                    
+                    displayStartDate = filterDto.CheckInDate!.Value; 
+                    displayEndDate = filterDto.CheckOutDate!.Value;  
+                }
+                else
+                {
+                    var cardReservations = allUpcomingReservationsForAvailableCards
+                        .Where(r => r.CardId == card.Id)
+                        .ToList();
+
+                    var (nextAvailableStart, nextAvailableEnd) = CalculateNextAvailablePeriod(cardReservations, DateTime.Today);
+                    displayStartDate = nextAvailableStart;
+                    displayEndDate = nextAvailableEnd;
+                }
+
+                responseDtos.Add(new CardResponseDto
+                {
+                    Id = card.Id,
+                    Name = card.Name,
+                    LocationId = card.LocationId,
+                    LocationName = card.Location?.Name ?? string.Empty,
+                    StartDate = displayStartDate, 
+                    EndDate = displayEndDate,     
+                    Rating = card.Rating,
+                    Price = card.Price,
+                    IsDeleted = card.IsDeleted,
+                    ImageUrls = card.ImageUrls ?? new List<string>(),
+                    CategoryIds = card.CardCategories?.Select(cc => cc.CategoryId).ToList() ?? new List<int>()
+                });
+            }
 
             return Ok(responseDtos);
+        }
+
+        private (DateTime StartDate, DateTime EndDate) CalculateNextAvailablePeriod(
+        List<Reservation> cardReservations, DateTime searchFromDate)
+        {
+            DateTime currentAvailableStart = searchFromDate;
+
+            foreach (var reservation in cardReservations.OrderBy(r => r.CheckInDate))
+            {
+                if (reservation.CheckInDate > currentAvailableStart)
+                {
+                    return (currentAvailableStart, reservation.CheckInDate.AddDays(-1));
+                }
+                else
+                {
+                    currentAvailableStart = reservation.CheckOutDate.AddDays(1);
+                }
+            }
+
+            return (currentAvailableStart, DateTime.Today.AddYears(1));
         }
     }
 }

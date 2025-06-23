@@ -27,7 +27,7 @@ namespace HomeFuBack.Helpers
 
             using (var client = new SmtpClient())
             {
-                await client.ConnectAsync(_smtpSettings.SmtpServer, _smtpSettings.SmtpPort, SecureSocketOptions.StartTls); // <-- КЛЮЧЕВОЕ ИЗМЕНЕНИЕ
+                await client.ConnectAsync(_smtpSettings.SmtpServer, _smtpSettings.SmtpPort, SecureSocketOptions.StartTls);
                 await client.AuthenticateAsync(_smtpSettings.Username, _smtpSettings.Password);
                 await client.SendAsync(email);
                 await client.DisconnectAsync(true);

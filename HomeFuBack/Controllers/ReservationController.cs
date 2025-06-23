@@ -55,7 +55,7 @@ namespace HomeFuBack.Controllers
         {
             var reservations = await _context.Reservations
                 .Include(r => r.Card)
-                .Include(r => r.User) 
+                .Include(r => r.User)
                 .ToListAsync();
 
             var reservationDtos = reservations.Select(r => MapToReservationResponseDto(r)).ToList();
@@ -208,7 +208,7 @@ namespace HomeFuBack.Controllers
             _context.Reservations.Add(reservation);
             await _context.SaveChangesAsync();
 
-            
+
             await _context.Entry(reservation).Reference(r => r.User).LoadAsync(); // Данных клиента для использования в письме
 
             try
@@ -220,43 +220,43 @@ namespace HomeFuBack.Controllers
                 var totalPrice = numberOfNights * card.Price;
 
                 //Письмо для клиента
-                var clientSubject = $"Ваша резервация в {card.Name} подтверждена!";
+                var clientSubject = $"Ваша резервація в {card.Name} підтверджена!";
                 var clientMessage = $@"
-            <h1>Резервация успешна!</h1>
-            <p>Здравствуйте, {client!.FirstName},</p>
-            <p>Ваша резервация для жилья ""{card.Name}"" была успешно создана и подтверждена.</p>
-            <h3>Детали вашей поездки:</h3>
-            <ul>
-                <li><strong>Дата заезда:</strong> {reservation.CheckInDate:dd MMMM yyyy}</li>
-                <li><strong>Дата выезда:</strong> {reservation.CheckOutDate:dd MMMM yyyy}</li>
-                <li><strong>Количество ночей:</strong> {numberOfNights}</li>
-                <li><strong>Гости:</strong> {reservation.Adults} взрослых, {reservation.Children} детей, {reservation.Infants} младенцев</li>
-                <li><strong>Питомцы:</strong> {reservation.Pets}</li>
-                <li><strong>Итоговая сумма:</strong> {totalPrice:C}</li>
-            </ul>
-            <p>Спасибо, что выбрали HomeFu!</p>";
+                <h1>Резервація успішна!</h1>
+                <p>Здрастуйте, {client!.FirstName},</p>
+                <p>Ваша резервація для житла ""{card.Name}"" була успішно створена та підтверджена.</p>
+                <h3>Деталі вашої поїздки:</h3>
+                <ul> 
+                    <li><strong>Дата заїзду:</strong> {reservation.CheckInDate:dd MMMM yyyy}</li> 
+                    <li><strong>Дата виїзду:</strong> {reservation.CheckOutDate:dd MMMM yyyy}</li> 
+                    <li><strong>Кількість ночей:</strong> {numberOfNights}</li> 
+                    <li><strong>Гості:</strong> {reservation.Adults} дорослих, {reservation.Children} дітей, {reservation.Infants} немовлят</li> 
+                    <li><strong>Вихованці:</strong> {reservation.Pets}</li> 
+                    <li><strong>Підсумкова сума:</strong> {totalPrice:C}</li>
+                </ul>
+                <p>Дякую, що вибрали HomeFu!</p>";
 
                 await _emailSender.SendEmailAsync(client.Email, clientSubject, clientMessage); // Данных хоста для использования в письме
 
                 // Письмо для хоста
                 if (host.Email != client.Email)
                 {
-                    var hostSubject = $"Новая резервация вашего жилья: {card.Name}";
-                    var hostMessage = $@"
-                <h1>У вас новая резервация!</h1>
-                <p>Здравствуйте, {host.FirstName},</p>
-                <p>Ваше жилье ""{card.Name}"" было зарезервировано.</p>
-                <h3>Детали резервации:</h3>
-                <ul>
-                    <li><strong>Имя гостя:</strong> {client.FirstName} {client.LastName}</li>
-                    <li><strong>Email гостя:</strong> {client.Email}</li>
-                    <li><strong>Дата заезда:</strong> {reservation.CheckInDate:dd MMMM yyyy}</li>
-                    <li><strong>Дата выезда:</strong> {reservation.CheckOutDate:dd MMMM yyyy}</li>
-                    <li><strong>Гости:</strong> {reservation.Adults} взрослых, {reservation.Children} детей, {reservation.Infants} младенцев</li>
-                    <li><strong>Питомцы:</strong> {reservation.Pets}</li>
-                    <li><strong>Итоговая сумма:</strong> {totalPrice:C}</li>
-                </ul>
-                <p>Вы можете управлять резервациями в вашей панели управления HomeFu.</p>";
+                    var hostSubject = $"Нова резервація вашого житла: {card.Name}";
+                    var hostMessage = $@" 
+                    <h1>У вас нова резервація!</h1> 
+                    <p>Здрастуйте, {host.FirstName},</p> 
+                    <p>Ваше житло ""{card.Name}"" було зарезервовано.</p> 
+                    <h3>Деталі резервації:</h3> 
+                    <ul> 
+                        <li><strong>Ім'я гостя:</strong> {client.FirstName} {client.LastName}</li> 
+                        <li><strong>Email гостя:</strong> {client.Email}</li> 
+                        <li><strong>Дата заїзду:</strong> {reservation.CheckInDate:dd MMMM yyyy}</li> 
+                        <li><strong>Дата виїзду:</strong> {reservation.CheckOutDate:dd MMMM yyyy}</li> 
+                        <li><strong>Гості:</strong> {reservation.Adults} дорослих, {reservation.Children} дітей, {reservation.Infants} немовлят</li> 
+                        <li><strong>Вихованці:</strong> {reservation.Pets}</li> 
+                        <li><strong>Підсумкова сума:</strong> {totalPrice:C}</li> 
+                    </ul> 
+                    <p>Ви можете керувати резерваціями у вашій панелі керування HomeFu.</p>";
 
                     await _emailSender.SendEmailAsync(host.Email, hostSubject, hostMessage);
                 }
@@ -392,11 +392,11 @@ namespace HomeFuBack.Controllers
         {
             var reservation = await _context.Reservations.FindAsync(id);
 
-            if (reservation == null) {return NotFound($"Резервация с ID {id} не найдена.");}
+            if (reservation == null) { return NotFound($"Резервация с ID {id} не найдена."); }
 
             var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (!User.IsInRole("Admin") && (string.IsNullOrEmpty(userIdClaim) 
-                                            || !Guid.TryParse(userIdClaim, out Guid userIdGuid) 
+            if (!User.IsInRole("Admin") && (string.IsNullOrEmpty(userIdClaim)
+                                            || !Guid.TryParse(userIdClaim, out Guid userIdGuid)
                                             || reservation.UserId != userIdGuid))
             {
                 return Forbid("Вы можете отменять только свои резервации.");

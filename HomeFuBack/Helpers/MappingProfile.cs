@@ -16,7 +16,7 @@ namespace HomeFuBack.Helpers
             // CardDetailResponseDto:
             CreateMap<CardDetail, CardDetailResponseDto>()
                  .ForMember(dest => dest.HostName, opt => opt.MapFrom(src => src.Host != null ? src.Host.Email : null))
-                 .ForMember(dest => dest.HostAvatarUrl, opt => opt.MapFrom(src => src.Host != null ? src.Host.ProfileImageUrl : null)) // Убедитесь, что у вашей модели User есть AvatarUrl
+                 .ForMember(dest => dest.HostAvatarUrl, opt => opt.MapFrom(src => src.Host != null ? src.Host.ProfileImageUrl : null)) 
                  .ForMember(dest => dest.Amenities, opt => opt.MapFrom(src => src.CardDetailAmenities.Select(cda => cda.Amenity))); // Маппинг удобств
 
             // AmenityResponseDto:
@@ -24,8 +24,7 @@ namespace HomeFuBack.Helpers
 
             // RatingDto:
             CreateMap<Rating, RatingDto>()
-                .ForMember(dest => dest.Location, opt => opt.MapFrom(src => src.OverallRating)); // Устранение расхождения в названиях полей
-                                                                                                  // (LocationRating в модели, Location в DTO)
+                .ForMember(dest => dest.Location, opt => opt.MapFrom(src => src.OverallRating));
 
             CreateMap<Card, CardResponseDto>()
                  .ForMember(dest => dest.LocationName, opt => opt.MapFrom(src => src.Location != null ? src.Location.Name : null))

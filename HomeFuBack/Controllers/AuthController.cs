@@ -8,7 +8,6 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System;
-using HomeFuBack.Helpers; // Убедитесь, что это действительно используется, если нет, можно удалить
 using HomeFuBack.Models.Users;
 using HomeFuBack.Data.DTO;
 using Microsoft.Extensions.Configuration;
@@ -39,12 +38,11 @@ public class AuthController : ControllerBase
             return BadRequest("Email уже используется");
         }
 
-        // 1) При регистрации указывал роль "USER"
         user.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
         user.Role = "User"; // Присваиваем роль "User" по умолчанию
 
         // Генерируем код подтверждения
-        user.EmailConfirmCode = GenerateConfirmationCode(); // Генерируем код
+        user.EmailConfirmCode = GenerateConfirmationCode();
 
         _context.Users.Add(user);
         await _context.SaveChangesAsync();
@@ -52,15 +50,13 @@ public class AuthController : ControllerBase
         // Отправка письма с кодом подтверждения
         try
         {
-            var subject = "Подтверждение регистрации в HomeFu";
-            var message = $"<h1>Добро пожаловать в HomeFu!</h1>" +
-                          $"<p>Спасибо за регистрацию. Для подтверждения вашей почты, пожалуйста, используйте следующий код:</p>" +
+            var subject = "Підтвердження реєстрації в HomeFu";
+            var message = $"<h1>Ласкаво просимо до HomeFu!</h1>" +
+                          $"<p>Дякую за реєстрацію. Для підтвердження вашої пошти, будь ласка, використовуйте наступний код:</p>" +
                           $"<h2>{user.EmailConfirmCode}</h2>" +
-                          $"<p>С уважением, команда HomeFu.</p>";
+                          $"<p>З повагою, команда HomeFu.</p>";
 
-            // Если у вас есть URL вашего фронтенда, вы можете добавить сюда ссылку
-            // Например, убедитесь, что в appsettings.json у вас есть "AppUrl"
-            // "AppUrl": "http://localhost:3000" или ваш домен
+
             var appUrl = _configuration["AppUrl"];
             if (!string.IsNullOrEmpty(appUrl))
             {
@@ -73,8 +69,6 @@ public class AuthController : ControllerBase
         }
         catch (Exception ex)
         {
-            // Логируем ошибку отправки письма, но не блокируем регистрацию.
-            // В реальном приложении можно добавить запись в лог или другой механизм уведомления.
             Console.WriteLine($"Ошибка при отправке письма подтверждения на {user.Email}: {ex.Message}");
         }
 
@@ -91,8 +85,6 @@ public class AuthController : ControllerBase
             return NotFound("Пользователь не найден.");
         }
 
-        // Проверяем, что код подтверждения не пустой/null (то есть, email еще не подтвержден)
-        // и что предоставленный код совпадает.
         if (string.IsNullOrEmpty(user.EmailConfirmCode) || user.EmailConfirmCode != confirmDto.ConfirmCode)
         {
             // Если код пустой, это означает, что email уже был подтвержден.
@@ -104,8 +96,7 @@ public class AuthController : ControllerBase
         }
 
         // Email подтвержден: очищаем код.
-        user.EmailConfirmCode = null; // Устанавливаем в null или string.Empty
-                                      // (в зависимости от того, как вы хотите трактовать "пусто")
+        user.EmailConfirmCode = null; 
 
         _context.Users.Update(user); // EF Core отследит изменения, но явное Update не повредит
         await _context.SaveChangesAsync();
@@ -126,10 +117,6 @@ public class AuthController : ControllerBase
         // Проверяем, подтвержден ли email (код подтверждения должен быть пустым/null)
         if (!string.IsNullOrEmpty(user.EmailConfirmCode))
         {
-            // Сценарий 2: Email не подтвержден
-            // 403 Forbidden - клиент аутентифицирован (email/пароль верны),
-            // но не имеет права доступа к ресурсу (входа) из-за неподтвержденной почты.
-            // Или 401 Unauthorized, но с более специфичным сообщением в теле ответа.
             return StatusCode(403, "Пожалуйста, подтвердите ваш email, используя код, отправленный на вашу почту.");
         }
 
